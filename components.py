@@ -260,7 +260,7 @@ def inception_v3_7b(bottom, conv_output):
 
     return conv_3x3_0, conv_3x3_0_bn, conv_3x3_0_relu, conv_3x3_reduce, conv_3x3_reduce_bn, conv_3x3_reduce_relu, \
            conv_3x3_1, conv_3x3_1_bn, conv_3x3_1_relu, conv_3x3_2, conv_3x3_2_bn, conv_3x3_2_relu, pool, concat
-
+           
 
 def factorization_conv(bottom, kernel=(1, 7), pad=(0, 3), output=(128, 192)):
     conv_1 = L.Convolution(bottom, kernel_h=kernel[0], kernel_w=kernel[1], pad_h=pad[0], pad_w=pad[1], stride=1,
@@ -456,7 +456,7 @@ def conv_bn_stack_2(bottom, conv_param):
                                              bias_value=conv_param['bias_value'][1]))
 
     return conv_1, bn_1, relu_1, conv_2, bn_2, relu_2
-
+    
 
 def spp(bottom, pool1_param, pool2_param, pool3_param):
     pool1 = L.Pooling(bottom, pool=pool1_param['type'], kernel_size=pool1_param['kernel_size'],

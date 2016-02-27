@@ -1,6 +1,7 @@
 # caffe-model
 Python script to generate CNN models on Caffe
-License and Citation
+
+# License and Citation
 
 Caffe is released under the BSD 2-Clause license. The BVLC reference models are released for unrestricted use.
 

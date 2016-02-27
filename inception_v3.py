@@ -2,7 +2,7 @@ from caffe import layers as L
 from caffe import params as P
 import caffe
 from caffe.proto import caffe_pb2
-from combine import *
+from components import *
 
 
 class Inception(object):

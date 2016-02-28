@@ -5,7 +5,7 @@ from caffe.proto import caffe_pb2
 from components import *
 
 
-class Inception(object):
+class InceptionV3(object):
     def __init__(self, lmdb_train, lmdb_test, num_output):
         self.train_data = lmdb_train
         self.test_data = lmdb_test

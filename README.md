@@ -1,6 +1,12 @@
 # caffe-model
 Python script to generate CNN models on Caffe
 
+# Models
+1. AlexNet(and CaffeNet in alexnet.py)
+  AlexNet was initially described in [ImageNet Classification with Deep Convolutional
+Neural Networks] (http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)
+
+
 # Acknowlegement
 
 I greatly thank [Yangqing Jia](https://github.com/Yangqing) and [BVLC group](https://www.github.com/BVLC/caffe) for developing Caffe

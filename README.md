@@ -2,6 +2,9 @@
 Python script to generate CNN models on Caffe
 
 # Models
+
+Every model has a bn (batch normalization) version, the paper is [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](http://arxiv.org/pdf/1502.03167v3)
+
 1. Lenet-5 (lenet.py)
  
    Lenet-5 was presented by Yann LeCun in [Backpropagation applied to handwritten zip code recognition](http://www.ics.uci.edu/~welling/teaching/273ASpring09/lecun-89e.pdf).
@@ -38,4 +41,4 @@ Neural Networks] (http://papers.nips.cc/paper/4824-imagenet-classification-with-
 
 I greatly thank [Yangqing Jia](https://github.com/Yangqing) and [BVLC group](https://www.github.com/BVLC/caffe) for developing Caffe
 
-And I also thank the authors of CNN models
+And I would like to thank all the authors of every cnn model

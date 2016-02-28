@@ -37,6 +37,11 @@ Neural Networks] (http://papers.nips.cc/paper/4824-imagenet-classification-with-
  
    Inception_v3 is the improved version of inception_v1, the details are described in [Rethinking the Inception Architecture for Computer Vision](http://arxiv.org/pdf/1512.00567v3)
 
+
+7. ResNet
+
+   Coming soon ......
+
 # Acknowlegement
 
 I greatly thank [Yangqing Jia](https://github.com/Yangqing) and [BVLC group](https://www.github.com/BVLC/caffe) for developing Caffe

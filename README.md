@@ -1,5 +1,5 @@
-# caffe-model
-Python script to generate CNN models on Caffe
+# Caffe-model
+Python script to generate CNN models on Caffe, specially the inception\inception_v3\inception_v4\inception_resnet
 
 # Models
 

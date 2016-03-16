@@ -3,7 +3,7 @@ Python script to generate CNN models on Caffe
 
 # Models
 
-Every model has a bn (batch normalization) version, the paper is [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](http://arxiv.org/pdf/1502.03167v3)
+Every model has a bn (batch normalization) version (maybe only bn version), the paper is [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](http://arxiv.org/pdf/1502.03167v3)
 
 1. Lenet-5 (lenet.py)
  
@@ -37,8 +37,15 @@ Neural Networks] (http://papers.nips.cc/paper/4824-imagenet-classification-with-
  
    Inception_v3 is the improved version of inception_v1, the details are described in [Rethinking the Inception Architecture for Computer Vision](http://arxiv.org/pdf/1512.00567v3)
 
+7. Inception_v4 (inception_resnet.py)
 
-7. ResNet
+   Inception_v4 is is a more uniform simplified architecture and more inception modules than Inception-v3, the details are described in [Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning](http://arxiv.org/pdf/1602.07261.pdf)
+
+8. Inception_resnet (inception_resnet.py)
+ 
+   Inception_resnet_v2 combines the residual connections and the latest revised version of the Inception architecture, single crop-single model top-5 error of inception_resnet_v2 is 4.9% on the non-blacklisted subset of the validation set of ILSVRC 2012. The details are described in [Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning](http://arxiv.org/pdf/1602.07261.pdf)
+
+9. ResNet
 
    Coming soon ......
 

@@ -1,4 +1,3 @@
-name:resnet_152
 layer {
   name: "data"
   type: "Data"
@@ -9,14 +8,14 @@ layer {
   }
   transform_param {
     mirror: true
-    crop_size: 224
+    crop_size: 299
     mean_value: 104
     mean_value: 117
     mean_value: 123
   }
   data_param {
-    source: "imagenet_train_lmdb"
-    batch_size: 32
+    source: "examples/imagenet/ilsvrc12_train_lmdb"
+    batch_size: 64
     backend: LMDB
   }
 }
@@ -30,14 +29,14 @@ layer {
   }
   transform_param {
     mirror: false
-    crop_size: 224
+    crop_size: 299
     mean_value: 104
     mean_value: 117
     mean_value: 123
   }
   data_param {
-    source: "imagenet_test_lmdb"
-    batch_size: 50
+    source: "examples/imagenet/ilsvrc12_val_lmdb"
+    batch_size: 64
     backend: LMDB
   }
 }
@@ -128,7 +127,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -149,12 +148,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res2a_branch1_relu"
-  type: "ReLU"
-  bottom: "res2a_branch1"
-  top: "res2a_branch1"
 }
 layer {
   name: "res2a_branch2a"
@@ -284,7 +277,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -305,12 +298,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res2a_branch2c_relu"
-  type: "ReLU"
-  bottom: "res2a_branch2c"
-  top: "res2a_branch2c"
 }
 layer {
   name: "res2a"
@@ -456,7 +443,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -477,12 +464,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res2b1_branch2c_relu"
-  type: "ReLU"
-  bottom: "res2b1_branch2c"
-  top: "res2b1_branch2c"
 }
 layer {
   name: "res2b1"
@@ -628,7 +609,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -649,12 +630,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res2b2_branch2c_relu"
-  type: "ReLU"
-  bottom: "res2b2_branch2c"
-  top: "res2b2_branch2c"
 }
 layer {
   name: "res2b2"
@@ -696,7 +671,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -717,12 +692,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res3a_branch1_relu"
-  type: "ReLU"
-  bottom: "res3a_branch1"
-  top: "res3a_branch1"
 }
 layer {
   name: "res3a_branch2a"
@@ -852,7 +821,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -873,12 +842,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res3a_branch2c_relu"
-  type: "ReLU"
-  bottom: "res3a_branch2c"
-  top: "res3a_branch2c"
 }
 layer {
   name: "res3a"
@@ -1024,7 +987,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -1045,12 +1008,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res3b1_branch2c_relu"
-  type: "ReLU"
-  bottom: "res3b1_branch2c"
-  top: "res3b1_branch2c"
 }
 layer {
   name: "res3b1"
@@ -1196,7 +1153,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -1217,12 +1174,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res3b2_branch2c_relu"
-  type: "ReLU"
-  bottom: "res3b2_branch2c"
-  top: "res3b2_branch2c"
 }
 layer {
   name: "res3b2"
@@ -1368,7 +1319,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -1389,12 +1340,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res3b3_branch2c_relu"
-  type: "ReLU"
-  bottom: "res3b3_branch2c"
-  top: "res3b3_branch2c"
 }
 layer {
   name: "res3b3"
@@ -1540,7 +1485,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -1561,12 +1506,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res3b4_branch2c_relu"
-  type: "ReLU"
-  bottom: "res3b4_branch2c"
-  top: "res3b4_branch2c"
 }
 layer {
   name: "res3b4"
@@ -1712,7 +1651,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -1733,12 +1672,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res3b5_branch2c_relu"
-  type: "ReLU"
-  bottom: "res3b5_branch2c"
-  top: "res3b5_branch2c"
 }
 layer {
   name: "res3b5"
@@ -1884,7 +1817,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -1905,12 +1838,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res3b6_branch2c_relu"
-  type: "ReLU"
-  bottom: "res3b6_branch2c"
-  top: "res3b6_branch2c"
 }
 layer {
   name: "res3b6"
@@ -2056,7 +1983,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -2077,12 +2004,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res3b7_branch2c_relu"
-  type: "ReLU"
-  bottom: "res3b7_branch2c"
-  top: "res3b7_branch2c"
 }
 layer {
   name: "res3b7"
@@ -2124,7 +2045,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -2145,12 +2066,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4a_branch1_relu"
-  type: "ReLU"
-  bottom: "res4a_branch1"
-  top: "res4a_branch1"
 }
 layer {
   name: "res4a_branch2a"
@@ -2280,7 +2195,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -2301,12 +2216,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4a_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4a_branch2c"
-  top: "res4a_branch2c"
 }
 layer {
   name: "res4a"
@@ -2452,7 +2361,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -2473,12 +2382,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b1_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b1_branch2c"
-  top: "res4b1_branch2c"
 }
 layer {
   name: "res4b1"
@@ -2624,7 +2527,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -2645,12 +2548,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b2_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b2_branch2c"
-  top: "res4b2_branch2c"
 }
 layer {
   name: "res4b2"
@@ -2796,7 +2693,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -2817,12 +2714,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b3_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b3_branch2c"
-  top: "res4b3_branch2c"
 }
 layer {
   name: "res4b3"
@@ -2968,7 +2859,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -2989,12 +2880,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b4_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b4_branch2c"
-  top: "res4b4_branch2c"
 }
 layer {
   name: "res4b4"
@@ -3140,7 +3025,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -3161,12 +3046,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b5_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b5_branch2c"
-  top: "res4b5_branch2c"
 }
 layer {
   name: "res4b5"
@@ -3312,7 +3191,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -3333,12 +3212,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b6_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b6_branch2c"
-  top: "res4b6_branch2c"
 }
 layer {
   name: "res4b6"
@@ -3484,7 +3357,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -3505,12 +3378,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b7_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b7_branch2c"
-  top: "res4b7_branch2c"
 }
 layer {
   name: "res4b7"
@@ -3656,7 +3523,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -3677,12 +3544,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b8_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b8_branch2c"
-  top: "res4b8_branch2c"
 }
 layer {
   name: "res4b8"
@@ -3828,7 +3689,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -3849,12 +3710,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b9_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b9_branch2c"
-  top: "res4b9_branch2c"
 }
 layer {
   name: "res4b9"
@@ -4000,7 +3855,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -4021,12 +3876,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b10_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b10_branch2c"
-  top: "res4b10_branch2c"
 }
 layer {
   name: "res4b10"
@@ -4172,7 +4021,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -4193,12 +4042,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b11_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b11_branch2c"
-  top: "res4b11_branch2c"
 }
 layer {
   name: "res4b11"
@@ -4344,7 +4187,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -4365,12 +4208,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b12_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b12_branch2c"
-  top: "res4b12_branch2c"
 }
 layer {
   name: "res4b12"
@@ -4516,7 +4353,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -4537,12 +4374,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b13_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b13_branch2c"
-  top: "res4b13_branch2c"
 }
 layer {
   name: "res4b13"
@@ -4688,7 +4519,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -4709,12 +4540,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b14_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b14_branch2c"
-  top: "res4b14_branch2c"
 }
 layer {
   name: "res4b14"
@@ -4860,7 +4685,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -4881,12 +4706,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b15_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b15_branch2c"
-  top: "res4b15_branch2c"
 }
 layer {
   name: "res4b15"
@@ -5032,7 +4851,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -5053,12 +4872,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b16_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b16_branch2c"
-  top: "res4b16_branch2c"
 }
 layer {
   name: "res4b16"
@@ -5204,7 +5017,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -5225,12 +5038,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b17_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b17_branch2c"
-  top: "res4b17_branch2c"
 }
 layer {
   name: "res4b17"
@@ -5376,7 +5183,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -5397,12 +5204,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b18_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b18_branch2c"
-  top: "res4b18_branch2c"
 }
 layer {
   name: "res4b18"
@@ -5548,7 +5349,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -5569,12 +5370,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b19_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b19_branch2c"
-  top: "res4b19_branch2c"
 }
 layer {
   name: "res4b19"
@@ -5720,7 +5515,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -5741,12 +5536,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b20_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b20_branch2c"
-  top: "res4b20_branch2c"
 }
 layer {
   name: "res4b20"
@@ -5892,7 +5681,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -5913,12 +5702,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b21_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b21_branch2c"
-  top: "res4b21_branch2c"
 }
 layer {
   name: "res4b21"
@@ -6064,7 +5847,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -6085,12 +5868,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b22_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b22_branch2c"
-  top: "res4b22_branch2c"
 }
 layer {
   name: "res4b22"
@@ -6236,7 +6013,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -6257,12 +6034,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b23_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b23_branch2c"
-  top: "res4b23_branch2c"
 }
 layer {
   name: "res4b23"
@@ -6408,7 +6179,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -6429,12 +6200,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b24_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b24_branch2c"
-  top: "res4b24_branch2c"
 }
 layer {
   name: "res4b24"
@@ -6580,7 +6345,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -6601,12 +6366,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b25_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b25_branch2c"
-  top: "res4b25_branch2c"
 }
 layer {
   name: "res4b25"
@@ -6752,7 +6511,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -6773,12 +6532,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b26_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b26_branch2c"
-  top: "res4b26_branch2c"
 }
 layer {
   name: "res4b26"
@@ -6924,7 +6677,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -6945,12 +6698,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b27_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b27_branch2c"
-  top: "res4b27_branch2c"
 }
 layer {
   name: "res4b27"
@@ -7096,7 +6843,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -7117,12 +6864,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b28_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b28_branch2c"
-  top: "res4b28_branch2c"
 }
 layer {
   name: "res4b28"
@@ -7268,7 +7009,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -7289,12 +7030,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b29_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b29_branch2c"
-  top: "res4b29_branch2c"
 }
 layer {
   name: "res4b29"
@@ -7440,7 +7175,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -7461,12 +7196,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b30_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b30_branch2c"
-  top: "res4b30_branch2c"
 }
 layer {
   name: "res4b30"
@@ -7612,7 +7341,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -7633,12 +7362,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b31_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b31_branch2c"
-  top: "res4b31_branch2c"
 }
 layer {
   name: "res4b31"
@@ -7784,7 +7507,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -7805,12 +7528,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b32_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b32_branch2c"
-  top: "res4b32_branch2c"
 }
 layer {
   name: "res4b32"
@@ -7956,7 +7673,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -7977,12 +7694,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b33_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b33_branch2c"
-  top: "res4b33_branch2c"
 }
 layer {
   name: "res4b33"
@@ -8128,7 +7839,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -8149,12 +7860,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b34_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b34_branch2c"
-  top: "res4b34_branch2c"
 }
 layer {
   name: "res4b34"
@@ -8300,7 +8005,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -8321,12 +8026,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res4b35_branch2c_relu"
-  type: "ReLU"
-  bottom: "res4b35_branch2c"
-  top: "res4b35_branch2c"
 }
 layer {
   name: "res4b35"
@@ -8368,7 +8067,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -8389,12 +8088,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res5a_branch1_relu"
-  type: "ReLU"
-  bottom: "res5a_branch1"
-  top: "res5a_branch1"
 }
 layer {
   name: "res5a_branch2a"
@@ -8524,7 +8217,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -8545,12 +8238,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res5a_branch2c_relu"
-  type: "ReLU"
-  bottom: "res5a_branch2c"
-  top: "res5a_branch2c"
 }
 layer {
   name: "res5a"
@@ -8696,7 +8383,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -8717,12 +8404,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res5b1_branch2c_relu"
-  type: "ReLU"
-  bottom: "res5b1_branch2c"
-  top: "res5b1_branch2c"
 }
 layer {
   name: "res5b1"
@@ -8868,7 +8549,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 0
+      value: 0.2
     }
   }
 }
@@ -8889,12 +8570,6 @@ layer {
   scale_param {
     bias_term: true
   }
-}
-layer {
-  name: "res5b2_branch2c_relu"
-  type: "ReLU"
-  bottom: "res5b2_branch2c"
-  top: "res5b2_branch2c"
 }
 layer {
   name: "res5b2"

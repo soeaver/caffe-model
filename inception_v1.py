@@ -282,7 +282,7 @@ class InceptionV1(object):
                                               conv_5x5=32, pool_proj=32))
         n.inception_3b_1x1, n.inception_3b_1x1_bn, n.inception_3b_1x1_scale, n.inception_3b_relu_1x1, \
         n.inception_3b_3x3_reduce, n.inception_3b_3x3_reduce_bn, n.inception_3b_3x3_reduce_scale, \
-        n.inception_3b_relu_3x3_reduce, n.inception_3b_3x3, n.inception_3b_3x3_bn, n.inception_3a_3x3_scale, \
+        n.inception_3b_relu_3x3_reduce, n.inception_3b_3x3, n.inception_3b_3x3_bn, n.inception_3b_3x3_scale, \
         n.inception_3b_relu_3x3, n.inception_3b_5x5_reduce, n.inception_3b_5x5_reduce_bn, \
         n.inception_3b_5x5_reduce_scale, n.inception_3b_relu_5x5_reduce, n.inception_3b_5x5, n.inception_3b_5x5_bn, \
         n.inception_3b_5x5_scale, n.inception_3b_relu_5x5, n.inception_3b_pool, n.inception_3b_pool_proj, \

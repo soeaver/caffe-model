@@ -70,8 +70,8 @@ class AlexNet(object):
         if phase == 'TRAIN':
             pass
         else:
-            n.loss2_accuracy_top1 = L.Accuracy(n.loss2_classifier, n.label, include=dict(phase=1))
-            n.loss2_accuracy_top5 = L.Accuracy(n.loss2_classifier, n.label, include=dict(phase=1),
+            n.accuracy_top1 = L.Accuracy(n.fc8, n.label, include=dict(phase=1))
+            n.accuracy_top5 = L.Accuracy(n.fc8, n.label, include=dict(phase=1),
                                                accuracy_param=dict(top_k=5))
         n.loss = L.SoftmaxWithLoss(n.fc8, n.label)
         

@@ -48,6 +48,13 @@ def factorization_conv_mxn(bottom, num_output=64, kernel_h=1, kernel_w=7, stride
     conv_mxn_relu = L.ReLU(conv_mxn, in_place=True)
 
     return conv_mxn, conv_mxn_bn, conv_mxn_scale, conv_mxn_relu
+    
+    
+def eltwise_relu(bottom1, bottom2):
+    residual_eltwise = L.Eltwise(bottom1, bottom2, eltwise_param=dict(operation=1))
+    residual_eltwise_relu = L.ReLU(residual_eltwise, in_place=True)
+
+    return residual_eltwise, residual_eltwise_relu
 
 
 def stem_resnet_v2_299x299(bottom):
@@ -132,13 +139,13 @@ def inception_resnet_v2_a(bottom):
         factorization_conv_bn_scale(concat, num_output=384, kernel_size=1)  # 384x35x35
     # conv_1x1_2_relu = L.ReLU(conv_1x1_2, in_place=True) # linear activation
 
-    residual_eltwise = L.Eltwise(bottom, conv_1x1_2, eltwise_param=dict(operation=1))  # 384x35x35
+    residual_eltwise, residual_eltwise_relu = eltwise_relu(bottom, conv_1x1_2)  # 384x35x35
 
     return conv_1x1, conv_1x1_bn, conv_1x1_scale, conv_1x1_relu, conv_3x3_reduce, conv_3x3_reduce_bn, \
            conv_3x3_reduce_scale, conv_3x3_reduce_relu, conv_3x3, conv_3x3_bn, conv_3x3_scale, conv_3x3_relu, \
            conv_3x3_2_reduce, conv_3x3_2_reduce_bn, conv_3x3_2_reduce_scale, conv_3x3_2_reduce_relu, \
            conv_3x3_2, conv_3x3_2_bn, conv_3x3_2_scale, conv_3x3_2_relu, conv_3x3_3, conv_3x3_3_bn, conv_3x3_3_scale, \
-           conv_3x3_3_relu, concat, conv_1x1_2, conv_1x1_2_bn, conv_1x1_2_scale, residual_eltwise
+           conv_3x3_3_relu, concat, conv_1x1_2, conv_1x1_2_bn, conv_1x1_2_scale, residual_eltwise, residual_eltwise_relu
 
 
 def reduction_resnet_v2_a(bottom):
@@ -189,12 +196,12 @@ def inception_resnet_v2_b(bottom):
         factorization_conv_bn_scale(concat, num_output=1152, kernel_size=1)  # 1152x17x17
     # conv_1x1_2_relu = L.ReLU(conv_1x1_2, in_place=True)  # linear activation
 
-    residual_eltwise = L.Eltwise(bottom, conv_1x1_2, eltwise_param=dict(operation=1))  # 1152x17x17
+    residual_eltwise, residual_eltwise_relu = eltwise_relu(bottom, conv_1x1_2)  # 1152x17x17
 
     return conv_1x1, conv_1x1_bn, conv_1x1_scale, conv_1x1_relu, conv_1x7_reduce, conv_1x7_reduce_bn, \
            conv_1x7_reduce_scale, conv_1x7_reduce_relu, conv_1x7, conv_1x7_bn, conv_1x7_scale, conv_1x7_relu, \
            conv_7x1, conv_7x1_bn, conv_7x1_scale, conv_7x1_relu, concat, conv_1x1_2, conv_1x1_2_bn, conv_1x1_2_scale, \
-           residual_eltwise
+           residual_eltwise, residual_eltwise_relu
 
 
 def reduction_resnet_v2_b(bottom):
@@ -255,12 +262,12 @@ def inception_resnet_v2_c(bottom):
         factorization_conv_bn_scale(concat, num_output=2048, kernel_size=1)  # 2048x8x8
     # conv_1x1_2_relu = L.ReLU(conv_1x1_2, in_place=True)  # linear activation
 
-    residual_eltwise = L.Eltwise(bottom, conv_1x1_2, eltwise_param=dict(operation=1))  # 2048x8x8
+    residual_eltwise, residual_eltwise_relu = eltwise_relu(bottom, conv_1x1_2)  # 2048x8x8
 
     return conv_1x1, conv_1x1_bn, conv_1x1_scale, conv_1x1_relu, conv_1x3_reduce, conv_1x3_reduce_bn, \
            conv_1x3_reduce_scale, conv_1x3_reduce_relu, conv_1x3, conv_1x3_bn, conv_1x3_scale, conv_1x3_relu, \
            conv_3x1, conv_3x1_bn, conv_3x1_scale, conv_3x1_relu, concat, conv_1x1_2, conv_1x1_2_bn, conv_1x1_2_scale, \
-           residual_eltwise
+           residual_eltwise, residual_eltwise_relu
 
 
 string_a = 'n.inception_resnet_v2_a(order)_1x1, n.inception_resnet_v2_a(order)_1x1_bn, n.inception_resnet_v2_a(order)_1x1_scale, \
@@ -272,7 +279,8 @@ string_a = 'n.inception_resnet_v2_a(order)_1x1, n.inception_resnet_v2_a(order)_1
         n.inception_resnet_v2_a(order)_3x3_2_scale, n.inception_resnet_v2_a(order)_3x3_2_relu, n.inception_resnet_v2_a(order)_3x3_3, \
         n.inception_resnet_v2_a(order)_3x3_3_bn, n.inception_resnet_v2_a(order)_3x3_3_scale, n.inception_resnet_v2_a(order)_3x3_3_relu, \
         n.inception_resnet_v2_a(order)_concat, n.inception_resnet_v2_a(order)_1x1_2, n.inception_resnet_v2_a(order)_1x1_2_bn, \
-        n.inception_resnet_v2_a(order)_1x1_2_scale, n.inception_resnet_v2_a(order)_residual_eltwise = \
+        n.inception_resnet_v2_a(order)_1x1_2_scale, n.inception_resnet_v2_a(order)_residual_eltwise, \
+        n.inception_resnet_v2_a(order)_residual_eltwise_relu = \
             inception_resnet_v2_a(bottom)'
 
 string_b = 'n.inception_resnet_v2_b(order)_1x1, n.inception_resnet_v2_b(order)_1x1_bn, n.inception_resnet_v2_b(order)_1x1_scale, \
@@ -281,7 +289,8 @@ string_b = 'n.inception_resnet_v2_b(order)_1x1, n.inception_resnet_v2_b(order)_1
         n.inception_resnet_v2_b(order)_1x7_bn, n.inception_resnet_v2_b(order)_1x7_scale, n.inception_resnet_v2_b(order)_1x7_relu, \
         n.inception_resnet_v2_b(order)_7x1, n.inception_resnet_v2_b(order)_7x1_bn, n.inception_resnet_v2_b(order)_7x1_scale, \
         n.inception_resnet_v2_b(order)_7x1_relu, n.inception_resnet_v2_b(order)_concat, n.inception_resnet_v2_b(order)_1x1_2, \
-        n.inception_resnet_v2_b(order)_1x1_2_bn, n.inception_resnet_v2_b(order)_1x1_2_scale, n.inception_resnet_v2_b(order)_residual_eltwise \
+        n.inception_resnet_v2_b(order)_1x1_2_bn, n.inception_resnet_v2_b(order)_1x1_2_scale, n.inception_resnet_v2_b(order)_residual_eltwise, \
+        n.inception_resnet_v2_b(order)_residual_eltwise_relu \
             = inception_resnet_v2_b(bottom)'
 
 string_c = 'n.inception_resnet_v2_c(order)_1x1, n.inception_resnet_v2_c(order)_1x1_bn, n.inception_resnet_v2_c(order)_1x1_scale, \
@@ -290,7 +299,8 @@ string_c = 'n.inception_resnet_v2_c(order)_1x1, n.inception_resnet_v2_c(order)_1
         n.inception_resnet_v2_c(order)_1x3_bn, n.inception_resnet_v2_c(order)_1x3_scale, n.inception_resnet_v2_c(order)_1x3_relu, \
         n.inception_resnet_v2_c(order)_3x1, n.inception_resnet_v2_c(order)_3x1_bn, n.inception_resnet_v2_c(order)_3x1_scale, \
         n.inception_resnet_v2_c(order)_3x1_relu, n.inception_resnet_v2_c(order)_concat, n.inception_resnet_v2_c(order)_1x1_2, \
-        n.inception_resnet_v2_c(order)_1x1_2_bn, n.inception_resnet_v2_c(order)_1x1_2_scale, n.inception_resnet_v2_c(order)_residual_eltwise = \
+        n.inception_resnet_v2_c(order)_1x1_2_bn, n.inception_resnet_v2_c(order)_1x1_2_scale, n.inception_resnet_v2_c(order)_residual_eltwise, \
+        n.inception_resnet_v2_c(order)_residual_eltwise_relu = \
             inception_resnet_v2_c(bottom)'
 
 

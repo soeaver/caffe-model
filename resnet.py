@@ -3,17 +3,6 @@ from caffe import layers as L
 from caffe import params as P
 
 
-def fc_relu_drop(bottom, num_output=1024, dropout_ratio=0.5):
-    fc = L.InnerProduct(bottom, num_output=num_output,
-                        param=[dict(lr_mult=1, decay_mult=1), dict(lr_mult=2, decay_mult=0)],
-                        weight_filler=dict(type='xavier', std=1),
-                        bias_filler=dict(type='constant', value=0.2))
-    relu = L.ReLU(fc, in_place=True)
-    drop = L.Dropout(fc, in_place=True,
-                     dropout_param=dict(dropout_ratio=dropout_ratio))
-    return fc, relu, drop
-
-
 def factorization_conv_bn_scale_relu(bottom, num_output=64, kernel_size=3, stride=1, pad=0):
     conv = L.Convolution(bottom, num_output=num_output, kernel_size=kernel_size, stride=stride, pad=pad,
                          param=[dict(lr_mult=1, decay_mult=1), dict(lr_mult=2, decay_mult=0)],

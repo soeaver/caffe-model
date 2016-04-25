@@ -61,8 +61,8 @@ class AlexNet(object):
             factorization_conv_bn_scale_relu(n.conv4, num_output=256, kernel_size=3, pad=1)  # 256x13x13
         n.pool5 = L.Pooling(n.conv5, kernel_size=3, stride=2, pool=P.Pooling.MAX)  # 256x6x16
 
-        n.fc6, n.relu6, n.drop6 = fc_relu_drop(n.pool5, num_output=4096)  # 1024x1x1
-        n.fc7, n.relu7, n.drop7 = fc_relu_drop(n.fc6, num_output=4096)  # 1024x1x1
+        n.fc6, n.relu6, n.drop6 = fc_relu_drop(n.pool5, num_output=4096)  # 4096x1x1
+        n.fc7, n.relu7, n.drop7 = fc_relu_drop(n.fc6, num_output=4096)  # 4096x1x1
         n.fc8 = L.InnerProduct(n.fc7, num_output=self.classifier_num,
                                param=[dict(lr_mult=1, decay_mult=1), dict(lr_mult=2, decay_mult=0)],
                                weight_filler=dict(type='gaussian', std=0.01),

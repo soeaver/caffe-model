@@ -8,7 +8,7 @@ layer {
   }
   transform_param {
     mirror: true
-    crop_size: 299
+    crop_size: 224
     mean_value: 104
     mean_value: 117
     mean_value: 123
@@ -29,7 +29,7 @@ layer {
   }
   transform_param {
     mirror: false
-    crop_size: 299
+    crop_size: 224
     mean_value: 104
     mean_value: 117
     mean_value: 123

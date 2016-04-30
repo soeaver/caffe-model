@@ -234,7 +234,7 @@ def inception_v3_c(bottom, pool=P.Pooling.AVE):
     conv_3x1_2, conv_3x1_2_bn, conv_3x1_2_scale, conv_3x1_2_relu = \
         factorization_conv_mxn(conv_1x3_2, num_output=384, kernel_h=3, kernel_w=1, pad_h=1, pad_w=0)  # 384x8x8
 
-    concat = L.Concat(conv_1x1, conv_1x1_2, conv_3x1, conv_3x1_2)  # 1280(192+320+384+384)x8x8
+    concat = L.Concat(conv_1x1, conv_1x1_2, conv_1x3, conv_3x1, conv_1x3_2, conv_3x1_2)  # 2048(192+320+384+384+384+384)x8x8
 
     return pool, conv_1x1, conv_1x1_bn, conv_1x1_scale, conv_1x1_relu, conv_1x1_2, conv_1x1_2_bn, conv_1x1_2_scale, \
            conv_1x1_2_relu, conv_1x3_reduce, conv_1x3_reduce_bn, conv_1x3_reduce_scale, conv_1x3_reduce_relu, conv_1x3, \
@@ -392,7 +392,7 @@ class InceptionV3(object):
         n.inception_c2_3x3_bn, n.inception_c2_3x3_scale, n.inception_c2_3x3_relu, n.inception_c2_1x3_2, n.inception_c2_1x3_2_bn, \
         n.inception_c2_1x3_2_scale, n.inception_c2_1x3_2_relu, n.inception_c2_3x1_2, n.inception_c2_3x1_2_bn, n.inception_c2_3x1_2_scale, \
         n.inception_c2_3x1_2_relu, n.inception_c2_concat = \
-            inception_v3_c(n.inception_c1_concat, pool=P.Pooling.MAX)  # 1280x8x8
+            inception_v3_c(n.inception_c1_concat, pool=P.Pooling.MAX)  # 2048x8x8
 
         # loss 2
         n.pool_8x8_s1 = L.Pooling(n.inception_c2_concat, kernel_size=8, pool=P.Pooling.AVE)

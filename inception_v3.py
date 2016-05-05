@@ -205,8 +205,8 @@ def reduction_v3_b(bottom):
 
 def inception_v3_c(bottom, pool=P.Pooling.AVE):
     """
-    input:1280x8x8
-    output:1280x8x8
+    input:2048x8x8
+    output:2048x8x8
     :param pool: pool_type
     :param bottom: bottom layer
     :return: layers

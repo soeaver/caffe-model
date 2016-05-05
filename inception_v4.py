@@ -53,10 +53,10 @@ def stem_v4_299x299(bottom):
     conv3_3x3_s1, conv3_3x3_s1_bn, conv3_3x3_s1_scale, conv3_3x3_s1_relu = \
         factorization_conv_bn_scale_relu(conv2_3x3_s1, num_output=64, kernel_size=3, stride=1, pad=1)  # 64x147x147
 
+    inception_stem1_pool = L.Pooling(conv3_3x3_s1, kernel_size=3, stride=2, pool=P.Pooling.MAX)  # 64x73x73
     inception_stem1_3x3_s2, inception_stem1_3x3_s2_bn, inception_stem1_3x3_s2_scale, inception_stem1_3x3_s2_relu = \
         factorization_conv_bn_scale_relu(conv3_3x3_s1, num_output=96, kernel_size=3, stride=2)  # 96x73x73
-    inception_stem1_pool = L.Pooling(conv3_3x3_s1, kernel_size=3, stride=2, pool=P.Pooling.MAX)  # 64x73x73
-    inception_stem1 = L.Concat(inception_stem1_3x3_s2, inception_stem1_pool)  # 160x73x73
+    inception_stem1 = L.Concat(inception_stem1_pool, inception_stem1_3x3_s2)  # 160x73x73
 
     inception_stem2_3x3_reduce, inception_stem2_3x3_reduce_bn, inception_stem2_3x3_reduce_scale, \
     inception_stem2_3x3_reduce_relu = \

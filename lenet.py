@@ -1,8 +1,6 @@
 from caffe import layers as L
 from caffe import params as P
-from components import *
 import caffe
-from caffe.proto import caffe_pb2
 
 
 class LeNet(object):
@@ -37,11 +35,12 @@ class LeNet(object):
         n.ip2 = L.InnerProduct(n.relu1, num_output=self.classifier_num,
                                weight_filler=dict(type='xavier'),
                                bias_filler=dict(type='constant'))
+        n.loss = L.SoftmaxWithLoss(n.ip2, n.label)
         if phase == 'TRAIN':
             pass
         else:
             n.accuracy = L.Accuracy(n.ip2, n.label, include=dict(phase=1))
-        n.loss = L.SoftmaxWithLoss(n.ip2, n.label)
+
         return n.to_proto()
 
     def lenet_bn_proto(self, batch_size, phase='TRAIN'):
@@ -72,9 +71,10 @@ class LeNet(object):
         n.ip2 = L.InnerProduct(n.relu1, num_output=self.classifier_num,
                                weight_filler=dict(type='xavier'),
                                bias_filler=dict(type='constant'))
+        n.loss = L.SoftmaxWithLoss(n.ip2, n.label)
         if phase == 'TRAIN':
             pass
         else:
             n.accuracy = L.Accuracy(n.ip2, n.label, include=dict(phase=1))
-        n.loss = L.SoftmaxWithLoss(n.ip2, n.label)
+
         return n.to_proto()

@@ -3,7 +3,7 @@ from caffe import layers as L
 from caffe import params as P
 
 
-def factorization_conv_bn_scale_relu(bottom, num_output=64, kernel_size=3, stride=1, pad=0):
+def conv_bn_scale_relu(bottom, num_output=64, kernel_size=3, stride=1, pad=0):
     conv = L.Convolution(bottom, num_output=num_output, kernel_size=kernel_size, stride=stride, pad=pad,
                          param=[dict(lr_mult=1, decay_mult=1), dict(lr_mult=2, decay_mult=0)],
                          weight_filler=dict(type='xavier', std=0.01),
@@ -15,7 +15,7 @@ def factorization_conv_bn_scale_relu(bottom, num_output=64, kernel_size=3, strid
     return conv, conv_bn, conv_scale, conv_relu
 
 
-def factorization_conv_bn_scale(bottom, num_output=64, kernel_size=3, stride=1, pad=0):
+def conv_bn_scale(bottom, num_output=64, kernel_size=3, stride=1, pad=0):
     conv = L.Convolution(bottom, num_output=num_output, kernel_size=kernel_size, stride=stride, pad=pad,
                          param=[dict(lr_mult=1, decay_mult=1), dict(lr_mult=2, decay_mult=0)],
                          weight_filler=dict(type='xavier', std=0.01),
@@ -42,11 +42,11 @@ def residual_branch(bottom, base_output=64):
     :return: layers
     """
     branch2a, branch2a_bn, branch2a_scale, branch2a_relu = \
-        factorization_conv_bn_scale_relu(bottom, num_output=base_output, kernel_size=1)  # base_output x n x n
+        conv_bn_scale_relu(bottom, num_output=base_output, kernel_size=1)  # base_output x n x n
     branch2b, branch2b_bn, branch2b_scale, branch2b_relu = \
-        factorization_conv_bn_scale_relu(branch2a, num_output=base_output, kernel_size=3, pad=1)  # base_output x n x n
+        conv_bn_scale_relu(branch2a, num_output=base_output, kernel_size=3, pad=1)  # base_output x n x n
     branch2c, branch2c_bn, branch2c_scale = \
-        factorization_conv_bn_scale(branch2b, num_output=4 * base_output, kernel_size=1)  # 4*base_output x n x n
+        conv_bn_scale(branch2b, num_output=4 * base_output, kernel_size=1)  # 4*base_output x n x n
 
     residual, residual_relu = \
         eltwize_relu(bottom, branch2c)  # 4*base_output x n x n
@@ -64,14 +64,14 @@ def residual_branch_shortcut(bottom, stride=2, base_output=64):
     :return: layers
     """
     branch1, branch1_bn, branch1_scale = \
-        factorization_conv_bn_scale(bottom, num_output=4 * base_output, kernel_size=1, stride=stride)
+        conv_bn_scale(bottom, num_output=4 * base_output, kernel_size=1, stride=stride)
 
     branch2a, branch2a_bn, branch2a_scale, branch2a_relu = \
-        factorization_conv_bn_scale_relu(bottom, num_output=base_output, kernel_size=1, stride=stride)
+        conv_bn_scale_relu(bottom, num_output=base_output, kernel_size=1, stride=stride)
     branch2b, branch2b_bn, branch2b_scale, branch2b_relu = \
-        factorization_conv_bn_scale_relu(branch2a, num_output=base_output, kernel_size=3, pad=1)
+        conv_bn_scale_relu(branch2a, num_output=base_output, kernel_size=3, pad=1)
     branch2c, branch2c_bn, branch2c_scale = \
-        factorization_conv_bn_scale(branch2b, num_output=4 * base_output, kernel_size=1)
+        conv_bn_scale(branch2b, num_output=4 * base_output, kernel_size=1)
 
     residual, residual_relu = \
         eltwize_relu(branch1, branch2c)  # 4*base_output x n x n
@@ -104,7 +104,7 @@ class ResNet(object):
 
         :param batch_size: the batch_size of train and test phase
         :param phase: TRAIN or TEST
-        :param stages: the num of layers = 2 + 3*sum(stages), layers would better be chosen from [20, 32, 50, 101, 152]
+        :param stages: the num of layers = 2 + 3*sum(stages), layers would better be chosen from [50, 101, 152]
                        {every stage is composed of 1 residual_branch_shortcut module and stage[i]-1 residual_branch
                        modules, each module consists of 3 conv layers}
                         (3, 4, 6, 3) for 50 layers; (3, 4, 23, 3) for 101 layers; (3, 8, 36, 3) for 152 layers
@@ -120,8 +120,8 @@ class ResNet(object):
                                  transform_param=dict(crop_size=224, mean_value=[104, 117, 123], mirror=mirror))
 
         n.conv1, n.conv1_bn, n.conv1_scale, n.conv1_relu = \
-            factorization_conv_bn_scale_relu(n.data, num_output=64, kernel_size=7, stride=2, pad=3)  # 64x112x112
-        n.pool1 = L.Pooling(n.conv1, kernel_size=3, stride=2, pool=P.Pooling.MAX)  # 64x55x55
+            conv_bn_scale_relu(n.data, num_output=64, kernel_size=7, stride=2, pad=3)  # 64x112x112
+        n.pool1 = L.Pooling(n.conv1, kernel_size=3, stride=2, pool=P.Pooling.MAX)  # 64x56x56
 
         for num in xrange(len(stages)):  # num = 0, 1, 2, 3
             for i in xrange(stages[num]):
@@ -139,7 +139,7 @@ class ResNet(object):
                       replace('(num)', str(2 ** num * 64)).replace('(order)', str(i)).
                       replace('(stride)', str(int(num > 0) + 1)))
 
-        exec 'n.pool5 = L.Pooling((bottom), kernel_size=7, stride=1, pool=P.Pooling.AVE)'.\
+        exec 'n.pool5 = L.Pooling((bottom), pool=P.Pooling.AVE, global_pooling=True)'.\
             replace('(bottom)', 'n.res5b%s' % str(stages[3] - 1))
         n.classifier = L.InnerProduct(n.pool5, num_output=self.classifier_num,
                                       param=[dict(lr_mult=1, decay_mult=1), dict(lr_mult=2, decay_mult=0)],

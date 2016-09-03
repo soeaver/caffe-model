@@ -214,7 +214,7 @@ def reduction_resnet_v2_b(bottom):
 
     conv_3x3_2_reduce, conv_3x3_2_reduce_bn, conv_3x3_2_reduce_scale, conv_3x3_2_reduce_relu = \
         factorization_conv_bn_scale_relu(bottom, num_output=256, kernel_size=1)  # 256x17x17
-    conv_3x3_2, conv_3x3_2_bn, conv_3x3_2_scale, conv_3x3_2_relu = \
+    conv_3x3_2, conv_3x3_2_bn, conv_3x3_2_scale, conv_3x3_2_relu = \ 
         factorization_conv_bn_scale_relu(conv_3x3_2_reduce, num_output=288, kernel_size=3, stride=2)  # 288x8x8
 
     conv_3x3_3_reduce, conv_3x3_3_reduce_bn, conv_3x3_3_reduce_scale, conv_3x3_3_reduce_relu = \

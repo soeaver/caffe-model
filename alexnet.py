@@ -82,7 +82,7 @@ class AlexNet(object):
         if phase == 'TRAIN':
             pass
         else:
-            n.accuracy_top1, n.accuracy_top5 = accuracy_top1_top5(n.pool4, n.label)
+            n.accuracy_top1, n.accuracy_top5 = accuracy_top1_top5(n.fc8, n.label)
 
         return n.to_proto()
 
@@ -125,6 +125,6 @@ class AlexNet(object):
         if phase == 'TRAIN':
             pass
         else:
-            n.accuracy_top1, n.accuracy_top5 = accuracy_top1_top5(n.pool4, n.label)
+            n.accuracy_top1, n.accuracy_top5 = accuracy_top1_top5(n.fc8, n.label)
 
         return n.to_proto()

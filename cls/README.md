@@ -19,3 +19,5 @@ resnet269-v2| 94.4 | 95.2 | 95.6 | --
 inception-v3| 93.8 | 94.6 | 94.3 | 95.0 
 inception-resnet-v2| 94.9 | -- | 95.4 | -- 
 
+- 224x224 and 320x320 crop size for resnet-v2, 299x299 and 331x331 crop size for inception.
+

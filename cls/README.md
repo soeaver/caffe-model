@@ -78,6 +78,7 @@ The main contribution belongs to the authors and model trainers.
     mean_value = np.array([128.0, 128.0, 128.0])  # BGR
     std = np.array([128.0, 128.0, 128.0])  # BGR
     crop_num = 1    # perform center(single)-crop
+    ```
     
 0. then
     ```

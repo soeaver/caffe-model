@@ -11,7 +11,7 @@ The main contribution belongs to the authors and model trainers.
 ### Performance on imagenet
 0. Top-1/Top-5 of pre-train models in this repository.
 
- Network|224or299(single-crop)|224or299(12-crop)|320or331(single-crop)|320or331(12-crop)
+ Network|224/299(single-crop)|224/299(12-crop)|320/331(single-crop)|320/331(12-crop)
  :---:|:---:|:---:|:---:|:---:
  resnet101-v2| 78.05/93.88 | 79.2/94.6 | 79.6/94.9 | 80.4/95.4 
  resnet152-v2| 79.15/94.58 | -- | -- | -- 

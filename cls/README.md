@@ -19,7 +19,7 @@ inception-v3| 77.6/93.9 | 79.0/94.6 | 78.6/94.4 | 79.9/95.1
 inception-resnet-v2| 79.6/94.9 | 80.7/95.6 | 80.5/95.5 | -- 
 
 - All the pre-train models are tested on origial [caffe](https://github.com/BVLC/caffe) by [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py).
-- 224x224 and 320x320 crop size for resnet-v2, 299x299 and 331x331 crop size for inception.
+- 224x224(short_size=256) and 320x320 crop size for resnet-v2, 299x299(short_size=320) and 331x331 crop size for inception.
 - The models are uploading, please wait.
 - -- means that I have not done this test yet.
 
@@ -28,7 +28,7 @@ inception-resnet-v2| 79.6/94.9 | 80.7/95.6 | 80.5/95.5 | --
     ```
     ~/Database/ILSVRC2012
     ```
-0. Chech the resnet-v2 (101, 152 and 269) performance, You need change the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):
+0. Check the resnet-v2 (101, 152 and 269) performance, You need change the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):
    
     ```
     val_file = 'ILSVRC2012_val.txt' # download from this folder, label range 0~999
@@ -38,8 +38,9 @@ inception-resnet-v2| 79.6/94.9 | 80.7/95.6 | 80.5/95.5 | --
     ... ...
     class_num = 1000
     ... ...
-    raw_scale = 1.0
-    mean_value = np.array([128, 128, 128])
+    mean_value = np.array([128.0, 128.0, 128.0])  # BGR
+    std = np.array([1.0, 1.0, 1.0])  # BGR
+    crop_num = 1    # perform center(single)-crop
     ```
     then
     ```

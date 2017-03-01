@@ -11,11 +11,11 @@ The main contribution belongs to the authors and model trainers.
 
 Top-5 of pre-train models in this repository.
 
-Network|224/299(single-crop)|224/299(12-crop)|Download|
-:---:|:---:|:---:|:---:
-resnet101-v2| 74.91| 92.19| [caffemodel (30.8  MB)](https://drive.google.com/open?id=0B7ubpZO7HnlCcHlfNmJkU2VPelE)
-resnet152-v2| 76.09| 93.14| [caffemodel (54.6  MB)](https://drive.google.com/open?id=0B7ubpZO7HnlCRWVVdUJjVVAyQXc)
-resnet269-v2| 77.31| 93.64| [caffemodel (77.3  MB)](https://drive.google.com/open?id=0B7ubpZO7HnlCV3pud2oyR3lNMWs)
-inception-v3| 77.64| 93.79| [caffemodel (110 MB)](https://drive.google.com/open?id=0B7ubpZO7HnlCa0phRGJIRERoTXM)
-inception-resnet-v2| 77.64| 93.79| [caffemodel (110 MB)](https://drive.google.com/open?id=0B7ubpZO7HnlCa0phRGJIRERoTXM)
+Network|224/299(single-crop)|224/299(12-crop)|320/331(single-crop)|320/331(12-crop)
+:---:|:---:|:---:|:---:|:---:
+resnet101-v2| 74.91| 92.19| [caffemodel (30.8  MB)](https://drive.google.com/open?id=0B7ubpZO7HnlCcHlfNmJkU2VPelE)| 0
+resnet152-v2| 76.09| 93.14| [caffemodel (54.6  MB)](https://drive.google.com/open?id=0B7ubpZO7HnlCRWVVdUJjVVAyQXc)| 0
+resnet269-v2| 77.31| 93.64| [caffemodel (77.3  MB)](https://drive.google.com/open?id=0B7ubpZO7HnlCV3pud2oyR3lNMWs)| 0
+inception-v3| 77.64| 93.79| [caffemodel (110 MB)](https://drive.google.com/open?id=0B7ubpZO7HnlCa0phRGJIRERoTXM)| 0
+inception-resnet-v2| 77.64| 93.79| [caffemodel (110 MB)](https://drive.google.com/open?id=0B7ubpZO7HnlCa0phRGJIRERoTXM)| 0
 

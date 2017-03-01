@@ -1,5 +1,6 @@
 # Classificaiton (imagenet)
 
+
 ### Introduction
 This folder contains the deploy files(include generator scripts) and caffe models(coming soon) of resnet-v1, resnet-v2, inception-v3, inception-resnet-v2, densenet(coming soon).
 
@@ -8,7 +9,7 @@ We didn't train any model from scratch, some of them are converted from other de
 The main contribution belongs to the authors and model trainers.
 
 ### Performance on imagenet
-Top-1/Top-5 of pre-train models in this repository.
+0. Top-1/Top-5 of pre-train models in this repository.
 
 Network|224/299(single-crop)|224/299(12-crop)|320/331(single-crop)|320/331(12-crop)
 :---:|:---:|:---:|:---:|:---:
@@ -22,6 +23,7 @@ inception-resnet-v2| 79.6/94.9 | 80.7/95.6 | 80.5/95.5 | --
 - 224x224(short_size=256) and 320x320 crop size for resnet-v2, 299x299(short_size=320) and 331x331 crop size for inception.
 - The models are uploading, please wait.
 - -- means that I have not done this test yet.
+
 
 ### Check the performance
 0. Download the ILSVRC 2012 classification val set [6.3GB](http://www.image-net.org/challenges/LSVRC/2012/nnoupb/ILSVRC2012_img_val.tar), and put the extracted images into the directory:

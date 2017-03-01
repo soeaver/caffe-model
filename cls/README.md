@@ -32,8 +32,14 @@ inception-resnet-v2| 79.6/94.9 | 80.7/95.6 | 80.5/95.5 | --
 0. Chech the resnet-v2 (101, 152 and 269) performance, You need change the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):
    
     ```
-    val_file = 'ILSVRC2012_val.txt'
-    model_weights = 'resnet-v2/resnet101_v2.caffemodel'
-    
+    val_file = 'ILSVRC2012_val.txt' # download from this folder
+    ... ...
+    model_weights = 'resnet-v2/resnet101_v2.caffemodel' # download as below
+    model_deploy = 'resnet-v2/deploy_resnet101_v2.prototxt' # check the parameters of input_shape
+    ... ...
+    class_num = 1000
+    ... ...
+    raw_scale = 1.0
+    mean_value = np.array([128, 128, 128])
     ```
 

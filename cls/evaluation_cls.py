@@ -18,9 +18,12 @@ prob_layer = 'prob'
 class_num = 1000
 base_size = 256 # short size
 crop_size = 224
-mean_value = np.array([128.0, 128.0, 128.0])  # BGR
+# mean_value = np.array([128.0, 128.0, 128.0])  # BGR
+mean_value = np.array([102.9801, 115.9465, 122.7717])  # BGR
+# std = np.array([128.0, 128.0, 128.0])  # BGR
 std = np.array([1.0, 1.0, 1.0])  # BGR
 crop_num = 1  # 1 and others for center(single)-crop, 12 for mirror(12)-crop, 144 for multi(144)-crop
+batch_size = 72
 top_k = (1, 5)
 
 if gpu_mode:
@@ -47,9 +50,9 @@ def eval_batch():
     start_time = datetime.datetime.now()
     for i in xrange(eval_len - skip_num):
         _img = cv2.imread(data_root + eval_images[i + skip_num])
-        _img =  cv2.resize(_img, (int(_img.shape[1] * base_size / min(_img.shape[:2])),
-                                  int(_img.shape[0] * base_size / min(_img.shape[:2])))
-                           )
+        _img = cv2.resize(_img, (int(_img.shape[1] * base_size / min(_img.shape[:2])),
+                                 int(_img.shape[0] * base_size / min(_img.shape[:2])))
+                          )
         _img = image_preprocess(_img)
 
         score_vec = np.zeros(class_num, dtype=np.float32)
@@ -63,9 +66,10 @@ def eval_batch():
         else:
             crops.append(center_crop(_img))
 
-        for j in crops:
-            score_vec += caffe_process(j)
-        score_index = (-score_vec).argsort()
+        iter_num = int(len(crops) / batch_size)
+        for j in xrange(iter_num):
+            score_vec += caffe_process(np.asarray(crops, dtype=np.float32)[j*batch_size:(j+1)*batch_size])
+        score_index = (-score_vec / len(crops)).argsort()
 
         print 'Testing image: ' + str(i + 1) + '/' + str(eval_len - skip_num) + '  ' + str(score_index[0]) + '/' + str(
             ground_truth[i + skip_num]),
@@ -132,7 +136,7 @@ def multi_crop(img):  # 144(12*12) crops
     crop_list = []
     size_list = [256, 288, 320, 352]  # crop_size: 224
     # size_list = [270, 300, 330, 360]  # crop_size: 235
-    # size_list = [348, 384, 420, 456]  # crop_size: 299
+    # size_list = [320, 352, 384, 416]  # crop_size: 299
     # size_list = [352, 384, 416, 448]  # crop_size: 320
     short_edge = min(img.shape[:2])
     for i in size_list:
@@ -148,15 +152,12 @@ def multi_crop(img):  # 144(12*12) crops
 
 
 def caffe_process(_input):
-    _input = np.asarray(_input, dtype=np.float32)
-    _input = _input.transpose(2, 0, 1)
-    _input = _input.reshape((1,) + _input.shape)
+    _input = _input.transpose(0, 3, 1, 2)
     net.blobs['data'].reshape(*_input.shape)
     net.blobs['data'].data[...] = _input
     net.forward()
-    _score = net.blobs[prob_layer].data[0]
 
-    return _score
+    return np.sum(net.blobs[prob_layer].data, axis=0)
 
 
 if __name__ == '__main__':

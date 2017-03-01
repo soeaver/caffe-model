@@ -9,15 +9,15 @@ We didn't train any model from scratch, some of them are converted from other de
 The main contribution belongs to the authors and model trainers.
 
 ### Performance on imagenet
-1.Top-1/Top-5 of pre-train models in this repository.
+0. Top-1/Top-5 of pre-train models in this repository.
 
-Network|224/299(single-crop)|224/299(12-crop)|320/331(single-crop)|320/331(12-crop)
-:---:|:---:|:---:|:---:|:---:
-resnet101-v2| 78.05/93.88 | 79.2/94.6 | 79.6/94.9 | 80.4/95.4 
-resnet152-v2| 79.15/94.58 | -- | -- | -- 
-resnet269-v2| 79.1/94.4 | 80.5/95.2 | **81.1/95.7** | -- 
-inception-v3| 77.6/93.9 | 79.0/94.6 | 78.6/94.4 | 79.9/95.1 
-inception-resnet-v2| 79.6/94.9 | 80.7/95.6 | 80.5/95.5 | -- 
+ Network|224/299(single-crop)|224/299(12-crop)|320/331(single-crop)|320/331(12-crop)
+ :---:|:---:|:---:|:---:|:---:
+ resnet101-v2| 78.05/93.88 | 79.2/94.6 | 79.6/94.9 | 80.4/95.4 
+ resnet152-v2| 79.15/94.58 | -- | -- | -- 
+ resnet269-v2| 79.1/94.4 | 80.5/95.2 | **81.1/95.7** | -- 
+ inception-v3| 77.6/93.9 | 79.0/94.6 | 78.6/94.4 | 79.9/95.1 
+ inception-resnet-v2| 79.6/94.9 | 80.7/95.6 | 80.5/95.5 | -- 
 
 - All the pre-train models are tested on origial [caffe](https://github.com/BVLC/caffe) by [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py).
 - 224x224(short_size=256) and 320x320 crop size for resnet-v2, 299x299(short_size=320) and 331x331 crop size for inception.

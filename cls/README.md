@@ -44,7 +44,7 @@ inception-resnet-v2| 79.6/94.9 | 80.7/95.6 | 80.5/95.5 | --
     crop_num = 1    # perform center(single)-crop
     ```
 
-0. Check the inception-v3 performance, the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):
+    Check the inception-v3 performance, the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):
    
     ```
     val_file = 'ILSVRC2015_val.txt' # download from this folder, label range 1~1000

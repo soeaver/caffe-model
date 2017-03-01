@@ -9,8 +9,8 @@ import datetime
 
 gpu_mode = True
 gpu_id = 0
-data_root = '~/Database/ILSVRC2016'
-val_file = 'ilsvrc/ILSVRC2015_val.txt'
+data_root = '~/Database/ILSVRC2012'
+val_file = 'ILSVRC2015_val.txt'
 save_log = 'log{}.txt'.format(datetime.datetime.now().strftime('%Y%m%d%H%M%S'))
 model_weights = 'inception_v3/inception_v3.caffemodel'
 model_deploy = 'inception_v3/deploy_inception_v3.prototxt'

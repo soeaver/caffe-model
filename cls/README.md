@@ -49,8 +49,6 @@ The main contribution belongs to the authors and model trainers.
     model_weights = 'resnet-v2/resnet101_v2.caffemodel' # download as below
     model_deploy = 'resnet-v2/deploy_resnet101_v2.prototxt' # check the parameters of input_shape
     ... ...
-    class_num = 1000
-    ... ...
     mean_value = np.array([102.9801, 115.9465, 122.7717])  # BGR
     std = np.array([1.0, 1.0, 1.0])  # BGR
     crop_num = 1    # perform center(single)-crop
@@ -59,17 +57,27 @@ The main contribution belongs to the authors and model trainers.
     Check the inception-v3 performance, the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):
    
     ```
-    val_file = 'ILSVRC2015_val.txt' # download from this folder, label range 1~1000
+    val_file = 'ILSVRC2015_val.txt' # download from this folder, label range 0~999
     ... ...
     model_weights = 'inception_v3/inception_v3.caffemodel' # download as below
     model_deploy = 'inception_v3/deploy_inception_v3.prototxt' # check the parameters of input_shape
-    ... ...
-    class_num = 1008
     ... ...
     mean_value = np.array([128.0, 128.0, 128.0])  # BGR
     std = np.array([128.0, 128.0, 128.0])  # BGR
     crop_num = 1    # perform center(single)-crop
     ```
+    
+    Check the inception-resnet-v2 performance, the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):
+   
+    ```
+    val_file = 'ILSVRC2012_val.txt' # download from this folder, label range 0~999
+    ... ...
+    model_weights = 'inception_resnet_v2/inception_resnet_v2.caffemodel' # download as below
+    model_deploy = 'inception_resnet_v2/deploy_inception_resnet_v2.prototxt' # check the parameters of input_shape
+    ... ...
+    mean_value = np.array([128.0, 128.0, 128.0])  # BGR
+    std = np.array([128.0, 128.0, 128.0])  # BGR
+    crop_num = 1    # perform center(single)-crop
     
 0. then
     ```

@@ -25,14 +25,13 @@ inception-resnet-v2| 79.6/94.9 | 80.7/95.6 | 80.5/95.5 | --
 
 ### Check the performance
 0. Download the ILSVRC 2012 classification val set [6.3GB](http://www.image-net.org/challenges/LSVRC/2012/nnoupb/ILSVRC2012_img_val.tar), and put the extracted images into the directory:
-
     ```
     ~/Database/ILSVRC2012
     ```
 0. Chech the resnet-v2 (101, 152 and 269) performance, You need change the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):
    
     ```
-    val_file = 'ILSVRC2012_val.txt' # download from this folder
+    val_file = 'ILSVRC2012_val.txt' # download from this folder, label range 0~999
     ... ...
     model_weights = 'resnet-v2/resnet101_v2.caffemodel' # download as below
     model_deploy = 'resnet-v2/deploy_resnet101_v2.prototxt' # check the parameters of input_shape
@@ -42,4 +41,7 @@ inception-resnet-v2| 79.6/94.9 | 80.7/95.6 | 80.5/95.5 | --
     raw_scale = 1.0
     mean_value = np.array([128, 128, 128])
     ```
-
+    then
+    ```
+    python evaluation_cls.py
+    ```

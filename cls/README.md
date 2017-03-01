@@ -22,7 +22,7 @@ The main contribution belongs to the authors and model trainers.
  - All the pre-train models are tested on origial [caffe](https://github.com/BVLC/caffe) by [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py).
  - 224x224(short_size=256) and 320x320 crop size for resnet-v2, 299x299(short_size=320) and 331x331 crop size for inception.
  - The models are uploading, please wait.
- - -- means that I have not done this test yet.
+ - -- means that we have not done this test yet.
  
 0. Forward time cost for each model.
 

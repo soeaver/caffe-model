@@ -1,7 +1,6 @@
 import sys
 
-# sys.path.append('/home/prmct/workspace/caffe-master-0116/python')
-sys.path.append('/home/prmct/workspace/PSPNet-0120/python')
+sys.path.append('~/caffe-master/python')
 
 import numpy as np
 import caffe
@@ -10,11 +9,11 @@ import datetime
 
 gpu_mode = True
 gpu_id = 0
-data_root = '/home/prmct/Database/ILSVRC2016'
+data_root = '~/Database/ILSVRC2016'
 val_file = 'ilsvrc/ILSVRC2015_val.txt'
 save_log = 'log{}.txt'.format(datetime.datetime.now().strftime('%Y%m%d%H%M%S'))
-model_weights = 'ilsvrc/inception_v3/inception_v3_pspBN.caffemodel'
-model_deploy = 'ilsvrc/inception_v3/deploy_inception_v3_pspBN.prototxt'
+model_weights = 'inception_v3/inception_v3.caffemodel'
+model_deploy = 'inception_v3/deploy_inception_v3.prototxt'
 prob_layer = 'prob'
 class_num = 1008
 base_size = 320

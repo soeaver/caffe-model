@@ -1,6 +1,6 @@
 import sys
 
-sys.path.append('~/caffe-master/python')
+sys.path.append('~/caffe-master-0116/python')
 
 import numpy as np
 import caffe
@@ -8,21 +8,20 @@ import cv2
 import datetime
 
 gpu_mode = True
-gpu_id = 0
+gpu_id = 3
 data_root = '~/Database/ILSVRC2012'
-val_file = 'ILSVRC2015_val.txt'
+val_file = 'ILSVRC2012_val.txt'
 save_log = 'log{}.txt'.format(datetime.datetime.now().strftime('%Y%m%d%H%M%S'))
-model_weights = 'inception_v3/inception_v3.caffemodel'
-model_deploy = 'inception_v3/deploy_inception_v3.prototxt'
+model_weights = 'resnet-v2/resnet101_v2.caffemodel'
+model_deploy = 'resnet-v2/deploy_resnet101_v2.prototxt'
 prob_layer = 'prob'
-class_num = 1008
-base_size = 320
-crop_size = 299
-raw_scale = 128.0
-mean_value = np.array([128, 128, 128])
+class_num = 1000
+base_size = 256 # short size
+crop_size = 224
+mean_value = np.array([128.0, 128.0, 128.0])  # BGR
+std = np.array([1.0, 1.0, 1.0])  # BGR
+crop_num = 1  # 1 and others for center(single)-crop, 12 for mirror(12)-crop, 144 for multi(144)-crop
 top_k = (1, 5)
-class_offset = 0
-crop_num = 1  # 1 and others for single-crop, 12 for 12-crop, 144 for 144-crop
 
 if gpu_mode:
     caffe.set_mode_gpu()
@@ -48,17 +47,21 @@ def eval_batch():
     start_time = datetime.datetime.now()
     for i in xrange(eval_len - skip_num):
         _img = cv2.imread(data_root + eval_images[i + skip_num])
+        _img =  cv2.resize(_img, (int(_img.shape[1] * base_size / min(_img.shape[:2])),
+                                  int(_img.shape[0] * base_size / min(_img.shape[:2])))
+                           )
+        _img = image_preprocess(_img)
 
         score_vec = np.zeros(class_num, dtype=np.float32)
         crops = []
         if crop_num == 1:
-            crops.append(cv2.resize(_img, (crop_size, crop_size)))
+            crops.append(center_crop(_img))
         elif crop_num == 12:
             crops.extend(mirror_crop(_img))
         elif crop_num == 144:
             crops.extend(multi_crop(_img))
         else:
-            crops.append(cv2.resize(_img, (crop_size, crop_size)))
+            crops.append(center_crop(_img))
 
         for j in crops:
             score_vec += caffe_process(j)
@@ -78,8 +81,8 @@ def eval_batch():
     end_time = datetime.datetime.now()
     w = open(save_log, 'w')
     s1 = 'Evaluation process ends at: {}. \nTime cost is: {}. '.format(str(end_time), str(end_time - start_time))
-    s2 = '\nThe model is: {}. \nThe val file is: {}. \n{} images has been tested, crop_num is: {}, crop_size is: {}.'\
-        .format(model_weights, val_file, str(eval_len), str(crop_num), str(crop_size))
+    s2 = '\nThe model is: {}. \nThe val file is: {}. \n{} images has been tested, crop_num is: {}, base_size is: {}, ' \
+         'crop_size is: {}.'.format(model_weights, val_file, str(eval_len), str(crop_num), str(base_size), str(crop_size))
     s3 = '\nThe mean value is: ({}, {}, {}).'.format(str(mean_value[0]), str(mean_value[1]), str(mean_value[2]))
     s4 = ''
     for i in xrange(len(top_k)):
@@ -88,6 +91,20 @@ def eval_batch():
     print s1, s2, s3, s4
     w.write(s1 + s2 + s3 + s4)
     w.close()
+
+
+def image_preprocess(img):
+    b, g, r = cv2.split(img)
+    return cv2.merge([(b-mean_value[0])/std[0], (g-mean_value[1])/std[1], (r-mean_value[2])/std[2]])
+
+
+def center_crop(img): # single crop
+    short_edge = min(img.shape[:2])
+    if short_edge < crop_size:
+        return
+    yy = int((img.shape[0] - crop_size) / 2)
+    xx = int((img.shape[1] - crop_size) / 2)
+    return img[yy: yy + crop_size, xx: xx + crop_size]
 
 
 def over_sample(img):  # 12 crops of image
@@ -132,11 +149,10 @@ def multi_crop(img):  # 144(12*12) crops
 
 def caffe_process(_input):
     _input = np.asarray(_input, dtype=np.float32)
-    _input -= mean_value
     _input = _input.transpose(2, 0, 1)
     _input = _input.reshape((1,) + _input.shape)
     net.blobs['data'].reshape(*_input.shape)
-    net.blobs['data'].data[...] = _input / raw_scale
+    net.blobs['data'].data[...] = _input
     net.forward()
     _score = net.blobs[prob_layer].data[0]
 

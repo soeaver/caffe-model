@@ -29,10 +29,11 @@ inception-resnet-v2| 79.6/94.9 | 80.7/95.6 | 80.5/95.5 | --
     ```
     ~/Database/ILSVRC2012
     ```
-0. Chech the resnet-v2 performance:
-   You need change the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):
+0. Chech the resnet-v2 (101, 152 and 269) performance, You need change the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):
    
     ```
-    ~/Database/ILSVRC2012
+    val_file = 'ILSVRC2012_val.txt'
+    model_weights = 'resnet-v2/resnet101_v2.caffemodel'
+    
     ```
 

@@ -24,12 +24,14 @@ The main contribution belongs to the authors and model trainers.
  - The models are uploading, please wait.
  - -- means that I have not done this test yet.
  
-0. Forward time and memory cost for each model. 
- Testing (just forward) speeds are evaluated with one image/mini-batch using cuDNN 5.1 on a Pascal Titan X GPU.
+0. Forward time cost for each model.
 
- Network|224/299(single-crop)|320/331(single-crop)
+ Forward time cost is evaluated with one image/mini-batch using cuDNN 5.1 on a Pascal Titan X GPU.
+
+ Network|224/299|320/331
  :---:|:---:|:---:
- resnet101-v2| 58ms | --  
+ resnet101-v2| 58.0ms | --
+ resnet152-v2| 84.6ms | --
 
 ### Check the performance
 0. Download the ILSVRC 2012 classification val set [6.3GB](http://www.image-net.org/challenges/LSVRC/2012/nnoupb/ILSVRC2012_img_val.tar), and put the extracted images into the directory:

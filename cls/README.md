@@ -9,7 +9,7 @@ We didn't train any model from scratch, some of them are converted from other de
 The main contribution belongs to the authors and model trainers.
 
 ### Performance on imagenet
-0. Top-1/Top-5 of pre-train models in this repository.
+1.Top-1/Top-5 of pre-train models in this repository.
 
 Network|224/299(single-crop)|224/299(12-crop)|320/331(single-crop)|320/331(12-crop)
 :---:|:---:|:---:|:---:|:---:

@@ -28,6 +28,7 @@ inception-resnet-v2| 79.6/94.9 | 80.7/95.6 | 80.5/95.5 | --
     ```
     ~/Database/ILSVRC2012
     ```
+
 0. Check the resnet-v2 (101, 152 and 269) performance, You need change the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):
    
     ```
@@ -39,6 +40,26 @@ inception-resnet-v2| 79.6/94.9 | 80.7/95.6 | 80.5/95.5 | --
     class_num = 1000
     ... ...
     mean_value = np.array([128.0, 128.0, 128.0])  # BGR
+    std = np.array([1.0, 1.0, 1.0])  # BGR
+    crop_num = 1    # perform center(single)-crop
+    ```
+    then
+    ```
+    python evaluation_cls.py
+    ```
+
+0. Check the inception-v3 (101, 152 and 269) performance, You need change the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):
+   
+    ```
+    val_file = 'ILSVRC2015_val.txt' # download from this folder, label range 1~1000
+    ... ...
+    model_weights = 'inception_v3/inception_v3.caffemodel' # download as below
+    model_deploy = 'inception_v3/deploy_inception_v3.prototxt' # check the parameters of input_shape
+    ... ...
+    class_num = 1008
+    ... ...
+    mean_value = np.array([128.0, 128.0, 128.0])  # BGR
+    std = np.array([128.0, 128.0, 128.0])  # BGR
     std = np.array([1.0, 1.0, 1.0])  # BGR
     crop_num = 1    # perform center(single)-crop
     ```

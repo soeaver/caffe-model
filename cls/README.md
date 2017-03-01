@@ -17,7 +17,7 @@ The main contribution belongs to the authors and model trainers.
  resnet152-v2| 79.15/94.58 | -- | -- | -- 
  resnet269-v2| 80.29/95.00 | 80.5/95.2 | **81.1/95.7** | -- 
  inception-v3| 78.33/94.25 | 79.0/94.6 | 78.6/94.4 | 79.9/95.1 
- inception-resnet-v2| 79.6/94.9 | 80.7/95.6 | 80.5/95.5 | -- 
+ inception-resnet-v2| 80.14/95.17 | 80.7/95.6 | 80.5/95.5 | -- 
 
  - All the pre-train models are tested on origial [caffe](https://github.com/BVLC/caffe) by [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py).
  - 224x224(short_size=256) and 320x320 crop size for resnet-v2, 299x299(short_size=320) and 331x331 crop size for inception.
@@ -34,6 +34,7 @@ The main contribution belongs to the authors and model trainers.
  resnet152-v2| 84.6ms | --
  resnet269-v2| 146.9ms | --
  inception-v3| 58.3ms | --
+ inception-resnet-v2| 127.1ms | --
 
 ### Check the performance
 0. Download the ILSVRC 2012 classification val set [6.3GB](http://www.image-net.org/challenges/LSVRC/2012/nnoupb/ILSVRC2012_img_val.tar), and put the extracted images into the directory:

@@ -11,7 +11,7 @@ The main contribution belongs to the authors and model trainers.
 
 Top-5 of pre-train models in this repository.
 
-Network|Top-1|Top-5|Download|
+Network|224/299(single-crop)|224/299(12-crop)|Download|
 :---:|:---:|:---:|:---:
 resnet101-v2| 74.91| 92.19| [caffemodel (30.8  MB)](https://drive.google.com/open?id=0B7ubpZO7HnlCcHlfNmJkU2VPelE)
 resnet152-v2| 76.09| 93.14| [caffemodel (54.6  MB)](https://drive.google.com/open?id=0B7ubpZO7HnlCRWVVdUJjVVAyQXc)

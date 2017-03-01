@@ -8,7 +8,7 @@ import cv2
 import datetime
 
 gpu_mode = True
-gpu_id = 3
+gpu_id = 0
 data_root = '~/Database/ILSVRC2012'
 val_file = 'ILSVRC2012_val.txt'
 save_log = 'log{}.txt'.format(datetime.datetime.now().strftime('%Y%m%d%H%M%S'))

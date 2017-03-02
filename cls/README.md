@@ -16,7 +16,7 @@ The main contribution belongs to the authors and model trainers.
  resnet101-v2| 78.05/93.88 | 79.2/94.6 | 79.63/94.84 | 80.4/95.4 
  resnet152-v2| 79.15/94.58 | -- | 80.34/95.26 | -- 
  resnet269-v2| **80.29**/95.00 | 80.5/95.2 | **81.30/95.67** | -- 
- inception-v3| 78.33/94.25 | 78.86/94.54 | 78.6/94.4 | 79.9/95.1 
+ inception-v3| 78.33/94.25 | 78.86/94.54 | 79.20/94.74 | 79.9/95.1 
  inception-resnet-v2| 80.14/**95.17** | 80.7/95.6 | 80.5/95.5 | -- 
 
  - All the pre-train models are tested on origial [caffe](https://github.com/BVLC/caffe) by [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py).
@@ -33,7 +33,7 @@ The main contribution belongs to the authors and model trainers.
  resnet101-v2| 58.0ms | 69.1ms
  resnet152-v2| 84.6ms | 100.8ms
  resnet269-v2| 146.9ms | 173.2ms
- inception-v3| 58.3ms | --
+ inception-v3| 58.3ms | 67.8ms
  inception-resnet-v2| 127.1ms | --
 
 ### Check the performance

@@ -31,8 +31,8 @@ The main contribution belongs to the authors and model trainers.
  Network|224/299|320/331
  :---:|:---:|:---:
  resnet101-v2| 58.0ms | 69.1ms
- resnet152-v2| 84.6ms | --
- resnet269-v2| 146.9ms | --
+ resnet152-v2| 84.6ms | 167.8ms
+ resnet269-v2| 146.9ms | 230.8ms
  inception-v3| 58.3ms | --
  inception-resnet-v2| 127.1ms | --
 

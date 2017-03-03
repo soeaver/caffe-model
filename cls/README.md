@@ -23,9 +23,9 @@ The main contribution belongs to the authors and model trainers.
  - 224x224(base_size=256) and 320x320(base_size=320) crop size for resnet-v2, 299x299(base_size=320) and 331x331(base_size=331) crop size for inception.
  - The models are uploading, please wait.
 
-0. Top-1/5 accuracy of different crop_sizes.
+0. Top-1/5 accuracy with different crop sizes.
 ![teaser](https://github.com/soeaver/caffe-model/blob/master/cls/accuracy.png)
-
+### Figure: Accuracy curves of inception_v3(left) and resnet101_v2(right) with different crop sizes.
 
 0. Forward time cost for each model.
 

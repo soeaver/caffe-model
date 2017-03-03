@@ -25,7 +25,7 @@ The main contribution belongs to the authors and model trainers.
 
 0. Top-1/5 accuracy with different crop sizes.
 ![teaser](https://github.com/soeaver/caffe-model/blob/master/cls/accuracy.png)
-           Figure: Accuracy curves of inception_v3(left) and resnet101_v2(right) with different crop sizes.
+ - Figure: Accuracy curves of inception_v3(left) and resnet101_v2(right) with different crop sizes.
 
 0. Forward time cost for each model.
 

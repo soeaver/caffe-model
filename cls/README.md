@@ -15,9 +15,9 @@ The main contribution belongs to the authors and model trainers.
  :---:|:---:|:---:|:---:|:---:
  resnet101-v2| 78.05/93.88 | 80.01/94.96 | 79.63/94.84 | 80.71/95.43
  resnet152-v2| 79.15/94.58 | 80.76/95.32 | 80.34/95.26 | 81.16/95.68 
- resnet269-v2| **80.29**/95.00 | **81.75**/95.80 | **81.30/95.67** | -- 
+ resnet269-v2| **80.29**/95.00 | **81.75**/95.80 | **81.30/95.67** | **82.13**/96.15 
  inception-v3| 78.33/94.25 | 80.40/95.27 | 79.20/94.74 | 80.78/95.60 
- inception-resnet-v2| 80.14/**95.17** | 81.54/**95.92** | 80.75/95.61 | 81.90/96.19 
+ inception-resnet-v2| 80.14/**95.17** | 81.54/**95.92** | 80.75/95.61 | 81.90/**96.19**
 
  - All the pre-train models are tested on original [caffe](https://github.com/BVLC/caffe) by [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py).
  - 224x224(base_size=256) and 320x320(base_size=320) crop size for resnet-v2, 299x299(base_size=320) and 331x331(base_size=331) crop size for inception.

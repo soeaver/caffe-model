@@ -31,13 +31,13 @@ The main contribution belongs to the authors and model trainers.
 
  Forward time cost is evaluated with one image/mini-batch using cuDNN 5.1 on a Pascal Titan X GPU.
 
- Network|224/299|320/331
- :---:|:---:|:---:
- resnet101-v2| 58.0ms | 69.1ms
- resnet152-v2| 84.6ms | 100.8ms
- resnet269-v2| 146.9ms | 173.2ms
- inception-v3| 58.3ms | 67.8ms
- inception-resnet-v2| 127.1ms | 152.4ms
+ Network|224/299|320/395|Download(BaiDuYun)
+ :---:|:---:|:---:|:---:
+ resnet101-v2| 58.0ms | 69.1ms | [caffemodel (170.3MB)](https://pan.baidu.com/s/1kVQDHFx#list/path=%2Fresnet101_v2)
+ resnet152-v2| 84.6ms | 100.8ms |
+ resnet269-v2| 146.9ms | 173.2ms |
+ inception-v3| 58.3ms | 82.8ms |
+ inception-resnet-v2| 127.1ms | 172.4ms |
 
 ### Check the performance
 0. Download the ILSVRC 2012 classification val set [6.3GB](http://www.image-net.org/challenges/LSVRC/2012/nnoupb/ILSVRC2012_img_val.tar), and put the extracted images into the directory:

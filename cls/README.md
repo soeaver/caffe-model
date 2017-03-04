@@ -2,7 +2,7 @@
 
 
 ### Introduction
-This folder contains the deploy files(include generator scripts) and pre-train models(coming soon) of resnet-v1, resnet-v2, inception-v3, inception-resnet-v2 and densenet(coming soon).
+This folder contains the deploy files(include generator scripts) and pre-train models of resnet-v1, resnet-v2, inception-v3, inception-resnet-v2 and densenet(coming soon).
 
 We didn't train any model from scratch, some of them are converted from other deep learning framworks (inception-v3 from [mxnet](https://github.com/dmlc/mxnet-model-gallery/blob/master/imagenet-1k-inception-v3.md), inception-resnet-v2 from [tensorflow](https://github.com/tensorflow/models/blob/master/slim/nets/inception_resnet_v2.py)), some of them are converted from other modified caffe ([resnet-v2](https://github.com/yjxiong/caffe/tree/mem)). But to achieve the original performance, finetuning is performed on imagenet for several epochs. 
 
@@ -21,7 +21,6 @@ The main contribution belongs to the authors and model trainers.
 
  - All the pre-train models are tested on original [caffe](https://github.com/BVLC/caffe) by [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py).
  - 224x224(base_size=256) and 320x320(base_size=320) crop size for resnet-v2, 299x299(base_size=320) and 395x395(base_size=395) crop size for inception.
- - The models are uploading, please wait.
 
 0. Top-1/5 accuracy with different crop sizes.
 ![teaser](https://github.com/soeaver/caffe-model/blob/master/cls/accuracy.png)

@@ -16,7 +16,7 @@ The main contribution belongs to the authors and model trainers.
  resnet101-v2| 78.05/93.88 | 80.01/94.96 | 79.63/94.84 | 80.71/95.43
  resnet152-v2| 79.15/94.58 | 80.76/95.32 | 80.34/95.26 | 81.16/95.68 
  resnet269-v2| **80.29**/95.00 | **81.75**/95.80 | **81.3**0/95.67 | **82.13**/96.15 
- inception-v3| 78.33/94.25 | 80.40/95.27 | 79.20/94.74 | 80.75/95.76 
+ inception-v3| 78.33/94.25 | 80.40/95.27 | 79.90/95.18 | 80.75/95.76 
  inception-resnet-v2| 80.14/**95.17** | 81.54/**95.92** | 81.25/**95.98** | 81.85/**96.29**
 
  - All the pre-train models are tested on original [caffe](https://github.com/BVLC/caffe) by [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py).

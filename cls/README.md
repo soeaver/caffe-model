@@ -27,17 +27,17 @@ The main contribution belongs to the authors and model trainers.
 ![teaser](https://github.com/soeaver/caffe-model/blob/master/cls/accuracy.png)
  - Figure: Accuracy curves of inception_v3(left) and resnet101_v2(right) with different crop sizes.
 
-0. Forward time cost for each model.
+0. **Download url** and forward time cost for each model.
 
  Forward time cost is evaluated with one image/mini-batch using cuDNN 5.1 on a Pascal Titan X GPU.
 
  Network|224/299|320/395|Download(BaiDuYun)
  :---:|:---:|:---:|:---:
- resnet101-v2| 58.0ms | 69.1ms | [caffemodel (170.3MB)](https://pan.baidu.com/s/1kVQDHFx#list/path=%2Fresnet101_v2)
- resnet152-v2| 84.6ms | 100.8ms |
- resnet269-v2| 146.9ms | 173.2ms |
- inception-v3| 58.3ms | 82.8ms |
- inception-resnet-v2| 127.1ms | 172.4ms |
+ resnet101-v2| 58.0ms | 69.1ms | [caffemodel (170.3MB)](https://pan.baidu.com/s/1kVQDHFx)
+ resnet152-v2| 84.6ms | 100.8ms | [caffemodel (230.2MB)](https://pan.baidu.com/s/1dFIc4vB)
+ resnet269-v2| 146.9ms | 173.2ms | [caffemodel (390.4MB)](https://pan.baidu.com/s/1qYbICs0)
+ inception-v3| 58.3ms | 82.8ms | [caffemodel (91.1MB)](https://pan.baidu.com/s/1boC0HEf)
+ inception-resnet-v2| 127.1ms | 172.4ms | [caffemodel (213.4MB)](https://pan.baidu.com/s/1jHPJCX4)
 
 ### Check the performance
 0. Download the ILSVRC 2012 classification val set [6.3GB](http://www.image-net.org/challenges/LSVRC/2012/nnoupb/ILSVRC2012_img_val.tar), and put the extracted images into the directory:

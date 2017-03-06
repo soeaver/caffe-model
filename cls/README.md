@@ -41,6 +41,7 @@ The main contribution belongs to the authors and model trainers.
  resnet152-v2| 84.6ms | 100.8ms | [caffemodel (230.2MB)](https://pan.baidu.com/s/1dFIc4vB)
  resnet269-v2| 146.9ms | 173.2ms | [caffemodel (390.4MB)](https://pan.baidu.com/s/1qYbICs0)
  inception-v3| 58.3ms | 82.8ms | [caffemodel (91.1MB)](https://pan.baidu.com/s/1boC0HEf)
+ inception-v4| 92.9ms | --ms | [caffemodel (91.1MB)]
  inception-resnet-v2| 127.1ms | 172.4ms | [caffemodel (213.4MB)](https://pan.baidu.com/s/1jHPJCX4)
 
 ### Check the performance

@@ -35,17 +35,17 @@ The main contribution belongs to the authors and model trainers.
 
  Forward time cost is evaluated with one image/mini-batch using cuDNN 5.1 on a Pascal Titan X GPU.
 
- Network|224/299|320/395|Download(BaiDuYun)
+ Network|224/299|320/395|Download(BaiDuCloud)
  :---:|:---:|:---:|:---:
- resnet101-v2| 58.0ms | 69.1ms | [caffemodel (170.3MB)](https://pan.baidu.com/s/1kVQDHFx)
- resnet152-v2| 84.6ms | 100.8ms | [caffemodel (230.2MB)](https://pan.baidu.com/s/1dFIc4vB)
- resnet269-v2| 146.9ms | 173.2ms | [caffemodel (390.4MB)](https://pan.baidu.com/s/1qYbICs0)
+ resnet101-v2| 55.7ms | 60.2ms | [caffemodel (170.3MB)](https://pan.baidu.com/s/1kVQDHFx)
+ resnet152-v2| 82.8ms | 89.1ms | [caffemodel (230.2MB)](https://pan.baidu.com/s/1dFIc4vB)
+ resnet269-v2| 144.3ms | 154.8ms | [caffemodel (390.4MB)](https://pan.baidu.com/s/1qYbICs0)
  inception-v3| 56.2ms | 60.4ms | [caffemodel (91.1MB)](https://pan.baidu.com/s/1boC0HEf)
  inception-v4| 91.9ms | 96.2ms | [caffemodel (91.1MB)]
  inception-resnet-v2| 127.1ms | 133.6ms | [caffemodel (213.4MB)](https://pan.baidu.com/s/1jHPJCX4)
  resnext50_32x4d| 37.0ms | 41.2ms | [caffemodel (91.1MB)]
  resnext101_32x4d| 69.4ms | 74.4ms | [caffemodel (91.1MB)]
- resnext101_64x4d| --ms | 87.6ms | [caffemodel (91.1MB)]
+ resnext101_64x4d| 79.1ms | 87.6ms | [caffemodel (91.1MB)]
  wrn50_2(resnet50_1x128d)| --ms | --ms | [caffemodel (91.1MB)]
 
 ### Check the performance

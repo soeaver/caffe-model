@@ -41,12 +41,12 @@ The main contribution belongs to the authors and model trainers.
  resnet152-v2| 82.8ms | 89.1ms | [caffemodel (230.2MB)](https://pan.baidu.com/s/1dFIc4vB)
  resnet269-v2| 144.3ms | 154.8ms | [caffemodel (390.4MB)](https://pan.baidu.com/s/1qYbICs0)
  inception-v3| 56.2ms | 60.4ms | [caffemodel (91.1MB)](https://pan.baidu.com/s/1boC0HEf)
- inception-v4| 91.9ms | 96.2ms | [caffemodel (91.1MB)]
+ inception-v4| 91.9ms | 96.2ms | [caffemodel (163.1MB)](https://pan.baidu.com/s/1c6D150)
  inception-resnet-v2| 127.1ms | 133.6ms | [caffemodel (213.4MB)](https://pan.baidu.com/s/1jHPJCX4)
- resnext50_32x4d| 37.0ms | 41.2ms | [caffemodel (91.1MB)]
- resnext101_32x4d| 69.4ms | 74.4ms | [caffemodel (91.1MB)]
- resnext101_64x4d| 79.1ms | 87.6ms | [caffemodel (91.1MB)]
- wrn50_2(resnet50_1x128d)| 33.4ms | 37.1ms | [caffemodel (91.1MB)]
+ resnext50_32x4d| 37.0ms | 41.2ms | [caffemodel (95.8MB)](https://pan.baidu.com/s/1kVqgfJL)
+ resnext101_32x4d| 69.4ms | 74.4ms | [caffemodel (169.1MB)](https://pan.baidu.com/s/1hswrNUG)
+ resnext101_64x4d| 79.1ms | 87.6ms | [caffemodel (319.2MB)](https://pan.baidu.com/s/1pLhk0Zp)
+ wrn50_2(resnet50_1x128d)| 33.4ms | 37.1ms | [caffemodel (263.1MB)](https://pan.baidu.com/s/1nvhoCsh)
 
 ### Check the performance
 0. Download the ILSVRC 2012 classification val set [6.3GB](http://www.image-net.org/challenges/LSVRC/2012/nnoupb/ILSVRC2012_img_val.tar), and put the extracted images into the directory:

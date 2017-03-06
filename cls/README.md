@@ -36,7 +36,7 @@ The main contribution belongs to the authors and model trainers.
  Forward time cost is evaluated with one image/mini-batch using cuDNN 5.1 on a Pascal Titan X GPU.
 
  Network|224/299|320/395|Download(BaiDuCloud)|Source
- :---:|:---:|:---:|:---:
+ :---:|:---:|:---:|:---:|:---:
  resnet101-v2| 55.7ms | 60.2ms | [caffemodel (170.3MB)](https://pan.baidu.com/s/1kVQDHFx)|[craftGBD](https://github.com/craftGBD/craftGBD)
  resnet152-v2| 82.8ms | 89.1ms | [caffemodel (230.2MB)](https://pan.baidu.com/s/1dFIc4vB)|[craftGBD](https://github.com/craftGBD/craftGBD)
  resnet269-v2| 144.3ms | 154.8ms | [caffemodel (390.4MB)](https://pan.baidu.com/s/1qYbICs0)|[craftGBD](https://github.com/craftGBD/craftGBD)

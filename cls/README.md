@@ -24,7 +24,7 @@ The main contribution belongs to the authors and model trainers.
  resnext101_64x4d| 79.40/94.59 | 81.12/95.41 | 80.74/95.37 | 81.52/95.69
  wrn50_2(resnet50_1x128d)| 77.87/93.87 | 79.91/94.94 | 79.32/94.72 | 80.17/95.13
 
- - All the pre-train models are tested on original [caffe](https://github.com/BVLC/caffe) by [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py).
+ - The pre-train models are tested on original [caffe](https://github.com/BVLC/caffe) by [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py), **but ceil_mode:false is used for the models converted from torch, the detail in https://github.com/BVLC/caffe/pull/3057/files.**
  - 224x224(base_size=256) and 320x320(base_size=320) crop size for resnet-v2/resnext/wrn, 299x299(base_size=320) and 395x395(base_size=395) crop size for inception.
 
 0. Top-1/5 accuracy with different crop sizes.
@@ -93,7 +93,7 @@ The main contribution belongs to the authors and model trainers.
     crop_num = 1    # perform center(single)-crop
     ```
     
-    Check the resnext (50_32x4d, 101_32x4d and 101_64x4d) or wrn50_2 performance, the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):
+    Check the resnext (50_32x4d, 101_32x4d and 101_64x4d) or wrn50_2 performance, the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):
    
     ```
     val_file = 'ILSVRC2012_val.txt' # download from this folder, label range 0~999

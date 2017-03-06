@@ -46,7 +46,7 @@ The main contribution belongs to the authors and model trainers.
  resnext50_32x4d| 37.0ms | 41.2ms | [caffemodel (91.1MB)]
  resnext101_32x4d| 69.4ms | 74.4ms | [caffemodel (91.1MB)]
  resnext101_64x4d| 79.1ms | 87.6ms | [caffemodel (91.1MB)]
- wrn50_2(resnet50_1x128d)| --ms | --ms | [caffemodel (91.1MB)]
+ wrn50_2(resnet50_1x128d)| 33.4ms | 37.1ms | [caffemodel (91.1MB)]
 
 ### Check the performance
 0. Download the ILSVRC 2012 classification val set [6.3GB](http://www.image-net.org/challenges/LSVRC/2012/nnoupb/ILSVRC2012_img_val.tar), and put the extracted images into the directory:

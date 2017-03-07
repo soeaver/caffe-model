@@ -31,7 +31,7 @@ The main contribution belongs to the authors and model trainers.
 ![teaser](https://github.com/soeaver/caffe-model/blob/master/cls/accuracy.png)
  - Figure: Accuracy curves of inception_v3(left) and resnet101_v2(right) with different crop sizes.
 
-0. **Download url** and forward time cost for each model.
+0. **Download url** and forward/backward time cost for each model.
 
  Forward/Backward time cost is evaluated with one image/mini-batch using cuDNN 5.1 on a Pascal Titan X GPU.
  
@@ -39,7 +39,7 @@ The main contribution belongs to the authors and model trainers.
   ```
     ~/caffe/build/tools/caffe -model deploy.prototxt time -gpu -iterations 1000
   ```
- to test the forward/backward tiem cost.
+ to test the forward/backward tiem cost, the result is really different with time cost of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py)
 
  Network|224/299|320/395|Download(BaiDuCloud)|Source
  :---:|:---:|:---:|:---:|:---:
@@ -47,7 +47,7 @@ The main contribution belongs to the authors and model trainers.
  resnet152-v2| 82.8ms | 89.1ms | [caffemodel (230.2MB)](https://pan.baidu.com/s/1dFIc4vB)|[craftGBD](https://github.com/craftGBD/craftGBD)
  resnet269-v2| 144.3ms | 154.8ms | [caffemodel (390.4MB)](https://pan.baidu.com/s/1qYbICs0)|[craftGBD](https://github.com/craftGBD/craftGBD)
  inception-v3| 56.2ms | 60.4ms | [caffemodel (91.1MB)](https://pan.baidu.com/s/1boC0HEf)|[mxnet](https://github.com/dmlc/mxnet-model-gallery/blob/master/imagenet-1k-inception-v3.md)
- inception-v4| 91.9ms | 96.2ms | [caffemodel (163.1MB)](https://pan.baidu.com/s/1c6D150)|[tensorflow_slim](https://github.com/tensorflow/models/tree/master/slim)
+ inception-v4| 32.96ms/32.19ms | 36.04ms/41.91ms | [caffemodel (163.1MB)](https://pan.baidu.com/s/1c6D150)|[tensorflow_slim](https://github.com/tensorflow/models/tree/master/slim)
  inception-resnet-v2| 127.1ms | 133.6ms | [caffemodel (213.4MB)](https://pan.baidu.com/s/1jHPJCX4)|[tensorflow_slim](https://github.com/tensorflow/models/tree/master/slim)
  resnext50_32x4d| 37.0ms | 41.2ms | [caffemodel (95.8MB)](https://pan.baidu.com/s/1kVqgfJL)|[facebookresearch](https://github.com/facebookresearch/ResNeXt)
  resnext101_32x4d| 69.4ms | 74.4ms | [caffemodel (169.1MB)](https://pan.baidu.com/s/1hswrNUG)|[facebookresearch](https://github.com/facebookresearch/ResNeXt)

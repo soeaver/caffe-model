@@ -43,16 +43,16 @@ The main contribution belongs to the authors and model trainers.
 
  Network|F/B(224/299)|F/B(320/395)|Download|Source
  :---:|:---:|:---:|:---:|:---:
- resnet101-v2| 55.7ms | 60.2ms | [170.3MB](https://pan.baidu.com/s/1kVQDHFx)|[craftGBD](https://github.com/craftGBD/craftGBD)
- resnet152-v2| 82.8ms | 89.1ms | [230.2MB](https://pan.baidu.com/s/1dFIc4vB)|[craftGBD](https://github.com/craftGBD/craftGBD)
- resnet269-v2| 144.3ms | 154.8ms | [390.4MB](https://pan.baidu.com/s/1qYbICs0)|[craftGBD](https://github.com/craftGBD/craftGBD)
+ resnet101-v2| 22.31/22.75ms | 26.02/29.50ms | [170.3MB](https://pan.baidu.com/s/1kVQDHFx)|[craftGBD](https://github.com/craftGBD/craftGBD)
+ resnet152-v2| 32.11/32.54ms | 37.46/41.84ms | [230.2MB](https://pan.baidu.com/s/1dFIc4vB)|[craftGBD](https://github.com/craftGBD/craftGBD)
+ resnet269-v2| 58.20/59.15ms | 69.43/77.26ms | [390.4MB](https://pan.baidu.com/s/1qYbICs0)|[craftGBD](https://github.com/craftGBD/craftGBD)
  inception-v3| 21.79/19.82ms | 22.14/24.88ms | [91.1MB](https://pan.baidu.com/s/1boC0HEf)|[mxnet](https://github.com/dmlc/mxnet-model-gallery/blob/master/imagenet-1k-inception-v3.md)
  inception-v4| 32.96/32.19ms | 36.04/41.91ms | [163.1MB](https://pan.baidu.com/s/1c6D150)|[tensorflow_slim](https://github.com/tensorflow/models/tree/master/slim)
  inception-resnet-v2| 49.06/54.83ms | 54.06/66.38ms | [213.4MB](https://pan.baidu.com/s/1jHPJCX4)|[tensorflow_slim](https://github.com/tensorflow/models/tree/master/slim)
  resnext50_32x4d| 17.29/20.08ms | 19.02/23.81ms | [95.8MB](https://pan.baidu.com/s/1kVqgfJL)|[facebookresearch](https://github.com/facebookresearch/ResNeXt)
  resnext101_32x4d| 30.73/35.75ms | 34.33/41.02ms | [169.1MB](https://pan.baidu.com/s/1hswrNUG)|[facebookresearch](https://github.com/facebookresearch/ResNeXt)
  resnext101_64x4d| 42.07/64.58ms | 51.99/77.71ms | [319.2MB](https://pan.baidu.com/s/1pLhk0Zp)|[facebookresearch](https://github.com/facebookresearch/ResNeXt)
- wrn50_2(resnet50_1x128d)| 33.4ms | 37.1ms | [263.1MB](https://pan.baidu.com/s/1nvhoCsh)|[szagoruyko](https://github.com/szagoruyko/wide-residual-networks)
+ wrn50_2(resnet50_1x128d)| 16.48/25.28ms | 20.99/35.04ms | [263.1MB](https://pan.baidu.com/s/1nvhoCsh)|[szagoruyko](https://github.com/szagoruyko/wide-residual-networks)
 
 ### Check the performance
 0. Download the ILSVRC 2012 classification val set [6.3GB](http://www.image-net.org/challenges/LSVRC/2012/nnoupb/ILSVRC2012_img_val.tar), and put the extracted images into the directory:

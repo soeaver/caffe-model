@@ -33,7 +33,13 @@ The main contribution belongs to the authors and model trainers.
 
 0. **Download url** and forward time cost for each model.
 
- Forward time cost is evaluated with one image/mini-batch using cuDNN 5.1 on a Pascal Titan X GPU.
+ Forward/Backward time cost is evaluated with one image/mini-batch using cuDNN 5.1 on a Pascal Titan X GPU.
+ 
+ We use
+  ```
+    ~/caffe/build/tools/caffe -model deploy.prototxt time -gpu -iterations 1000
+  ```
+ to test the forward/backward tiem cost.
 
  Network|224/299|320/395|Download(BaiDuCloud)|Source
  :---:|:---:|:---:|:---:|:---:

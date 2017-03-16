@@ -23,7 +23,7 @@ mean_value = np.array([102.9801, 115.9465, 122.7717])  # BGR
 # std = np.array([128.0, 128.0, 128.0])  # BGR
 std = np.array([1.0, 1.0, 1.0])  # BGR
 crop_num = 1  # 1 and others for center(single)-crop, 12 for mirror(12)-crop, 144 for multi(144)-crop
-batch_size = 72
+batch_size = 1
 top_k = (1, 5)
 
 if gpu_mode:

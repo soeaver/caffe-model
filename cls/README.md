@@ -111,7 +111,7 @@ The main contribution belongs to the authors and model trainers.
     std = np.array([57.375, 57.12, 58.395])  # BGR
     crop_num = 1    # perform center(single)-crop
     ```
-    
+     
 0. then
     ```
     python evaluation_cls.py

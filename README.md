@@ -114,13 +114,14 @@ The main contribution belongs to the authors and model trainers.
     ```
     val_file = 'ILSVRC2012_val.txt' # download from this folder, label range 0~999
     ... ...
-    model_weights = 'resnext/resnext50/resnext50_32x4d.caffemodel' # download as below
-    model_deploy = 'resnext/resnext50/deploy_resnext50_32x4d.prototxt' # check the parameters of input_shape
+    model_weights = 'inception_resnet_v2/inception_resnet_v2.caffemodel' # download as below
+    model_deploy = 'inception_resnet_v2/deploy_inception_resnet_v2.prototxt' # check the parameters of input_shape
     ... ...
     mean_value = np.array([103.52, 116.28, 123.675])  # BGR
     std = np.array([57.375, 57.12, 58.395])  # BGR
     crop_num = 1    # perform center(single)-crop
     ```
+
 
 0. then
     ```

@@ -80,14 +80,8 @@ The main contribution belongs to the authors and model trainers.
  resnext(50/101) | ILSVRC2012_val | [103.52, 116.28, 123.675] | [57.375, 57.12, 58.395]
  wrn50_2 | ILSVRC2012_val | [103.52, 116.28, 123.675] | [57.375, 57.12, 58.395]
  inception-v3| **ILSVRC2015_val** | [128.0, 128.0, 128.0] | [128.0, 128.0, 128.0] 
- xception | ILSVRC2012_val | [128.0, 128.0, 128.0] | [128.0, 128.0, 128.0] 
+ inception-v2(xception) | ILSVRC2012_val | [128.0, 128.0, 128.0] | [128.0, 128.0, 128.0] 
  inception-v4(inception-resnet-v2) | ILSVRC2012_val | [128.0, 128.0, 128.0] | [128.0, 128.0, 128.0] 
- inception-resnet-v2| 80.14/**95.17** | 81.54/**95.92** | 81.25/**95.98** 
- resnext50_32x4d| 77.63/93.69 | 79.47/94.65 | 78.90/94.47 
- resnext101_32x4d| 78.70/94.21 | 80.53/95.11 | 80.09/95.03 
- resnext101_64x4d| 79.40/94.59 | 81.12/95.41 | 80.74/95.37 
- wrn50_2(resnet50_1x128d)| 77.87/93.87 | 79.91/94.94 | 79.32/94.72 
-
 
 
 **3. then run evaluation_cls.py**

@@ -36,7 +36,7 @@ The main contribution belongs to the authors and model trainers.
  wrn50_2(resnet50_1x128d)| 77.87/93.87 | 79.91/94.94 | 79.32/94.72 | 80.17/95.13
 
  - The pre-train models are tested on original [caffe](https://github.com/BVLC/caffe) by [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py), **but ceil_mode:false（pooling_layer） is used for the models converted from torch, the detail in https://github.com/BVLC/caffe/pull/3057/files**. If you remove ceil_mode:false, the performance will decline about 1% top1.
- - 224x224(base_size=256) and 320x320(base_size=320) crop size for resnet-v2/resnext/wrn, 299x299(base_size=320) and 395x395(base_size=395) crop size for inception. Specially, 231x231 and 327x327 crop size for inception-v2.
+ - 224x224(base_size=256) and 320x320(base_size=320) crop size for resnet-v2/resnext/wrn, 299x299(base_size=320) and 395x395(base_size=395) crop size for inception.
 
 **2. Top-1/5 accuracy with different crop sizes.**
 ![teaser](https://github.com/soeaver/caffe-model/blob/master/cls/accuracy.png)
@@ -92,7 +92,7 @@ The main contribution belongs to the authors and model trainers.
 
  Network|224(single-crop)|F/B(224)|Download|Source
  :---:|:---:|:---:|:---:|:---:
- resnet10| 63.37/84.78 | ../.. | 64.06/85.55 | ../..
+ resnet10| 63.37/84.78 | ../.. | ../.. | ../..
  resnet36| 71.30/89.70 | ../.. | ../.. | ../..
  resnet50_1x32d| 67.61/88.01 | ../.. | ../.. | ../..
  resnet77_1x32d| 70.34/89.63 | ../.. | ../.. | ../..
@@ -100,10 +100,11 @@ The main contribution belongs to the authors and model trainers.
  inception-v1(tf)| 68.64/88.90 | ../.. | ../.. | ../..
  inception-v1(bvlc)| ../.. | ../.. | ../.. | ../..
  inception-v1(dsd)| 68.61/88.90 | ../.. | ../.. | ../..
- inception-v2| 71.57/90.29 | 73.39/91.45 | 72.83/91.34 | 74.14/92.16
+ inception-v2| 71.57/90.29 |  ../.. | ../.. | ../..
  vgg16(tf)| ../.. | ../.. | ../.. | ../..
  vgg16(dsd)| 72.03/90.80 | ../.. | ../.. | ../..
- 
+
+ - Specially, 231x231 crop size for inception-v2
 
 
 

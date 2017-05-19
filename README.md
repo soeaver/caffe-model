@@ -18,7 +18,7 @@ We didn't train any model from scratch, some of them are converted from other de
 The main contribution belongs to the authors and model trainers.
 
 ### Performance on imagenet
-1. Top-1/5 accuracy of pre-train models in this repository.
+**1. Top-1/5 accuracy of pre-train models in this repository.**
 
  Network|224/299(single-crop)|224/299(12-crop)|320/395(single-crop)|320/395(12-crop)
  :---:|:---:|:---:|:---:|:---:

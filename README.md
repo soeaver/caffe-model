@@ -38,11 +38,11 @@ The main contribution belongs to the authors and model trainers.
  - The pre-train models are tested on original [caffe](https://github.com/BVLC/caffe) by [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py), **but ceil_mode:false（pooling_layer） is used for the models converted from torch, the detail in https://github.com/BVLC/caffe/pull/3057/files**. If you remove ceil_mode:false, the performance will decline about 1% top1.
  - 224x224(base_size=256) and 320x320(base_size=320) crop size for resnet-v2/resnext/wrn, 299x299(base_size=320) and 395x395(base_size=395) crop size for inception. Specially, 231x231 and 327x327 crop size for inception-v2.
 
-2. Top-1/5 accuracy with different crop sizes.
+**2. Top-1/5 accuracy with different crop sizes.**
 ![teaser](https://github.com/soeaver/caffe-model/blob/master/cls/accuracy.png)
  - Figure: Accuracy curves of inception_v3(left) and resnet101_v2(right) with different crop sizes.
 
-3. **Download url** and forward/backward time cost for each model.
+**3. Download url and forward/backward time cost for each model.**
 
  Forward/Backward time cost is evaluated with one image/mini-batch using cuDNN 5.1 on a Pascal Titan X GPU.
  
@@ -67,12 +67,12 @@ The main contribution belongs to the authors and model trainers.
 
 
 ### Check the performance
-1. Download the ILSVRC 2012 classification val set [6.3GB](http://www.image-net.org/challenges/LSVRC/2012/nnoupb/ILSVRC2012_img_val.tar), and put the extracted images into the directory:
+**1. Download the ILSVRC 2012 classification val set [6.3GB](http://www.image-net.org/challenges/LSVRC/2012/nnoupb/ILSVRC2012_img_val.tar), and put the extracted images into the directory:**
     ```
     ~/Database/ILSVRC2012
     ```
 
-2. Check the resnet-v2 (101, 152 and 269) performance, the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):
+**2. Check the resnet-v2 (101, 152 and 269) performance, the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):**
    
     ```
     val_file = 'ILSVRC2012_val.txt' # download from this folder, label range 0~999

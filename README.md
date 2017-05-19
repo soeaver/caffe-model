@@ -78,10 +78,11 @@ The main contribution belongs to the authors and model trainers.
  resnet_v2(101/152/269)| ILSVRC2012_val | [102.98, 115.947, 122.772] | [1.0, 1.0, 1.0]
  resnet_v2(38a/38a1) | ILSVRC2012_val | [103.52, 116.28, 123.675] | [57.375, 57.12, 58.395]
  resnext(50/101), wrn50_2 | ILSVRC2012_val | [103.52, 116.28, 123.675] | [57.375, 57.12, 58.395]
- resnet36, resnet50(77)_1x32d | ILSVRC2012_val | [104.0, 117.0, 123.0] | [1.0, 1.0, 1.0]
  inception-v3| **ILSVRC2015_val** | [128.0, 128.0, 128.0] | [128.0, 128.0, 128.0] 
  inception-v1(v2/xception) | ILSVRC2012_val | [128.0, 128.0, 128.0] | [128.0, 128.0, 128.0] 
  inception-v4(inception-resnet-v2) | ILSVRC2012_val | [128.0, 128.0, 128.0] | [128.0, 128.0, 128.0] 
+ resnet36, resnet50(77)_1x32d | ILSVRC2012_val | [104.0, 117.0, 123.0] | [1.0, 1.0, 1.0]
+ vgg16_tf | ILSVRC2012_val | [103.94, 116.78, 123.68] | [1.0, 1.0, 1.0]
 
 
 **3. then run evaluation_cls.py**
@@ -101,8 +102,8 @@ The main contribution belongs to the authors and model trainers.
  inception-v1(bvlc)| ../.. | ../.. | ../.. | ../..
  inception-v1(dsd)| 68.61/88.90 | ../.. | ../.. | ../..
  inception-v2| 71.57/90.29 |  ../.. | ../.. | ../..
- vgg16(tf)| ../.. | ../.. | ../.. | ../..
- vgg16(dsd)| 72.03/90.80 | ../.. | ../.. | ../..
+ vgg16_tf| 70.97/89.88 | ../.. | ../.. | ../..
+ vgg16_dsd| 72.03/90.80 | ../.. | ../.. | ../..
 
  - Specially, 231x231 crop size for inception-v2
 

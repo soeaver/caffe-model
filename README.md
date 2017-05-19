@@ -105,8 +105,8 @@ The main contribution belongs to the authors and model trainers.
  vgg16_tf| 70.97/89.88 | ../.. | ../.. | ../..
  vgg16_dsd| 71.91/90.68 | ../.. | ../.. | ../..
 
- - inception-v2 needs crop_size=231 and base_size=256.
- - inception_v1(dsd) needs crop_size=224 and base_size=224.
+ - crop_size=231 and base_size=256 for inception_v2.
+ - crop_size=224 and base_size=224 for inception_v1(dsd).
 
 
 

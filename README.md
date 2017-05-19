@@ -68,11 +68,12 @@ The main contribution belongs to the authors and model trainers.
 
 ### Check the performance
 **1. Download the ILSVRC 2012 classification val set [6.3GB](http://www.image-net.org/challenges/LSVRC/2012/nnoupb/ILSVRC2012_img_val.tar), and put the extracted images into the directory:**
+
     ```
     ~/Database/ILSVRC2012
     ```
-
-**2. Check the resnet-v2 (101, 152 and 269) performance, the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):**
+**2. Modify the parameter settings**
+    Check the resnet-v2 (101, 152 and 269) performance, the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):
    
     ```
     val_file = 'ILSVRC2012_val.txt' # download from this folder, label range 0~999
@@ -125,7 +126,8 @@ The main contribution belongs to the authors and model trainers.
     ```
 
 
-3. then
+**3. then run evaluation_cls.py**
+
     ```
     python evaluation_cls.py
     ```

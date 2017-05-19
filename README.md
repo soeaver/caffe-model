@@ -81,7 +81,7 @@ The main contribution belongs to the authors and model trainers.
  inception-v3| **ILSVRC2015_val** | [128.0, 128.0, 128.0] | [128.0, 128.0, 128.0] 
  inception-v1(v2/xception) | ILSVRC2012_val | [128.0, 128.0, 128.0] | [128.0, 128.0, 128.0] 
  inception-v4(inception-resnet-v2) | ILSVRC2012_val | [128.0, 128.0, 128.0] | [128.0, 128.0, 128.0] 
- resnet36, resnet50(77)_1x32d | ILSVRC2012_val | [104.0, 117.0, 123.0] | [1.0, 1.0, 1.0]
+ resnet36, resnet50(77)_1x32d, vgg16_dsd | ILSVRC2012_val | [104.0, 117.0, 123.0] | [1.0, 1.0, 1.0]
  vgg16_tf | ILSVRC2012_val | [103.94, 116.78, 123.68] | [1.0, 1.0, 1.0]
 
 
@@ -103,7 +103,7 @@ The main contribution belongs to the authors and model trainers.
  inception-v1(dsd)| 68.61/88.90 | ../.. | ../.. | ../..
  inception-v2| 71.57/90.29 |  ../.. | ../.. | ../..
  vgg16_tf| 70.97/89.88 | ../.. | ../.. | ../..
- vgg16_dsd| 72.03/90.80 | ../.. | ../.. | ../..
+ vgg16_dsd| 71.91/90.68 | ../.. | ../.. | ../..
 
  - Specially, 231x231 crop size for inception-v2
 

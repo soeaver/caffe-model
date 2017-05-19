@@ -18,7 +18,7 @@ We didn't train any model from scratch, some of them are converted from other de
 The main contribution belongs to the authors and model trainers.
 
 ### Performance on imagenet
-**0. Top-1/5 accuracy of some lightweight networks from the open source.**
+**0. Top-1/5 accuracy of some lightweight or low-accuracy networks from the open source.**
 
  Network|224/299(single-crop)|224/299(12-crop)|320/395(single-crop)|320/395(12-crop)
  :---:|:---:|:---:|:---:|:---:
@@ -26,6 +26,10 @@ The main contribution belongs to the authors and model trainers.
  resnet50_1x32d| 67.61/88.01 | ../.. | ../.. | ../..
  resnet77_1x32d| 70.34/89.63 | ../.. | ../.. | ../..
  mobilenet| 70.02/89.48 | ../.. | ../.. | ../..
+ inception-v1(tf)| ../.. | ../.. | ../.. | ../..
+ inception-v1(bvlc)| ../.. | ../.. | ../.. | ../..
+ inception-v1(dsd)| ../.. | ../.. | ../.. | ../..
+ inception-v2| 71.57/90.29 | 73.39/91.45 | 72.83/91.34 | 74.14/92.16 
  
  
 **1. Top-1/5 accuracy of pre-train models in this repository.**
@@ -35,8 +39,6 @@ The main contribution belongs to the authors and model trainers.
  resnet101-v2| 78.05/93.88 | 80.01/94.96 | 79.63/94.84 | 80.71/95.43
  resnet152-v2| 79.15/94.58 | 80.76/95.32 | 80.34/95.26 | 81.16/95.68 
  resnet269-v2| **80.29**/95.00 | **81.75**/95.80 | 81.30/95.67 | **82.13**/96.15
- inception-v1(tf)| 71.57/90.29 | 73.39/91.45 | 72.83/91.34 | 74.14/92.16
- inception-v2| 71.57/90.29 | 73.39/91.45 | 72.83/91.34 | 74.14/92.16 
  inception-v3| 78.33/94.25 | 80.40/95.27 | 79.90/95.18 | 80.75/95.76 
  xception| 79.10/94.51 | ../.. | 80.42/95.23 | ../.. 
  inception-v4| 79.97/94.91 | 81.40/95.70 | **81.32**/95.68 | 81.88/96.08 

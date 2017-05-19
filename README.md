@@ -106,7 +106,7 @@ The main contribution belongs to the authors and model trainers.
  vgg16_dsd| 71.91/90.68 | ../.. | ../.. | ../..
 
  - crop_size=231 and base_size=256 for inception_v2.
- - crop_size=224 and base_size=224 for inception_v1(dsd).
+ - crop_size=224 and base_size=224 for inception_v1(dsd), and it will achieve 69.27/89.38 by crop_size=224 and base_size=256x256.
 
 
 

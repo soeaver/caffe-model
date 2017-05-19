@@ -101,7 +101,6 @@ The main contribution belongs to the authors and model trainers.
     
     Check the inception-resnet-v2 (inception-v4) performance, the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):
    
-    ```
     val_file = 'ILSVRC2012_val.txt' # download from this folder, label range 0~999
     ... ...
     model_weights = 'inception_resnet_v2/inception_resnet_v2.caffemodel' # download as below
@@ -110,11 +109,9 @@ The main contribution belongs to the authors and model trainers.
     mean_value = np.array([128.0, 128.0, 128.0])  # BGR
     std = np.array([128.0, 128.0, 128.0])  # BGR
     crop_num = 1    # perform center(single)-crop
-    ```
-    
+
     Check the resnext (50_32x4d, 101_32x4d and 101_64x4d) or wrn50_2 performance, the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):
    
-    ```
     val_file = 'ILSVRC2012_val.txt' # download from this folder, label range 0~999
     ... ...
     model_weights = 'inception_resnet_v2/inception_resnet_v2.caffemodel' # download as below
@@ -123,14 +120,13 @@ The main contribution belongs to the authors and model trainers.
     mean_value = np.array([103.52, 116.28, 123.675])  # BGR
     std = np.array([57.375, 57.12, 58.395])  # BGR
     crop_num = 1    # perform center(single)-crop
-    ```
+
 
 
 **3. then run evaluation_cls.py**
 
-    ```
     python evaluation_cls.py
-    ```
+
 
 
 

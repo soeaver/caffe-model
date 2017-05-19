@@ -18,6 +18,16 @@ We didn't train any model from scratch, some of them are converted from other de
 The main contribution belongs to the authors and model trainers.
 
 ### Performance on imagenet
+**0. Top-1/5 accuracy of some lightweight networks from the open source.**
+
+ Network|224/299(single-crop)|224/299(12-crop)|320/395(single-crop)|320/395(12-crop)
+ :---:|:---:|:---:|:---:|:---:
+ resnet36| 71.30/89.70 | ../.. | ../.. | ../..
+ resnet50_1x32d| 67.61/88.01 | ../.. | ../.. | ../..
+ resnet77_1x32d| 70.34/89.63 | ../.. | ../.. | ../..
+ mobilenet| 70.02/89.48 | ../.. | ../.. | ../..
+ 
+ 
 **1. Top-1/5 accuracy of pre-train models in this repository.**
 
  Network|224/299(single-crop)|224/299(12-crop)|320/395(single-crop)|320/395(12-crop)
@@ -25,6 +35,7 @@ The main contribution belongs to the authors and model trainers.
  resnet101-v2| 78.05/93.88 | 80.01/94.96 | 79.63/94.84 | 80.71/95.43
  resnet152-v2| 79.15/94.58 | 80.76/95.32 | 80.34/95.26 | 81.16/95.68 
  resnet269-v2| **80.29**/95.00 | **81.75**/95.80 | 81.30/95.67 | **82.13**/96.15
+ inception-v1(tf)| 71.57/90.29 | 73.39/91.45 | 72.83/91.34 | 74.14/92.16
  inception-v2| 71.57/90.29 | 73.39/91.45 | 72.83/91.34 | 74.14/92.16 
  inception-v3| 78.33/94.25 | 80.40/95.27 | 79.90/95.18 | 80.75/95.76 
  xception| 79.10/94.51 | ../.. | 80.42/95.23 | ../.. 
@@ -78,6 +89,7 @@ The main contribution belongs to the authors and model trainers.
  resnet_v2(101/152/269)| ILSVRC2012_val | [102.98, 115.947, 122.772] | [1.0, 1.0, 1.0]
  resnet_v2(38a/38a1) | ILSVRC2012_val | [103.52, 116.28, 123.675] | [57.375, 57.12, 58.395]
  resnext(50/101), wrn50_2 | ILSVRC2012_val | [103.52, 116.28, 123.675] | [57.375, 57.12, 58.395]
+ resnet36, resnet50(77)_1x32d | ILSVRC2012_val | [104.0, 117.0, 123.0] | [1.0, 1.0, 1.0]
  inception-v3| **ILSVRC2015_val** | [128.0, 128.0, 128.0] | [128.0, 128.0, 128.0] 
  inception-v2(xception) | ILSVRC2012_val | [128.0, 128.0, 128.0] | [128.0, 128.0, 128.0] 
  inception-v4(inception-resnet-v2) | ILSVRC2012_val | [128.0, 128.0, 128.0] | [128.0, 128.0, 128.0] 

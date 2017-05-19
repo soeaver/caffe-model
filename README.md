@@ -1,14 +1,14 @@
 # Caffe-model
 Python script to generate prototxt on Caffe, specially the inception_v3\inception_v4\inception_resnet\fractalnet
 
-# Generator scripts
+# Scripts
 
 The prototxts can be visualized by [ethereon](http://ethereon.github.io/netscope/quickstart.html).
 
 All the generator scripts have moved to [scripts folder](https://github.com/soeaver/caffe-model/tree/master/scripts)
 
 
-# Classificaiton (imagenet)
+# CLS (imagenet)
 
 ### Introduction
 This folder contains the deploy files(include generator scripts) and pre-train models of resnet-v1, resnet-v2, inception-v3, inception-resnet-v2 and densenet(coming soon).
@@ -18,7 +18,7 @@ We didn't train any model from scratch, some of them are converted from other de
 The main contribution belongs to the authors and model trainers.
 
 ### Performance on imagenet
-0. Top-1/5 accuracy of pre-train models in this repository.
+1. Top-1/5 accuracy of pre-train models in this repository.
 
  Network|224/299(single-crop)|224/299(12-crop)|320/395(single-crop)|320/395(12-crop)
  :---:|:---:|:---:|:---:|:---:
@@ -38,11 +38,11 @@ The main contribution belongs to the authors and model trainers.
  - The pre-train models are tested on original [caffe](https://github.com/BVLC/caffe) by [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py), **but ceil_mode:false（pooling_layer） is used for the models converted from torch, the detail in https://github.com/BVLC/caffe/pull/3057/files**. If you remove ceil_mode:false, the performance will decline about 1% top1.
  - 224x224(base_size=256) and 320x320(base_size=320) crop size for resnet-v2/resnext/wrn, 299x299(base_size=320) and 395x395(base_size=395) crop size for inception. Specially, 231x231 and 327x327 crop size for inception-v2.
 
-0. Top-1/5 accuracy with different crop sizes.
+2. Top-1/5 accuracy with different crop sizes.
 ![teaser](https://github.com/soeaver/caffe-model/blob/master/cls/accuracy.png)
  - Figure: Accuracy curves of inception_v3(left) and resnet101_v2(right) with different crop sizes.
 
-0. **Download url** and forward/backward time cost for each model.
+3. **Download url** and forward/backward time cost for each model.
 
  Forward/Backward time cost is evaluated with one image/mini-batch using cuDNN 5.1 on a Pascal Titan X GPU.
  
@@ -65,13 +65,14 @@ The main contribution belongs to the authors and model trainers.
  resnext101_64x4d| 42.07/64.58ms | 51.99/77.71ms | [319.2MB](https://pan.baidu.com/s/1pLhk0Zp)|[facebookresearch](https://github.com/facebookresearch/ResNeXt)
  wrn50_2(resnet50_1x128d)| 16.48/25.28ms | 20.99/35.04ms | [263.1MB](https://pan.baidu.com/s/1nvhoCsh)|[szagoruyko](https://github.com/szagoruyko/wide-residual-networks)
 
+
 ### Check the performance
-0. Download the ILSVRC 2012 classification val set [6.3GB](http://www.image-net.org/challenges/LSVRC/2012/nnoupb/ILSVRC2012_img_val.tar), and put the extracted images into the directory:
+1. Download the ILSVRC 2012 classification val set [6.3GB](http://www.image-net.org/challenges/LSVRC/2012/nnoupb/ILSVRC2012_img_val.tar), and put the extracted images into the directory:
     ```
     ~/Database/ILSVRC2012
     ```
 
-0. Check the resnet-v2 (101, 152 and 269) performance, the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):
+2. Check the resnet-v2 (101, 152 and 269) performance, the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):
    
     ```
     val_file = 'ILSVRC2012_val.txt' # download from this folder, label range 0~999
@@ -124,7 +125,7 @@ The main contribution belongs to the authors and model trainers.
     ```
 
 
-0. then
+3. then
     ```
     python evaluation_cls.py
     ```

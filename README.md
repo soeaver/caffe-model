@@ -72,9 +72,10 @@ The main contribution belongs to the authors and model trainers.
       ~/Database/ILSVRC2012
 
 **2. Modify the parameter settings**
-    Check the resnet-v2 (101, 152 and 269) performance, the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):
+
+   Check the resnet-v2 (101, 152 and 269) performance, the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):
    
-    ```
+    
     val_file = 'ILSVRC2012_val.txt' # download from this folder, label range 0~999
     ... ...
     model_weights = 'resnet-v2/resnet101_v2.caffemodel' # download as below
@@ -83,11 +84,11 @@ The main contribution belongs to the authors and model trainers.
     mean_value = np.array([102.9801, 115.9465, 122.7717])  # BGR
     std = np.array([1.0, 1.0, 1.0])  # BGR
     crop_num = 1    # perform center(single)-crop
-    ```
+    
 
     Check the inception-v3 performance, the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):
    
-    ```
+    
     val_file = 'ILSVRC2015_val.txt' # download from this folder, label range 0~999
     ... ...
     model_weights = 'inception_v3/inception_v3.caffemodel' # download as below
@@ -96,7 +97,7 @@ The main contribution belongs to the authors and model trainers.
     mean_value = np.array([128.0, 128.0, 128.0])  # BGR
     std = np.array([128.0, 128.0, 128.0])  # BGR
     crop_num = 1    # perform center(single)-crop
-    ```
+    
     
     Check the inception-resnet-v2 (inception-v4) performance, the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):
    

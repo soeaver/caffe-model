@@ -35,6 +35,7 @@ The main contribution belongs to the authors and model trainers.
  resnext50_32x4d| 77.63/93.69 | 79.47/94.65 | 78.90/94.47 | 79.63/94.97 
  resnext101_32x4d| 78.70/94.21 | 80.53/95.11 | 80.09/95.03 | 80.81/95.41
  resnext101_64x4d| 79.40/94.59 | 81.12/95.41 | 80.74/95.37 | 81.52/95.69
+ resnext152_32x4d(unofficial)| 78.63/94.44 | ../.. | ../.. | ../..
  wrn50_2(resnet50_1x128d)| 77.87/93.87 | 79.91/94.94 | 79.32/94.72 | 80.17/95.13
 
  - The pre-train models are tested on original [caffe](https://github.com/BVLC/caffe) by [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py), **but ceil_mode:false（pooling_layer） is used for the models converted from torch, the detail in https://github.com/BVLC/caffe/pull/3057/files**. If you remove ceil_mode:false, the performance will decline about 1% top1.
@@ -80,12 +81,13 @@ The main contribution belongs to the authors and model trainers.
  resnet_v2(101/152/269)| ILSVRC2012_val | [102.98, 115.947, 122.772] | [1.0, 1.0, 1.0]
  resnet_v2(38a/38a1) | ILSVRC2012_val | [103.52, 116.28, 123.675] | [57.375, 57.12, 58.395]
  resnext(50/101), wrn50_2 | ILSVRC2012_val | [103.52, 116.28, 123.675] | [57.375, 57.12, 58.395]
+ resnext152_32x4d(unofficial) | **ILSVRC2015_val** | [0, 0, 0] | [1.0, 1.0, 1.0]
  inception-v3| **ILSVRC2015_val** | [128.0, 128.0, 128.0] | [128.0, 128.0, 128.0] 
  inception-v1(v2/xception) | ILSVRC2012_val | [128.0, 128.0, 128.0] | [128.0, 128.0, 128.0] 
  inception-v4(inception-resnet-v2) | ILSVRC2012_val | [128.0, 128.0, 128.0] | [128.0, 128.0, 128.0] 
  resnet36, resnet50(77)_1x32d, vgg16_dsd | ILSVRC2012_val | [104.0, 117.0, 123.0] | [1.0, 1.0, 1.0]
- vgg16_tf | ILSVRC2012_val | [103.94, 116.78, 123.68] | [1.0, 1.0, 1.0]
-
+ vgg16_tf, resnet18_casia | ILSVRC2012_val | [103.94, 116.78, 123.68] | [1.0, 1.0, 1.0]
+ resnet10 | ILSVRC2012_val | [0, 0, 0] | [1.0, 1.0, 1.0]
 
 **3. then run evaluation_cls.py**
 
@@ -96,13 +98,13 @@ The main contribution belongs to the authors and model trainers.
  Network|224(single-crop)|F/B(224)|Download|Source
  :---:|:---:|:---:|:---:|:---:
  resnet10| 63.37/84.78 | ../.. | ../.. | ../..
+ resnet18_casia| 68.61/88.77 | ../.. | ../.. | ../..
  resnet36| 71.30/89.70 | ../.. | ../.. | ../..
  resnet50_1x32d| 67.61/88.01 | ../.. | ../.. | ../..
  resnet77_1x32d| 70.34/89.63 | ../.. | ../.. | ../..
  mobilenet| 70.02/89.48 | ../.. | ../.. | ../..
- inception-v1(tf)| 68.64/88.90 | ../.. | ../.. | ../..
- inception-v1(bvlc)| ../.. | ../.. | ../.. | ../..
- inception-v1(dsd)| 68.61/88.90 | ../.. | ../.. | ../..
+ inception-v1_tf| 68.64/88.90 | ../.. | ../.. | ../..
+ inception-v1_dsd| 68.61/88.90 | ../.. | ../.. | ../..
  inception-v2| 71.57/90.29 |  ../.. | ../.. | ../..
  vgg16_tf| 70.97/89.88 | ../.. | ../.. | ../..
  vgg16_dsd| 71.91/90.68 | ../.. | ../.. | ../..

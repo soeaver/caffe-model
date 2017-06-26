@@ -2,8 +2,8 @@ input: "data"
 input_shape {
   dim: 1
   dim: 3
-  dim: 395 
-  dim: 395
+  dim: 299 
+  dim: 299
 }
 layer {
   name: "conv1_3x3_s2"

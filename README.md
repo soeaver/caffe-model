@@ -1,13 +1,6 @@
 # Caffe-model
 Python script to generate prototxt on Caffe, specially the inception_v3\inception_v4\inception_resnet\fractalnet
 
-# Scripts
-
-The prototxts can be visualized by [ethereon](http://ethereon.github.io/netscope/quickstart.html).
-
-All the generator scripts have moved to [scripts folder](https://github.com/soeaver/caffe-model/tree/master/scripts)
-
-
 # CLS (imagenet)
 
 ### Introduction

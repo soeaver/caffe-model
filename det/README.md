@@ -17,3 +17,5 @@
  densenet-201| 77.7 | -- | -- | -- | --
  resnet38a| 80.1 | -- | -- | -- | --
  
+ - All the models are trained on single scale (600*1000), and tested on the same single scale;
+ 

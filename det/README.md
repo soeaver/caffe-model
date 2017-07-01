@@ -5,7 +5,7 @@
  Network|mAP@50|train speed|train memory|test speed|test memory
  :---:|:---:|:---:|:---:|:---:|:---:
  resnet101| 78.25 | -- | -- | -- | --
- resnet101-v2| -- | 3.1 img/s | 6,495MB | -- | --
+ resnet101-v2| 79.6 | 3.1 img/s | 6,495MB | -- | --
  resnet152-v2| -- | -- | -- | -- | --
  wrn50_2| 76.8 | -- | -- | -- | --
  resnext50-32x4d| -- | -- | -- | -- | --
@@ -17,6 +17,6 @@
  densenet-201| 77.7 | -- | -- | -- | --
  resnet38a| 80.1 | -- | -- | -- | --
  
- - Performanc, speed and memory are calculateed on py-R-FCN-multiGPU (this reproduction) with Nvidia Titan pascal, we do not guarantee that the results can be reproduced under any other conditions;
+ - Performanc, speed and memory are calculated on py-R-FCN-multiGPU (this reproduction) with Nvidia Titan pascal, we do not guarantee that the results can be reproduced under any other conditions;
  - All the models are trained on single scale (600*1000), and tested on the same single scale with test batch=300 and nms=0.3;
  

@@ -3,7 +3,7 @@
 **1. Original faster rcnn train on VOC 2007+2012 trainval and test on VOC 2007 test.**
 
  Network|mAP@50|train speed|train memory cost|test speed|test memory cost
- :---:|:---:|:---:|:---:|:---:
+ :---:|:---:|:---:|:---:|:---:|:---:
  resnet101| 78.25 | -- | -- | -- | --
  resnet101-v2| -- | 3.1 img/s | 6,495MB | -- | --
  resnet152-v2| -- | -- | -- | -- | --

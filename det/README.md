@@ -23,10 +23,10 @@
  **2. Comparisons on VOC 2007 test using faster rcnn with inception-v4.**
  
  Method|mAP@50| improvment |test speed
- :---:|:---:|:---:|:---:
- baseline inception-v4  | 81.49 | -- | --
+ :---|:---:|:---:|:---:
+ baseline inception-v4 | 81.49 | -- | --
   +multi-scale training | -- | -- | --
-  +box voting           | -- | -- | --
+  +box voting | -- | -- | --
   +image flipping test | -- | -- | --
   +multi-scale testing | -- | -- | --
 

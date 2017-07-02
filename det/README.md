@@ -12,7 +12,7 @@
  resnext101-32x4d| 79.94 | 2.7 img/s | 7,836MB | -- | --
  inception-v3| -- | 4.1 img/s | 4,325MB | -- | --
  inception-v4| 81.49 | 2.6 img/s | 6,759MB | -- | --
- inception-resnet-v2| **80.9** | -- | -- | -- | --
+ inception-resnet-v2| **80.9** | 2.0 img/s | 11,495MB | -- | --
  densenet-169| -- | -- | -- | -- | --
  densenet-201| 77.7 | -- | -- | -- | --
  resnet38a| 80.1 | -- | -- | -- | --

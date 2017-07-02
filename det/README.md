@@ -10,7 +10,7 @@
  wrn50_2| 76.8 | -- | -- | -- | --
  resnext50-32x4d| -- | -- | -- | -- | --
  resnext101-32x4d| 79.94 | 2.7 img/s | 7,836MB | -- | --
- inception-v3| -- | -- | -- | -- | --
+ inception-v3| -- | 4.1 img/s | 4,325MB | -- | --
  inception-v4| 81.49 | 2.6 img/s | 6,759MB | -- | --
  inception-resnet-v2| **80.9** | -- | -- | -- | --
  densenet-169| -- | -- | -- | -- | --

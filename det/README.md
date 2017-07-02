@@ -22,9 +22,11 @@
  
  **2. Comparisons on VOC 2007 test using faster rcnn with inception-v4.**
  
- Method|mAP@50|box proposals|box voting|nms type|test speed
- :---:|:---:|:---:|:---:|:---:|:---:
- ss train & ss test | 81.49 | 2.6 img/s | 6,759MB | -- | --
- ss train & ss test | -- | 2.6 img/s | 6,759MB | -- | --
- ss train & ms test | -- | 2.6 img/s | 6,759MB | -- | --
+ Method|mAP@50| improvment |test speed
+ :---:|:---:|:---:|:---:
+ base inception-v4 | 81.49 | -- | --
+  +multi-scale training | -- | -- | --
+  +box voting | -- | -- | --
+  +image flipping test | -- | -- | --
+  +multi-scale testing | -- | -- | --
 

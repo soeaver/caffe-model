@@ -18,5 +18,5 @@
  resnet38a| 80.1 | -- | -- | -- | --
  
  - Performanc, speed and memory are calculated on py-R-FCN-multiGPU (this reproduction) with Nvidia Titan pascal, we do not guarantee that the results can be reproduced under any other conditions;
- - All the models are trained on single scale (600*1000), and tested on the same single scale with test batch=300 and nms=0.3;
+ - All the models are trained on a single scale (600*1000) with image flipping and train-batch=128 for 80,000 iterations, tested on the same single scale with test-batch=300 and nms=0.3;
  

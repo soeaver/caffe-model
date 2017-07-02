@@ -25,5 +25,6 @@
  Method|mAP@50|train speed|train memory|test speed|test memory
  :---:|:---:|:---:|:---:|:---:|:---:
  ss train & ss test| 81.49 | 2.6 img/s | 6,759MB | -- | --
- ss train & ms test| 81.49 | 2.6 img/s | 6,759MB | -- | --
+ ss train & ss test & bbox voting | -- | 2.6 img/s | 6,759MB | -- | --
+ ss train & ms test| -- | 2.6 img/s | 6,759MB | -- | --
 

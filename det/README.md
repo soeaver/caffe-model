@@ -14,7 +14,7 @@
  inception-v4| 81.49 | 2.6 img/s | 6,759MB | -- | --
  inception-resnet-v2| 80.0 | 2.0 img/s(batch=112) | 11,497MB | -- | --
  densenet-169| -- | -- | -- | -- | --
- densenet-201| 77.7 | -- | -- | -- | --
+ densenet-201| 77.7 | 3.9 img/s | 10,073MB | -- | --
  resnet38a| 80.1 | 1.4 img/s | 8,723MB | -- | --
  
  - Performanc, speed and memory are calculated on py-R-FCN-multiGPU (this reproduction) with Nvidia Titan pascal, we do not guarantee that the results can be reproduced under any other conditions;

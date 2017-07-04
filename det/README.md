@@ -31,7 +31,6 @@
  &nbsp;+multi-scale training | 83.79 | 2.30 | --
  &nbsp;+box voting | 83.95 | 0.16 | --
  &nbsp;+nms=0.4 | 84.22 | 0.27 | --
- &nbsp;+linear soft-nms | 84.47 | 0.25 | --
- &nbsp;+image flipping test | -- | -- | --
- &nbsp;+multi-scale testing | -- | -- | --
+ &nbsp;+image flipping test | 84.54 | 0.32 | --
+ &nbsp;+multi-scale testing | 85.26 | 0.72 | --
 

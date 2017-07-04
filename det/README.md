@@ -26,7 +26,7 @@
  Method|mAP@50| improvment |test speed
  :---|:---:|:---:|:---:
  baseline inception-v4 | 81.49 | -- | --
- &nbsp;+multi-scale training | -- | -- | --
+ &nbsp;+multi-scale training | 83.79 | 2.30 | --
  &nbsp;+box voting | -- | -- | --
  &nbsp;+image flipping test | -- | -- | --
  &nbsp;+multi-scale testing | -- | -- | --

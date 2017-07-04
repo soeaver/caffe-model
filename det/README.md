@@ -27,7 +27,7 @@
  :---|:---:|:---:|:---:
  baseline inception-v4 | 81.49 | -- | --
  &nbsp;+multi-scale training | 83.79 | 2.30 | --
- &nbsp;+box voting | -- | -- | --
+ &nbsp;+box voting | 83.95 | 0.16 | --
  &nbsp;+image flipping test | -- | -- | --
  &nbsp;+multi-scale testing | -- | -- | --
 

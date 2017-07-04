@@ -10,7 +10,7 @@
  wrn50_2| 76.8 | 2.1 img/s | 4,895MB | -- | --
  resnext50-32x4d| 77.99 | 3.6 img/s | 5,315MB | -- | --
  resnext101-32x4d| 79.98 | 2.7 img/s | 7,836MB | -- | --
- resnext101-64x4d| -- | 2.0 img/s | 11,277MB (batch=96) | -- | --
+ resnext101-64x4d| -- | 2.0 img/s (batch=96) | 11,277MB | -- | --
  inception-v3| 78.6 | 4.1 img/s | 4,325MB | -- | --
  inception-v4| 81.49 | 2.6 img/s | 6,759MB | -- | --
  inception-resnet-v2| 80.0 | 2.0 img/s (batch=112) | 11,497MB | -- | --

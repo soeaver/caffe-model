@@ -4,7 +4,7 @@
 
  Network|mAP@50|train speed|train memory|test speed|test memory
  :---:|:---:|:---:|:---:|:---:|:---:
- resnet18 | -- | 9.5 img/s | 1,235MB | -- | --
+ resnet18 | 70.02 | 9.5 img/s | 1,235MB | -- | --
  resnet101| 78.25 | -- | -- | -- | --
  resnet101-v2| 79.6 | 3.1 img/s | 6,495MB | -- | --
  resnet152-v2| 80.72 | 2.8 img/s | 9,315MB | -- | --

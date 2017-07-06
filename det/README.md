@@ -13,11 +13,11 @@
  resnext101-32x4d| 79.98 | 2.7 img/s | 7,836MB | 6.3 img/s | 5,705MB
  resnext101-64x4d| 80.71 | 2.0 img/s (batch=96) | 11,277MB | 3.7 img/s | 9,461MB
  inception-v3| 78.6 | 4.1 img/s | 4,325MB | 7.3 img/s | 3,445MB
- inception-v4| 81.49 | 2.6 img/s | 6,759MB | -- | --
- inception-resnet-v2| 80.0 | 2.0 img/s (batch=112) | 11,497MB | -- | --
+ inception-v4| 81.49 | 2.6 img/s | 6,759MB | 5.4 img/s | 4,683MB
+ inception-resnet-v2| 80.0 | 2.0 img/s (batch=112) | 11,497MB | 3.2 img/s | 8,409MB
  densenet-161| -- | -- | -- | -- | --
- densenet-201| 77.53 | 3.9 img/s (batch=72) | 10,073MB | -- | --
- resnet38a| 80.1 | 1.4 img/s | 8,723MB | -- | --
+ densenet-201| 77.53 | 3.9 img/s (batch=72) | 10,073MB | 5.5 img/s | 9,955MB
+ resnet38a| 80.1 | 1.4 img/s | 8,723MB | 3.4 img/s | 5,501MB
  
  - Performanc, speed and memory are calculated on py-R-FCN-multiGPU (this reproduction) with Nvidia Titan pascal, we do not guarantee that the results can be reproduced under any other conditions;
  - All the models are trained on a single scale (600*1000) with image flipping and train-batch=128 for 80,000 iterations, tested on the same single scale with test-batch=300 and nms=0.3;

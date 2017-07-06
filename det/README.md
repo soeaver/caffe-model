@@ -12,7 +12,7 @@
  resnext50-32x4d| 77.99 | 3.6 img/s | 5,315MB | 7.4 img/s | 4,305MB
  resnext101-32x4d| 79.98 | 2.7 img/s | 7,836MB | 6.3 img/s | 5,705MB
  resnext101-64x4d| 80.71 | 2.0 img/s (batch=96) | 11,277MB | 3.7 img/s | 9,461MB
- inception-v3| 78.6 | 4.1 img/s | 4,325MB | -- | --
+ inception-v3| 78.6 | 4.1 img/s | 4,325MB | 7.3 img/s | 3,445MB
  inception-v4| 81.49 | 2.6 img/s | 6,759MB | -- | --
  inception-resnet-v2| 80.0 | 2.0 img/s (batch=112) | 11,497MB | -- | --
  densenet-161| -- | -- | -- | -- | --
@@ -32,5 +32,5 @@
  &nbsp;+box voting | 83.95 | 0.16 | --
  &nbsp;+nms=0.4 | 84.22 | 0.27 | --
  &nbsp;+image flipping test | 84.54 | 0.32 | --
- &nbsp;+multi-scale testing | 85.45 | 0.91 | --
+ &nbsp;+multi-scale testing | 85.78 | 1.24 | --
 

@@ -8,10 +8,10 @@
  resnet101| -- | -- | -- | -- | --
  resnet101-v2| 79.6 | 3.1 img/s | 6,495MB | 7.1 img/s | 4,573MB
  resnet152-v2| 80.72 | 2.8 img/s | 9,315MB | 6.2 img/s | 6,021MB
- wrn50_2| 78.59 | 2.1 img/s | 4,895MB | -- | --
- resnext50-32x4d| 77.99 | 3.6 img/s | 5,315MB | -- | --
- resnext101-32x4d| 79.98 | 2.7 img/s | 7,836MB | -- | --
- resnext101-64x4d| 80.71 | 2.0 img/s (batch=96) | 11,277MB | -- | --
+ wrn50_2| 78.59 | 2.1 img/s | 4,895MB | 4.9 img/s | 3,499MB
+ resnext50-32x4d| 77.99 | 3.6 img/s | 5,315MB | 7.4 img/s | 4,305MB
+ resnext101-32x4d| 79.98 | 2.7 img/s | 7,836MB | 6.3 img/s | 5,705MB
+ resnext101-64x4d| 80.71 | 2.0 img/s (batch=96) | 11,277MB | 3.7 img/s | 9,461MB
  inception-v3| 78.6 | 4.1 img/s | 4,325MB | -- | --
  inception-v4| 81.49 | 2.6 img/s | 6,759MB | -- | --
  inception-resnet-v2| 80.0 | 2.0 img/s (batch=112) | 11,497MB | -- | --

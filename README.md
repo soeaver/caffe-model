@@ -1,7 +1,7 @@
 # Caffe-model
 Caffe models (include classification, detection and segmentation) and deploy prototxt for resnet, resnext, inception_v3, inception_v4, inception_resnet, wider_resnet, densenet and other networks.
 
-## We recommend testing the caffe models with [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv)
+## We recommend using the caffe models with [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv)
 
 ## Disclaimer
 
@@ -9,9 +9,7 @@ Most of the models are converted from other projects, the main contribution belo
 
 Project links:
 
-[mxnet-model-gallery](https://github.com/dmlc/mxnet-model-gallery)
-
-[tensorflow slim](https://github.com/tensorflow/models/tree/master/slim)
+[mxnet-model-gallery](https://github.com/dmlc/mxnet-model-gallery)、 [tensorflow slim](https://github.com/tensorflow/models/tree/master/slim)
 
 [craftGBD](https://github.com/craftGBD/craftGBD)
 

@@ -28,11 +28,6 @@ Project links:
 ## CLS (imagenet)
 
 ### Introduction
-This folder contains the deploy files(include generator scripts) and pre-train models of resnet-v1, resnet-v2, inception-v3, inception-resnet-v2 and densenet(coming soon).
-
-We didn't train any model from scratch, some of them are converted from other deep learning framworks (inception-v3 from [mxnet](https://github.com/dmlc/mxnet-model-gallery/blob/master/imagenet-1k-inception-v3.md), inception-resnet-v2 from [tensorflow](https://github.com/tensorflow/models/blob/master/slim/nets/inception_resnet_v2.py)), some of them are converted from other modified caffe ([resnet-v2](https://github.com/yjxiong/caffe/tree/mem)). But to achieve the original performance, finetuning is performed on imagenet for several epochs. 
-
-The main contribution belongs to the authors and model trainers.
 
 ### Performance on imagenet
 **1. Top-1/5 accuracy of pre-train models in this repository.**
@@ -112,6 +107,6 @@ caffe-model is released under the MIT License (refer to the LICENSE file for det
 
 ## Acknowlegement
 
-I greatly thank [Yangqing Jia](https://github.com/Yangqing) and [BVLC group](https://www.github.com/BVLC/caffe) for developing Caffe
+I greatly thank [Yangqing Jia](https://github.com/Yangqing) and [BVLC group](https://www.github.com/BVLC/caffe) for developing Caffe.
 
 And I would like to thank all the authors of every network.

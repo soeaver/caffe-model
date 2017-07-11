@@ -1,6 +1,7 @@
 # Caffe-model
 Caffe models (include classification, detection and segmentation) and deploy prototxt for resnet, resnext, inception_v3, inception_v4, inception_resnet, wider_resnet, densenet and other networks.
 
+## We recommend testing the caffe models with [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv)
 
 ## Disclaimer
 
@@ -23,8 +24,6 @@ Project links:
 [keras deep-learning-models](https://github.com/fchollet/deep-learning-models)
 
 [ademxapp](https://github.com/itijyou/ademxapp)
-
-We recommend testing the caffe models with [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv)
 
 
 ## CLS (imagenet)

@@ -1,7 +1,22 @@
 # Caffe-model
-Caffe models (include classification, detection and segmentation) and deploy prototxt for resnet, resnext, inception_v3, inception_v4, inception_resnet, wider_resnet, and other networks
+Caffe models (include classification, detection and segmentation) and deploy prototxt for resnet, resnext, inception_v3, inception_v4, inception_resnet, wider_resnet, densenet and other networks.
 
-# CLS (imagenet)
+
+## Disclaimer
+
+Most of the models are converted from other projects, the main contribution belongs to the original authors.
+Project links:
+[mxnet-model-gallery](https://github.com/dmlc/mxnet-model-gallery)
+[tensorflow slim](https://github.com/tensorflow/models/tree/master/slim)
+[craftGBD](https://github.com/craftGBD/craftGBD)
+[ResNeXt](https://github.com/facebookresearch/ResNeXt)
+[DenseNet](https://github.com/liuzhuang13/DenseNet)
+[wide-residual-networks](https://github.com/szagoruyko/wide-residual-networks)
+[keras deep-learning-models](https://github.com/fchollet/deep-learning-models)
+[ademxapp](https://github.com/itijyou/ademxapp)
+
+
+## CLS (imagenet)
 
 ### Introduction
 This folder contains the deploy files(include generator scripts) and pre-train models of resnet-v1, resnet-v2, inception-v3, inception-resnet-v2 and densenet(coming soon).
@@ -83,8 +98,8 @@ The main contribution belongs to the authors and model trainers.
 
 
 
-# Acknowlegement
+## Acknowlegement
 
 I greatly thank [Yangqing Jia](https://github.com/Yangqing) and [BVLC group](https://www.github.com/BVLC/caffe) for developing Caffe
 
-And I would like to thank all the authors of every cnn model
+And I would like to thank all the authors of every network.

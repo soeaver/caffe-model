@@ -13,6 +13,7 @@ Project links:
 
 
 ## CLS (imagenet)
+Please install [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv) for evaluating and finetuning.
 
 ### Performance on imagenet validation.
 **1. Top-1/5 accuracy of pre-train models in this repository.**

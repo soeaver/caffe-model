@@ -1,5 +1,5 @@
 # Caffe-model
-Python script to generate prototxt on Caffe, specially the inception_v3\inception_v4\inception_resnet\fractalnet
+Caffe models (include classification, detection and segmentation) and deploy prototxt for resnet, resnext, inception_v3, inception_v4, inception_resnet, wider_resnet, and other networks
 
 # CLS (imagenet)
 

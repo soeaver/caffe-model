@@ -5,7 +5,9 @@ Caffe models (include classification, detection and segmentation) and deploy pro
 ## Disclaimer
 
 Most of the models are converted from other projects, the main contribution belongs to the original authors.
+
 Project links:
+
 [mxnet-model-gallery](https://github.com/dmlc/mxnet-model-gallery)
 
 [tensorflow slim](https://github.com/tensorflow/models/tree/master/slim)
@@ -103,6 +105,9 @@ The main contribution belongs to the authors and model trainers.
     python evaluation_cls.py
 
 
+## License
+
+caffe-model is released under the MIT License (refer to the LICENSE file for details).
 
 
 ## Acknowlegement

@@ -24,12 +24,12 @@ Project links:
 
 [ademxapp](https://github.com/itijyou/ademxapp)
 
+We recommend testing the caffe models with [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv)
+
 
 ## CLS (imagenet)
 
-### Introduction
-
-### Performance on imagenet
+### Performance on imagenet validation.
 **1. Top-1/5 accuracy of pre-train models in this repository.**
 
  Network|224/299(single-crop)|224/299(12-crop)|320/395(single-crop)|320/395(12-crop)

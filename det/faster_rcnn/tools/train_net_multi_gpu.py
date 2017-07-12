@@ -27,11 +27,11 @@ def parse_args():
     """
     parser = argparse.ArgumentParser(description='Train a Fast R-CNN network')
     parser.add_argument("--gpu_id", type=str, 
-                        default='1,2',
+                        default='0,1',
                         help="List of device ids.")
     parser.add_argument('--solver', dest='solver',
                         help='solver prototxt',
-                        default='./solver.prototxt', type=str)
+                        default='~/caffe-model/det/faster_rcnn/models/pascal_voc/solver.prototxt', type=str)
     parser.add_argument('--iters', dest='max_iters',
                         help='number of iterations to train',
                         default=80000, type=int)

@@ -1,0 +1,2833 @@
+input: "dense66_concat"
+input_shape {
+  dim: 1
+  dim: 1792
+  dim: 40
+  dim: 40
+}
+
+input: "rois"
+input_shape {
+  dim: 300
+  dim: 5
+}
+
+#============== RCNN ===============
+layer {
+  name: "roi_pool"
+  type: "ROIPooling"
+  bottom: "dense66_concat"
+  bottom: "rois"
+  top: "roi_pool"
+  roi_pooling_param {
+    pooled_w: 14
+    pooled_h: 14
+    spatial_scale: 0.062500
+  }
+}
+layer {
+  name: "conv4"
+  type: "Convolution"
+  bottom: "roi_pool"
+  top: "conv4"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 896
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "pool4"
+  type: "Pooling"
+  bottom: "conv4"
+  top: "pool4"
+  pooling_param {
+    pool: AVE
+    kernel_size: 2
+    stride: 2
+  }
+}
+layer {
+  name: "dense67_scale"
+  type: "Scale"
+  bottom: "pool4"
+  top: "dense67_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense67_relu"
+  type: "ReLU"
+  bottom: "dense67_scale"
+  top: "dense67_scale"
+}
+layer {
+  name: "dense67_conv1"
+  type: "Convolution"
+  bottom: "dense67_scale"
+  top: "dense67_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense67_conv1_scale"
+  type: "Scale"
+  bottom: "dense67_conv1"
+  top: "dense67_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense67_conv1_relu"
+  type: "ReLU"
+  bottom: "dense67_conv1"
+  top: "dense67_conv1"
+}
+layer {
+  name: "dense67_conv2"
+  type: "Convolution"
+  bottom: "dense67_conv1"
+  top: "dense67_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense67_concat"
+  type: "Concat"
+  bottom: "pool4"
+  bottom: "dense67_conv2"
+  top: "dense67_concat"
+}
+layer {
+  name: "dense68_scale"
+  type: "Scale"
+  bottom: "dense67_concat"
+  top: "dense68_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense68_relu"
+  type: "ReLU"
+  bottom: "dense68_scale"
+  top: "dense68_scale"
+}
+layer {
+  name: "dense68_conv1"
+  type: "Convolution"
+  bottom: "dense68_scale"
+  top: "dense68_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense68_conv1_scale"
+  type: "Scale"
+  bottom: "dense68_conv1"
+  top: "dense68_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense68_conv1_relu"
+  type: "ReLU"
+  bottom: "dense68_conv1"
+  top: "dense68_conv1"
+}
+layer {
+  name: "dense68_conv2"
+  type: "Convolution"
+  bottom: "dense68_conv1"
+  top: "dense68_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense68_concat"
+  type: "Concat"
+  bottom: "dense67_concat"
+  bottom: "dense68_conv2"
+  top: "dense68_concat"
+}
+layer {
+  name: "dense69_scale"
+  type: "Scale"
+  bottom: "dense68_concat"
+  top: "dense69_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense69_relu"
+  type: "ReLU"
+  bottom: "dense69_scale"
+  top: "dense69_scale"
+}
+layer {
+  name: "dense69_conv1"
+  type: "Convolution"
+  bottom: "dense69_scale"
+  top: "dense69_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense69_conv1_scale"
+  type: "Scale"
+  bottom: "dense69_conv1"
+  top: "dense69_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense69_conv1_relu"
+  type: "ReLU"
+  bottom: "dense69_conv1"
+  top: "dense69_conv1"
+}
+layer {
+  name: "dense69_conv2"
+  type: "Convolution"
+  bottom: "dense69_conv1"
+  top: "dense69_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense69_concat"
+  type: "Concat"
+  bottom: "dense68_concat"
+  bottom: "dense69_conv2"
+  top: "dense69_concat"
+}
+layer {
+  name: "dense70_scale"
+  type: "Scale"
+  bottom: "dense69_concat"
+  top: "dense70_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense70_relu"
+  type: "ReLU"
+  bottom: "dense70_scale"
+  top: "dense70_scale"
+}
+layer {
+  name: "dense70_conv1"
+  type: "Convolution"
+  bottom: "dense70_scale"
+  top: "dense70_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense70_conv1_scale"
+  type: "Scale"
+  bottom: "dense70_conv1"
+  top: "dense70_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense70_conv1_relu"
+  type: "ReLU"
+  bottom: "dense70_conv1"
+  top: "dense70_conv1"
+}
+layer {
+  name: "dense70_conv2"
+  type: "Convolution"
+  bottom: "dense70_conv1"
+  top: "dense70_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense70_concat"
+  type: "Concat"
+  bottom: "dense69_concat"
+  bottom: "dense70_conv2"
+  top: "dense70_concat"
+}
+layer {
+  name: "dense71_scale"
+  type: "Scale"
+  bottom: "dense70_concat"
+  top: "dense71_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense71_relu"
+  type: "ReLU"
+  bottom: "dense71_scale"
+  top: "dense71_scale"
+}
+layer {
+  name: "dense71_conv1"
+  type: "Convolution"
+  bottom: "dense71_scale"
+  top: "dense71_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense71_conv1_scale"
+  type: "Scale"
+  bottom: "dense71_conv1"
+  top: "dense71_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense71_conv1_relu"
+  type: "ReLU"
+  bottom: "dense71_conv1"
+  top: "dense71_conv1"
+}
+layer {
+  name: "dense71_conv2"
+  type: "Convolution"
+  bottom: "dense71_conv1"
+  top: "dense71_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense71_concat"
+  type: "Concat"
+  bottom: "dense70_concat"
+  bottom: "dense71_conv2"
+  top: "dense71_concat"
+}
+layer {
+  name: "dense72_scale"
+  type: "Scale"
+  bottom: "dense71_concat"
+  top: "dense72_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense72_relu"
+  type: "ReLU"
+  bottom: "dense72_scale"
+  top: "dense72_scale"
+}
+layer {
+  name: "dense72_conv1"
+  type: "Convolution"
+  bottom: "dense72_scale"
+  top: "dense72_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense72_conv1_scale"
+  type: "Scale"
+  bottom: "dense72_conv1"
+  top: "dense72_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense72_conv1_relu"
+  type: "ReLU"
+  bottom: "dense72_conv1"
+  top: "dense72_conv1"
+}
+layer {
+  name: "dense72_conv2"
+  type: "Convolution"
+  bottom: "dense72_conv1"
+  top: "dense72_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense72_concat"
+  type: "Concat"
+  bottom: "dense71_concat"
+  bottom: "dense72_conv2"
+  top: "dense72_concat"
+}
+layer {
+  name: "dense73_scale"
+  type: "Scale"
+  bottom: "dense72_concat"
+  top: "dense73_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense73_relu"
+  type: "ReLU"
+  bottom: "dense73_scale"
+  top: "dense73_scale"
+}
+layer {
+  name: "dense73_conv1"
+  type: "Convolution"
+  bottom: "dense73_scale"
+  top: "dense73_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense73_conv1_scale"
+  type: "Scale"
+  bottom: "dense73_conv1"
+  top: "dense73_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense73_conv1_relu"
+  type: "ReLU"
+  bottom: "dense73_conv1"
+  top: "dense73_conv1"
+}
+layer {
+  name: "dense73_conv2"
+  type: "Convolution"
+  bottom: "dense73_conv1"
+  top: "dense73_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense73_concat"
+  type: "Concat"
+  bottom: "dense72_concat"
+  bottom: "dense73_conv2"
+  top: "dense73_concat"
+}
+layer {
+  name: "dense74_scale"
+  type: "Scale"
+  bottom: "dense73_concat"
+  top: "dense74_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense74_relu"
+  type: "ReLU"
+  bottom: "dense74_scale"
+  top: "dense74_scale"
+}
+layer {
+  name: "dense74_conv1"
+  type: "Convolution"
+  bottom: "dense74_scale"
+  top: "dense74_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense74_conv1_scale"
+  type: "Scale"
+  bottom: "dense74_conv1"
+  top: "dense74_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense74_conv1_relu"
+  type: "ReLU"
+  bottom: "dense74_conv1"
+  top: "dense74_conv1"
+}
+layer {
+  name: "dense74_conv2"
+  type: "Convolution"
+  bottom: "dense74_conv1"
+  top: "dense74_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense74_concat"
+  type: "Concat"
+  bottom: "dense73_concat"
+  bottom: "dense74_conv2"
+  top: "dense74_concat"
+}
+layer {
+  name: "dense75_scale"
+  type: "Scale"
+  bottom: "dense74_concat"
+  top: "dense75_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense75_relu"
+  type: "ReLU"
+  bottom: "dense75_scale"
+  top: "dense75_scale"
+}
+layer {
+  name: "dense75_conv1"
+  type: "Convolution"
+  bottom: "dense75_scale"
+  top: "dense75_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense75_conv1_scale"
+  type: "Scale"
+  bottom: "dense75_conv1"
+  top: "dense75_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense75_conv1_relu"
+  type: "ReLU"
+  bottom: "dense75_conv1"
+  top: "dense75_conv1"
+}
+layer {
+  name: "dense75_conv2"
+  type: "Convolution"
+  bottom: "dense75_conv1"
+  top: "dense75_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense75_concat"
+  type: "Concat"
+  bottom: "dense74_concat"
+  bottom: "dense75_conv2"
+  top: "dense75_concat"
+}
+layer {
+  name: "dense76_scale"
+  type: "Scale"
+  bottom: "dense75_concat"
+  top: "dense76_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense76_relu"
+  type: "ReLU"
+  bottom: "dense76_scale"
+  top: "dense76_scale"
+}
+layer {
+  name: "dense76_conv1"
+  type: "Convolution"
+  bottom: "dense76_scale"
+  top: "dense76_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense76_conv1_scale"
+  type: "Scale"
+  bottom: "dense76_conv1"
+  top: "dense76_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense76_conv1_relu"
+  type: "ReLU"
+  bottom: "dense76_conv1"
+  top: "dense76_conv1"
+}
+layer {
+  name: "dense76_conv2"
+  type: "Convolution"
+  bottom: "dense76_conv1"
+  top: "dense76_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense76_concat"
+  type: "Concat"
+  bottom: "dense75_concat"
+  bottom: "dense76_conv2"
+  top: "dense76_concat"
+}
+layer {
+  name: "dense77_scale"
+  type: "Scale"
+  bottom: "dense76_concat"
+  top: "dense77_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense77_relu"
+  type: "ReLU"
+  bottom: "dense77_scale"
+  top: "dense77_scale"
+}
+layer {
+  name: "dense77_conv1"
+  type: "Convolution"
+  bottom: "dense77_scale"
+  top: "dense77_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense77_conv1_scale"
+  type: "Scale"
+  bottom: "dense77_conv1"
+  top: "dense77_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense77_conv1_relu"
+  type: "ReLU"
+  bottom: "dense77_conv1"
+  top: "dense77_conv1"
+}
+layer {
+  name: "dense77_conv2"
+  type: "Convolution"
+  bottom: "dense77_conv1"
+  top: "dense77_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense77_concat"
+  type: "Concat"
+  bottom: "dense76_concat"
+  bottom: "dense77_conv2"
+  top: "dense77_concat"
+}
+layer {
+  name: "dense78_scale"
+  type: "Scale"
+  bottom: "dense77_concat"
+  top: "dense78_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense78_relu"
+  type: "ReLU"
+  bottom: "dense78_scale"
+  top: "dense78_scale"
+}
+layer {
+  name: "dense78_conv1"
+  type: "Convolution"
+  bottom: "dense78_scale"
+  top: "dense78_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense78_conv1_scale"
+  type: "Scale"
+  bottom: "dense78_conv1"
+  top: "dense78_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense78_conv1_relu"
+  type: "ReLU"
+  bottom: "dense78_conv1"
+  top: "dense78_conv1"
+}
+layer {
+  name: "dense78_conv2"
+  type: "Convolution"
+  bottom: "dense78_conv1"
+  top: "dense78_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense78_concat"
+  type: "Concat"
+  bottom: "dense77_concat"
+  bottom: "dense78_conv2"
+  top: "dense78_concat"
+}
+layer {
+  name: "dense79_scale"
+  type: "Scale"
+  bottom: "dense78_concat"
+  top: "dense79_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense79_relu"
+  type: "ReLU"
+  bottom: "dense79_scale"
+  top: "dense79_scale"
+}
+layer {
+  name: "dense79_conv1"
+  type: "Convolution"
+  bottom: "dense79_scale"
+  top: "dense79_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense79_conv1_scale"
+  type: "Scale"
+  bottom: "dense79_conv1"
+  top: "dense79_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense79_conv1_relu"
+  type: "ReLU"
+  bottom: "dense79_conv1"
+  top: "dense79_conv1"
+}
+layer {
+  name: "dense79_conv2"
+  type: "Convolution"
+  bottom: "dense79_conv1"
+  top: "dense79_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense79_concat"
+  type: "Concat"
+  bottom: "dense78_concat"
+  bottom: "dense79_conv2"
+  top: "dense79_concat"
+}
+layer {
+  name: "dense80_scale"
+  type: "Scale"
+  bottom: "dense79_concat"
+  top: "dense80_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense80_relu"
+  type: "ReLU"
+  bottom: "dense80_scale"
+  top: "dense80_scale"
+}
+layer {
+  name: "dense80_conv1"
+  type: "Convolution"
+  bottom: "dense80_scale"
+  top: "dense80_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense80_conv1_scale"
+  type: "Scale"
+  bottom: "dense80_conv1"
+  top: "dense80_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense80_conv1_relu"
+  type: "ReLU"
+  bottom: "dense80_conv1"
+  top: "dense80_conv1"
+}
+layer {
+  name: "dense80_conv2"
+  type: "Convolution"
+  bottom: "dense80_conv1"
+  top: "dense80_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense80_concat"
+  type: "Concat"
+  bottom: "dense79_concat"
+  bottom: "dense80_conv2"
+  top: "dense80_concat"
+}
+layer {
+  name: "dense81_scale"
+  type: "Scale"
+  bottom: "dense80_concat"
+  top: "dense81_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense81_relu"
+  type: "ReLU"
+  bottom: "dense81_scale"
+  top: "dense81_scale"
+}
+layer {
+  name: "dense81_conv1"
+  type: "Convolution"
+  bottom: "dense81_scale"
+  top: "dense81_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense81_conv1_scale"
+  type: "Scale"
+  bottom: "dense81_conv1"
+  top: "dense81_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense81_conv1_relu"
+  type: "ReLU"
+  bottom: "dense81_conv1"
+  top: "dense81_conv1"
+}
+layer {
+  name: "dense81_conv2"
+  type: "Convolution"
+  bottom: "dense81_conv1"
+  top: "dense81_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense81_concat"
+  type: "Concat"
+  bottom: "dense80_concat"
+  bottom: "dense81_conv2"
+  top: "dense81_concat"
+}
+layer {
+  name: "dense82_scale"
+  type: "Scale"
+  bottom: "dense81_concat"
+  top: "dense82_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense82_relu"
+  type: "ReLU"
+  bottom: "dense82_scale"
+  top: "dense82_scale"
+}
+layer {
+  name: "dense82_conv1"
+  type: "Convolution"
+  bottom: "dense82_scale"
+  top: "dense82_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense82_conv1_scale"
+  type: "Scale"
+  bottom: "dense82_conv1"
+  top: "dense82_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense82_conv1_relu"
+  type: "ReLU"
+  bottom: "dense82_conv1"
+  top: "dense82_conv1"
+}
+layer {
+  name: "dense82_conv2"
+  type: "Convolution"
+  bottom: "dense82_conv1"
+  top: "dense82_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense82_concat"
+  type: "Concat"
+  bottom: "dense81_concat"
+  bottom: "dense82_conv2"
+  top: "dense82_concat"
+}
+layer {
+  name: "dense83_scale"
+  type: "Scale"
+  bottom: "dense82_concat"
+  top: "dense83_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense83_relu"
+  type: "ReLU"
+  bottom: "dense83_scale"
+  top: "dense83_scale"
+}
+layer {
+  name: "dense83_conv1"
+  type: "Convolution"
+  bottom: "dense83_scale"
+  top: "dense83_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense83_conv1_scale"
+  type: "Scale"
+  bottom: "dense83_conv1"
+  top: "dense83_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense83_conv1_relu"
+  type: "ReLU"
+  bottom: "dense83_conv1"
+  top: "dense83_conv1"
+}
+layer {
+  name: "dense83_conv2"
+  type: "Convolution"
+  bottom: "dense83_conv1"
+  top: "dense83_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense83_concat"
+  type: "Concat"
+  bottom: "dense82_concat"
+  bottom: "dense83_conv2"
+  top: "dense83_concat"
+}
+layer {
+  name: "dense84_scale"
+  type: "Scale"
+  bottom: "dense83_concat"
+  top: "dense84_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense84_relu"
+  type: "ReLU"
+  bottom: "dense84_scale"
+  top: "dense84_scale"
+}
+layer {
+  name: "dense84_conv1"
+  type: "Convolution"
+  bottom: "dense84_scale"
+  top: "dense84_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense84_conv1_scale"
+  type: "Scale"
+  bottom: "dense84_conv1"
+  top: "dense84_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense84_conv1_relu"
+  type: "ReLU"
+  bottom: "dense84_conv1"
+  top: "dense84_conv1"
+}
+layer {
+  name: "dense84_conv2"
+  type: "Convolution"
+  bottom: "dense84_conv1"
+  top: "dense84_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense84_concat"
+  type: "Concat"
+  bottom: "dense83_concat"
+  bottom: "dense84_conv2"
+  top: "dense84_concat"
+}
+layer {
+  name: "dense85_scale"
+  type: "Scale"
+  bottom: "dense84_concat"
+  top: "dense85_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense85_relu"
+  type: "ReLU"
+  bottom: "dense85_scale"
+  top: "dense85_scale"
+}
+layer {
+  name: "dense85_conv1"
+  type: "Convolution"
+  bottom: "dense85_scale"
+  top: "dense85_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense85_conv1_scale"
+  type: "Scale"
+  bottom: "dense85_conv1"
+  top: "dense85_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense85_conv1_relu"
+  type: "ReLU"
+  bottom: "dense85_conv1"
+  top: "dense85_conv1"
+}
+layer {
+  name: "dense85_conv2"
+  type: "Convolution"
+  bottom: "dense85_conv1"
+  top: "dense85_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense85_concat"
+  type: "Concat"
+  bottom: "dense84_concat"
+  bottom: "dense85_conv2"
+  top: "dense85_concat"
+}
+layer {
+  name: "dense86_scale"
+  type: "Scale"
+  bottom: "dense85_concat"
+  top: "dense86_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense86_relu"
+  type: "ReLU"
+  bottom: "dense86_scale"
+  top: "dense86_scale"
+}
+layer {
+  name: "dense86_conv1"
+  type: "Convolution"
+  bottom: "dense86_scale"
+  top: "dense86_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense86_conv1_scale"
+  type: "Scale"
+  bottom: "dense86_conv1"
+  top: "dense86_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense86_conv1_relu"
+  type: "ReLU"
+  bottom: "dense86_conv1"
+  top: "dense86_conv1"
+}
+layer {
+  name: "dense86_conv2"
+  type: "Convolution"
+  bottom: "dense86_conv1"
+  top: "dense86_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense86_concat"
+  type: "Concat"
+  bottom: "dense85_concat"
+  bottom: "dense86_conv2"
+  top: "dense86_concat"
+}
+layer {
+  name: "dense87_scale"
+  type: "Scale"
+  bottom: "dense86_concat"
+  top: "dense87_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense87_relu"
+  type: "ReLU"
+  bottom: "dense87_scale"
+  top: "dense87_scale"
+}
+layer {
+  name: "dense87_conv1"
+  type: "Convolution"
+  bottom: "dense87_scale"
+  top: "dense87_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense87_conv1_scale"
+  type: "Scale"
+  bottom: "dense87_conv1"
+  top: "dense87_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense87_conv1_relu"
+  type: "ReLU"
+  bottom: "dense87_conv1"
+  top: "dense87_conv1"
+}
+layer {
+  name: "dense87_conv2"
+  type: "Convolution"
+  bottom: "dense87_conv1"
+  top: "dense87_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense87_concat"
+  type: "Concat"
+  bottom: "dense86_concat"
+  bottom: "dense87_conv2"
+  top: "dense87_concat"
+}
+layer {
+  name: "dense88_scale"
+  type: "Scale"
+  bottom: "dense87_concat"
+  top: "dense88_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense88_relu"
+  type: "ReLU"
+  bottom: "dense88_scale"
+  top: "dense88_scale"
+}
+layer {
+  name: "dense88_conv1"
+  type: "Convolution"
+  bottom: "dense88_scale"
+  top: "dense88_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense88_conv1_scale"
+  type: "Scale"
+  bottom: "dense88_conv1"
+  top: "dense88_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense88_conv1_relu"
+  type: "ReLU"
+  bottom: "dense88_conv1"
+  top: "dense88_conv1"
+}
+layer {
+  name: "dense88_conv2"
+  type: "Convolution"
+  bottom: "dense88_conv1"
+  top: "dense88_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense88_concat"
+  type: "Concat"
+  bottom: "dense87_concat"
+  bottom: "dense88_conv2"
+  top: "dense88_concat"
+}
+layer {
+  name: "dense89_scale"
+  type: "Scale"
+  bottom: "dense88_concat"
+  top: "dense89_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense89_relu"
+  type: "ReLU"
+  bottom: "dense89_scale"
+  top: "dense89_scale"
+}
+layer {
+  name: "dense89_conv1"
+  type: "Convolution"
+  bottom: "dense89_scale"
+  top: "dense89_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense89_conv1_scale"
+  type: "Scale"
+  bottom: "dense89_conv1"
+  top: "dense89_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense89_conv1_relu"
+  type: "ReLU"
+  bottom: "dense89_conv1"
+  top: "dense89_conv1"
+}
+layer {
+  name: "dense89_conv2"
+  type: "Convolution"
+  bottom: "dense89_conv1"
+  top: "dense89_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense89_concat"
+  type: "Concat"
+  bottom: "dense88_concat"
+  bottom: "dense89_conv2"
+  top: "dense89_concat"
+}
+layer {
+  name: "dense90_scale"
+  type: "Scale"
+  bottom: "dense89_concat"
+  top: "dense90_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense90_relu"
+  type: "ReLU"
+  bottom: "dense90_scale"
+  top: "dense90_scale"
+}
+layer {
+  name: "dense90_conv1"
+  type: "Convolution"
+  bottom: "dense90_scale"
+  top: "dense90_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense90_conv1_scale"
+  type: "Scale"
+  bottom: "dense90_conv1"
+  top: "dense90_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense90_conv1_relu"
+  type: "ReLU"
+  bottom: "dense90_conv1"
+  top: "dense90_conv1"
+}
+layer {
+  name: "dense90_conv2"
+  type: "Convolution"
+  bottom: "dense90_conv1"
+  top: "dense90_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense90_concat"
+  type: "Concat"
+  bottom: "dense89_concat"
+  bottom: "dense90_conv2"
+  top: "dense90_concat"
+}
+layer {
+  name: "dense91_scale"
+  type: "Scale"
+  bottom: "dense90_concat"
+  top: "dense91_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense91_relu"
+  type: "ReLU"
+  bottom: "dense91_scale"
+  top: "dense91_scale"
+}
+layer {
+  name: "dense91_conv1"
+  type: "Convolution"
+  bottom: "dense91_scale"
+  top: "dense91_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense91_conv1_scale"
+  type: "Scale"
+  bottom: "dense91_conv1"
+  top: "dense91_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense91_conv1_relu"
+  type: "ReLU"
+  bottom: "dense91_conv1"
+  top: "dense91_conv1"
+}
+layer {
+  name: "dense91_conv2"
+  type: "Convolution"
+  bottom: "dense91_conv1"
+  top: "dense91_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense91_concat"
+  type: "Concat"
+  bottom: "dense90_concat"
+  bottom: "dense91_conv2"
+  top: "dense91_concat"
+}
+layer {
+  name: "dense92_scale"
+  type: "Scale"
+  bottom: "dense91_concat"
+  top: "dense92_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense92_relu"
+  type: "ReLU"
+  bottom: "dense92_scale"
+  top: "dense92_scale"
+}
+layer {
+  name: "dense92_conv1"
+  type: "Convolution"
+  bottom: "dense92_scale"
+  top: "dense92_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense92_conv1_scale"
+  type: "Scale"
+  bottom: "dense92_conv1"
+  top: "dense92_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense92_conv1_relu"
+  type: "ReLU"
+  bottom: "dense92_conv1"
+  top: "dense92_conv1"
+}
+layer {
+  name: "dense92_conv2"
+  type: "Convolution"
+  bottom: "dense92_conv1"
+  top: "dense92_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense92_concat"
+  type: "Concat"
+  bottom: "dense91_concat"
+  bottom: "dense92_conv2"
+  top: "dense92_concat"
+}
+layer {
+  name: "dense93_scale"
+  type: "Scale"
+  bottom: "dense92_concat"
+  top: "dense93_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense93_relu"
+  type: "ReLU"
+  bottom: "dense93_scale"
+  top: "dense93_scale"
+}
+layer {
+  name: "dense93_conv1"
+  type: "Convolution"
+  bottom: "dense93_scale"
+  top: "dense93_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense93_conv1_scale"
+  type: "Scale"
+  bottom: "dense93_conv1"
+  top: "dense93_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense93_conv1_relu"
+  type: "ReLU"
+  bottom: "dense93_conv1"
+  top: "dense93_conv1"
+}
+layer {
+  name: "dense93_conv2"
+  type: "Convolution"
+  bottom: "dense93_conv1"
+  top: "dense93_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense93_concat"
+  type: "Concat"
+  bottom: "dense92_concat"
+  bottom: "dense93_conv2"
+  top: "dense93_concat"
+}
+layer {
+  name: "dense94_scale"
+  type: "Scale"
+  bottom: "dense93_concat"
+  top: "dense94_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense94_relu"
+  type: "ReLU"
+  bottom: "dense94_scale"
+  top: "dense94_scale"
+}
+layer {
+  name: "dense94_conv1"
+  type: "Convolution"
+  bottom: "dense94_scale"
+  top: "dense94_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense94_conv1_scale"
+  type: "Scale"
+  bottom: "dense94_conv1"
+  top: "dense94_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense94_conv1_relu"
+  type: "ReLU"
+  bottom: "dense94_conv1"
+  top: "dense94_conv1"
+}
+layer {
+  name: "dense94_conv2"
+  type: "Convolution"
+  bottom: "dense94_conv1"
+  top: "dense94_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense94_concat"
+  type: "Concat"
+  bottom: "dense93_concat"
+  bottom: "dense94_conv2"
+  top: "dense94_concat"
+}
+layer {
+  name: "dense95_scale"
+  type: "Scale"
+  bottom: "dense94_concat"
+  top: "dense95_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense95_relu"
+  type: "ReLU"
+  bottom: "dense95_scale"
+  top: "dense95_scale"
+}
+layer {
+  name: "dense95_conv1"
+  type: "Convolution"
+  bottom: "dense95_scale"
+  top: "dense95_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense95_conv1_scale"
+  type: "Scale"
+  bottom: "dense95_conv1"
+  top: "dense95_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense95_conv1_relu"
+  type: "ReLU"
+  bottom: "dense95_conv1"
+  top: "dense95_conv1"
+}
+layer {
+  name: "dense95_conv2"
+  type: "Convolution"
+  bottom: "dense95_conv1"
+  top: "dense95_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense95_concat"
+  type: "Concat"
+  bottom: "dense94_concat"
+  bottom: "dense95_conv2"
+  top: "dense95_concat"
+}
+layer {
+  name: "dense96_scale"
+  type: "Scale"
+  bottom: "dense95_concat"
+  top: "dense96_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense96_relu"
+  type: "ReLU"
+  bottom: "dense96_scale"
+  top: "dense96_scale"
+}
+layer {
+  name: "dense96_conv1"
+  type: "Convolution"
+  bottom: "dense96_scale"
+  top: "dense96_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense96_conv1_scale"
+  type: "Scale"
+  bottom: "dense96_conv1"
+  top: "dense96_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense96_conv1_relu"
+  type: "ReLU"
+  bottom: "dense96_conv1"
+  top: "dense96_conv1"
+}
+layer {
+  name: "dense96_conv2"
+  type: "Convolution"
+  bottom: "dense96_conv1"
+  top: "dense96_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense96_concat"
+  type: "Concat"
+  bottom: "dense95_concat"
+  bottom: "dense96_conv2"
+  top: "dense96_concat"
+}
+layer {
+  name: "dense97_scale"
+  type: "Scale"
+  bottom: "dense96_concat"
+  top: "dense97_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense97_relu"
+  type: "ReLU"
+  bottom: "dense97_scale"
+  top: "dense97_scale"
+}
+layer {
+  name: "dense97_conv1"
+  type: "Convolution"
+  bottom: "dense97_scale"
+  top: "dense97_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense97_conv1_scale"
+  type: "Scale"
+  bottom: "dense97_conv1"
+  top: "dense97_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense97_conv1_relu"
+  type: "ReLU"
+  bottom: "dense97_conv1"
+  top: "dense97_conv1"
+}
+layer {
+  name: "dense97_conv2"
+  type: "Convolution"
+  bottom: "dense97_conv1"
+  top: "dense97_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense97_concat"
+  type: "Concat"
+  bottom: "dense96_concat"
+  bottom: "dense97_conv2"
+  top: "dense97_concat"
+}
+layer {
+  name: "dense98_scale"
+  type: "Scale"
+  bottom: "dense97_concat"
+  top: "dense98_scale"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense98_relu"
+  type: "ReLU"
+  bottom: "dense98_scale"
+  top: "dense98_scale"
+}
+layer {
+  name: "dense98_conv1"
+  type: "Convolution"
+  bottom: "dense98_scale"
+  top: "dense98_conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 128
+    bias_term: false
+    kernel_size: 1
+  }
+}
+layer {
+  name: "dense98_conv1_scale"
+  type: "Scale"
+  bottom: "dense98_conv1"
+  top: "dense98_conv1"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense98_conv1_relu"
+  type: "ReLU"
+  bottom: "dense98_conv1"
+  top: "dense98_conv1"
+}
+layer {
+  name: "dense98_conv2"
+  type: "Convolution"
+  bottom: "dense98_conv1"
+  top: "dense98_conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  convolution_param {
+    num_output: 32
+    bias_term: false
+    pad: 1
+    kernel_size: 3
+  }
+}
+layer {
+  name: "dense98_concat"
+  type: "Concat"
+  bottom: "dense97_concat"
+  bottom: "dense98_conv2"
+  top: "dense98_concat"
+}
+layer {
+  name: "dense98_concat_scale"
+  type: "Scale"
+  bottom: "dense98_concat"
+  top: "dense98_concat"
+  scale_param {
+    bias_term: true
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+  param {
+    lr_mult: 0.0
+    decay_mult: 0.0
+  }
+}
+layer {
+  name: "dense98_concat_relu"
+  type: "ReLU"
+  bottom: "dense98_concat"
+  top: "dense98_concat"
+}
+layer {
+  name: "pool5"
+  type: "Pooling"
+  bottom: "dense98_concat"
+  top: "pool5"
+  pooling_param {
+    pool: AVE
+    global_pooling: true
+  }
+}
+layer {
+  name: "cls_score"
+  type: "InnerProduct"
+  bottom: "pool5"
+  top: "cls_score"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
+  inner_product_param {
+    num_output: 21
+    weight_filler {
+      type: "msra"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+layer {
+  name: "bbox_pred"
+  type: "InnerProduct"
+  bottom: "pool5"
+  top: "bbox_pred"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
+  inner_product_param {
+  num_output: 84
+    weight_filler {
+      type: "msra"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+layer {
+  name: "cls_prob"
+  type: "Softmax"
+  bottom: "cls_score"
+  top: "cls_prob"
+}
+
+
+

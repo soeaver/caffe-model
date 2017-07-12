@@ -1,11 +1,11 @@
-ROOT_DIR: /home/yanglu/Program/caffe-model/det/faster_rcnn/resnet101-v2/ss
+ROOT_DIR: ~/caffe-model/det/faster_rcnn/models/pascal_voc/resnet101-v2
 EXP_DIR: faster_rcnn_end2end
 PIXEL_MEANS: [[[102.98, 115.947, 122.772]]]
 PIXEL_STDS: [[[1.0, 1.0, 1.0]]]
 TRAIN:
   SNAPSHOT_INFIX: 'ss'
   SNAPSHOT_ITERS: 10000
-  # SCALES: [400, 600, 800, 1000, 1200]
+  # SCALES: [400, 600, 800, 1000, 1200] # for multi-scale training
   SCALES: [600]
   MAX_SIZE: 1000  
   HAS_RPN: True

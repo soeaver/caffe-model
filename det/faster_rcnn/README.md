@@ -3,18 +3,19 @@
 
 1.Download the network weights trained on imagenet.
 
+
 2.Modify solver file
   ```
   caffe-model/det/faster_rcnn/models/pascal_voc/solver.prototxt
   ```
-  You need modify 'train_net' and 'snapshot_prefix' to the correct path or name.
+ - You need modify 'train_net' and 'snapshot_prefix' to the correct path or name.
   
   
 3.Modify yml file
   ```
   caffe-model/det/faster_rcnn/experiments/cfgs/faster_rcnn_end2end.yml
   ```
-  The faster rcnn models will saved in '{ROOT_DIR}/output/{EXP_DIR}/{imdb}/' folder.
+ - The faster rcnn models will saved in '{ROOT_DIR}/output/{EXP_DIR}/{imdb.name}/' folder.
 
 
 4.Training

@@ -1,9 +1,9 @@
 import numpy as np
 import xml.etree.ElementTree as ET
 
-gt_root = '/home/yanglu/Database/VOC_PASCAL/VOC2007_test/Annotations/'
-val_file = '../../../2007test.txt'
-det_root = './predict_ss/'
+gt_root = '~/Database/VOC_PASCAL/VOC2007_test/Annotations/'
+val_file = '~/2007test.txt'
+det_root = '~/predict_ss/'
 
 _classes = ('__background__',  # always index 0
             'aeroplane', 'bicycle', 'bird', 'boat',

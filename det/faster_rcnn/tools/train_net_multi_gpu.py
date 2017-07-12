@@ -1,16 +1,16 @@
 #!/usr/bin/env python
 
 # --------------------------------------------------------
-# Written by Bharat Singh
-# Modified version of py-R-FCN
+# Written by soeaver
+# Modified version of py-R-FCN-multiGPU
 # --------------------------------------------------------
 
 """Train a Fast R-CNN network on a region of interest database."""
 
 # import _init_paths
 import sys
-sys.path.append('/home/yanglu/workspace/py-RFCN-0701/caffe-rfcn/python')
-sys.path.append('/home/yanglu/workspace/py-RFCN-0701/lib')
+sys.path.append('~/py-RFCN-priv/caffe-priv/python')
+sys.path.append('~/py-RFCN-priv/lib')
 from fast_rcnn.train_multi_gpu import get_training_roidb, train_net_multi_gpu
 from fast_rcnn.config import cfg, cfg_from_file, cfg_from_list, get_output_dir
 from datasets.factory import get_imdb
@@ -37,10 +37,10 @@ def parse_args():
                         default=80000, type=int)
     parser.add_argument('--weights', dest='pretrained_model',
                         help='initialize with pretrained model weights',
-                        default='/home/yanglu/Program/caffe-model/cls/ilsvrc/resnet_v2/resnet101_v2/resnet101_v2_merge_bn_scale.caffemodel', type=str)
+                        default='~/caffe-model/cls/ilsvrc/resnet-v2/resnet101-v2/resnet101-v2_merge.caffemodel', type=str)
     parser.add_argument('--cfg', dest='cfg_file',
                         help='optional config file',
-                        default='./faster_rcnn_end2end.yml', type=str)
+                        default='~/caffe-model/det/faster_rcnn/experiments/cfgs/faster_rcnn_end2end.yml', type=str)
     parser.add_argument('--imdb', dest='imdb_name',
                         help='dataset to train on',
                         default='voc_0712_trainval', type=str)
@@ -51,9 +51,9 @@ def parse_args():
                         help='set config keys', default=None,
                         nargs=argparse.REMAINDER)
 
-    # if len(sys.argv) == 1:
-    #     parser.print_help()
-    #     sys.exit(1)
+    if len(sys.argv) == 1:
+        parser.print_help()
+        sys.exit(1)
 
     args = parser.parse_args()
     return args

@@ -1,4 +1,8 @@
 
+## Object Detection
+
+### We recommend using these caffe models with [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv)
+
 ### Object Detection Performance on PASCAL VOC.
 **1. Original faster rcnn train on VOC 2007+2012 trainval and test on VOC 2007 test.**
 

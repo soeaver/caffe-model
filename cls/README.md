@@ -19,17 +19,17 @@ Project links:
  resnet18-priv| 29.11/10.07 | ../.. | ../.. | ../..
  resnext26-32x4d-priv| 24.93/7.75 | ../.. | ../.. | ../..
  resnet101-v2| 21.95/6.12 | 19.99/5.04 | 20.37/5.16 | 19.29/4.57
- resnet152-v2| 79.15/94.58 | 80.76/95.32 | 80.34/95.26 | 81.16/95.68 
- resnet269-v2| **80.29**/95.00 | **81.75**/95.80 | 81.30/95.67 | **82.13**/96.15 
- resnet38a| 79.34/94.73 | ../.. | 80.75/95.34 | ../..
- inception-v3| 78.33/94.25 | 80.40/95.27 | 79.90/95.18 | 80.75/95.76 
- xception| 79.10/94.51 | ../.. | 80.42/95.23 | ../.. 
- inception-v4| 79.97/94.91 | 81.40/95.70 | **81.32**/95.68 | 81.88/96.08 
- inception-resnet-v2| 80.14/**95.17** | 81.54/**95.92** | 81.25/**95.98** | 81.85/**96.29**
- resnext50-32x4d| 77.63/93.69 | 79.47/94.65 | 78.90/94.47 | 79.63/94.97 
- resnext101-32x4d| 78.70/94.21 | 80.53/95.11 | 80.09/95.03 | 80.81/95.41
- resnext101-64x4d| 79.40/94.59 | 81.12/95.41 | 80.74/95.37 | 81.52/95.69
- wrn50-2(resnet50-1x128d)| 77.87/93.87 | 79.91/94.94 | 79.32/94.72 | 80.17/95.13
+ resnet152-v2| 20.85/5.42 | 19.24/4.68 | 19.66/4.73 | 18.84/4.32
+ resnet269-v2| **19.71**/5.00 | **18.25**/4.20 | 18.70/4.33 | **17.87**/3.85
+ resnet38a| 20.66/5.27 | ../.. | 19.25/4.66 | ../..
+ inception-v3| 21.67/5.75 | 19.60/4.73 | 20.10/4.82 | 19.25/4.24 
+ xception| 20.90/5.49 | ../.. | 19.58/4.77 | ../.. 
+ inception-v4| 20.03/5.09 | 18.60/4.30 | **18.68**/4.32 |18.12/3.92 
+ inception-resnet-v2| 19.86/**4.83** | 18.46/**4.08** | 18.75/**4.02** | 18.15/**3.71**
+ resnext50-32x4d| 22.37/6.31 | 20.53/5.35 | 21.10/5.53 | 20.37/5.03
+ resnext101-32x4d| 21.30/5.79 | 19.47/4.89 | 19.91/4.97 | 19.19/4.59
+ resnext101-64x4d| 20.60/5.41 | 18.88/4.59 | 19.26/4.63 | 18.48/4.31
+ wrn50-2(resnet50-1x128d)| 22.13/6.17 | 20.09/5.06 | 20.68/5.28 | 19.83/4.87
 
  - The pre-train models are tested on original [caffe](https://github.com/BVLC/caffe) by [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py), **but ceil_mode:false（pooling_layer） is used for the models converted from torch, the detail in https://github.com/BVLC/caffe/pull/3057/files**. If you remove ceil_mode:false, the performance will decline about 1% top1.
  - 224x224(base_size=256) and 320x320(base_size=320) crop size for resnet-v2/resnext/wrn, 299x299(base_size=320) and 395x395(base_size=395) crop size for inception.

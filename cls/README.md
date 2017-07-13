@@ -12,11 +12,13 @@ Project links:
 
 
 ### Performance on imagenet validation.
-**1. Top-1/5 accuracy of pre-train models in this repository.**
+**1. Top-1/5 error of pre-train models in this repository.**
 
  Network|224/299(single-crop)|224/299(12-crop)|320/395(single-crop)|320/395(12-crop)
  :---:|:---:|:---:|:---:|:---:
- resnet101-v2| 78.05/93.88 | 80.01/94.96 | 79.63/94.84 | 80.71/95.43
+ resnet18-priv| 29.11/10.07 | ../.. | ../.. | ../..
+ resnext26-32x4d-priv| 24.93/7.75 | ../.. | ../.. | ../..
+ resnet101-v2| 21.95/6.12 | 19.99/5.04 | 20.37/5.16 | 19.29/4.57
  resnet152-v2| 79.15/94.58 | 80.76/95.32 | 80.34/95.26 | 81.16/95.68 
  resnet269-v2| **80.29**/95.00 | **81.75**/95.80 | 81.30/95.67 | **82.13**/96.15 
  resnet38a| 79.34/94.73 | ../.. | 80.75/95.34 | ../..
@@ -24,10 +26,10 @@ Project links:
  xception| 79.10/94.51 | ../.. | 80.42/95.23 | ../.. 
  inception-v4| 79.97/94.91 | 81.40/95.70 | **81.32**/95.68 | 81.88/96.08 
  inception-resnet-v2| 80.14/**95.17** | 81.54/**95.92** | 81.25/**95.98** | 81.85/**96.29**
- resnext50_32x4d| 77.63/93.69 | 79.47/94.65 | 78.90/94.47 | 79.63/94.97 
- resnext101_32x4d| 78.70/94.21 | 80.53/95.11 | 80.09/95.03 | 80.81/95.41
- resnext101_64x4d| 79.40/94.59 | 81.12/95.41 | 80.74/95.37 | 81.52/95.69
- wrn50_2(resnet50_1x128d)| 77.87/93.87 | 79.91/94.94 | 79.32/94.72 | 80.17/95.13
+ resnext50-32x4d| 77.63/93.69 | 79.47/94.65 | 78.90/94.47 | 79.63/94.97 
+ resnext101-32x4d| 78.70/94.21 | 80.53/95.11 | 80.09/95.03 | 80.81/95.41
+ resnext101-64x4d| 79.40/94.59 | 81.12/95.41 | 80.74/95.37 | 81.52/95.69
+ wrn50-2(resnet50-1x128d)| 77.87/93.87 | 79.91/94.94 | 79.32/94.72 | 80.17/95.13
 
  - The pre-train models are tested on original [caffe](https://github.com/BVLC/caffe) by [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py), **but ceil_mode:false（pooling_layer） is used for the models converted from torch, the detail in https://github.com/BVLC/caffe/pull/3057/files**. If you remove ceil_mode:false, the performance will decline about 1% top1.
  - 224x224(base_size=256) and 320x320(base_size=320) crop size for resnet-v2/resnext/wrn, 299x299(base_size=320) and 395x395(base_size=395) crop size for inception.

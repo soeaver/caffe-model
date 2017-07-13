@@ -11,8 +11,8 @@ Project links:
 [mxnet-model-gallery](https://github.com/dmlc/mxnet-model-gallery)、 [tensorflow slim](https://github.com/tensorflow/models/tree/master/slim)、 [craftGBD](https://github.com/craftGBD/craftGBD)、 [ResNeXt](https://github.com/facebookresearch/ResNeXt)、 [DenseNet](https://github.com/liuzhuang13/DenseNet)、 [wide-residual-networks](https://github.com/szagoruyko/wide-residual-networks)、 [keras deep-learning-models](https://github.com/fchollet/deep-learning-models)、 [ademxapp](https://github.com/itijyou/ademxapp)
 
 
-### Performance on imagenet
-0. Top-1/5 accuracy of pre-train models in this repository.
+### Performance on imagenet validation.
+**1. Top-1/5 accuracy of pre-train models in this repository.**
 
  Network|224/299(single-crop)|224/299(12-crop)|320/395(single-crop)|320/395(12-crop)
  :---:|:---:|:---:|:---:|:---:
@@ -20,6 +20,7 @@ Project links:
  resnet152-v2| 79.15/94.58 | 80.76/95.32 | 80.34/95.26 | 81.16/95.68 
  resnet269-v2| **80.29**/95.00 | **81.75**/95.80 | 81.30/95.67 | **82.13**/96.15 
  inception-v3| 78.33/94.25 | 80.40/95.27 | 79.90/95.18 | 80.75/95.76 
+ xception| 79.10/94.51 | ../.. | 80.42/95.23 | ../.. 
  inception-v4| 79.97/94.91 | 81.40/95.70 | **81.32**/95.68 | 81.88/96.08 
  inception-resnet-v2| 80.14/**95.17** | 81.54/**95.92** | 81.25/**95.98** | 81.85/**96.29**
  resnext50_32x4d| 77.63/93.69 | 79.47/94.65 | 78.90/94.47 | 79.63/94.97 
@@ -30,11 +31,11 @@ Project links:
  - The pre-train models are tested on original [caffe](https://github.com/BVLC/caffe) by [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py), **but ceil_mode:false（pooling_layer） is used for the models converted from torch, the detail in https://github.com/BVLC/caffe/pull/3057/files**. If you remove ceil_mode:false, the performance will decline about 1% top1.
  - 224x224(base_size=256) and 320x320(base_size=320) crop size for resnet-v2/resnext/wrn, 299x299(base_size=320) and 395x395(base_size=395) crop size for inception.
 
-0. Top-1/5 accuracy with different crop sizes.
+**2. Top-1/5 accuracy with different crop sizes.**
 ![teaser](https://github.com/soeaver/caffe-model/blob/master/cls/accuracy.png)
  - Figure: Accuracy curves of inception_v3(left) and resnet101_v2(right) with different crop sizes.
 
-0. **Download url** and forward/backward time cost for each model.
+**3. Download url and forward/backward time cost for each model.**
 
  Forward/Backward time cost is evaluated with one image/mini-batch using cuDNN 5.1 on a Pascal Titan X GPU.
  
@@ -58,65 +59,22 @@ Project links:
  wrn50_2(resnet50_1x128d)| 16.48/25.28ms | 20.99/35.04ms | [263.1MB](https://pan.baidu.com/s/1nvhoCsh)|[szagoruyko](https://github.com/szagoruyko/wide-residual-networks)
 
 ### Check the performance
-0. Download the ILSVRC 2012 classification val set [6.3GB](http://www.image-net.org/challenges/LSVRC/2012/nnoupb/ILSVRC2012_img_val.tar), and put the extracted images into the directory:
-    ```
-    ~/Database/ILSVRC2012
-    ```
+**1. Download the ILSVRC 2012 classification val set [6.3GB](http://www.image-net.org/challenges/LSVRC/2012/nnoupb/ILSVRC2012_img_val.tar), and put the extracted images into the directory:**
 
-0. Check the resnet-v2 (101, 152 and 269) performance, the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):
-   
-    ```
-    val_file = 'ILSVRC2012_val.txt' # download from this folder, label range 0~999
-    ... ...
-    model_weights = 'resnet-v2/resnet101_v2.caffemodel' # download as below
-    model_deploy = 'resnet-v2/deploy_resnet101_v2.prototxt' # check the parameters of input_shape
-    ... ...
-    mean_value = np.array([102.9801, 115.9465, 122.7717])  # BGR
-    std = np.array([1.0, 1.0, 1.0])  # BGR
-    crop_num = 1    # perform center(single)-crop
-    ```
+      ~/Database/ILSVRC2012
 
-    Check the inception-v3 performance, the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):
-   
-    ```
-    val_file = 'ILSVRC2015_val.txt' # download from this folder, label range 0~999
-    ... ...
-    model_weights = 'inception_v3/inception_v3.caffemodel' # download as below
-    model_deploy = 'inception_v3/deploy_inception_v3.prototxt' # check the parameters of input_shape
-    ... ...
-    mean_value = np.array([128.0, 128.0, 128.0])  # BGR
-    std = np.array([128.0, 128.0, 128.0])  # BGR
-    crop_num = 1    # perform center(single)-crop
-    ```
-    
-    Check the inception-resnet-v2 (inception-v4) performance, the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):
-   
-    ```
-    val_file = 'ILSVRC2012_val.txt' # download from this folder, label range 0~999
-    ... ...
-    model_weights = 'inception_resnet_v2/inception_resnet_v2.caffemodel' # download as below
-    model_deploy = 'inception_resnet_v2/deploy_inception_resnet_v2.prototxt' # check the parameters of input_shape
-    ... ...
-    mean_value = np.array([128.0, 128.0, 128.0])  # BGR
-    std = np.array([128.0, 128.0, 128.0])  # BGR
-    crop_num = 1    # perform center(single)-crop
-    ```
-    
-    Check the resnext (50_32x4d, 101_32x4d and 101_64x4d) or wrn50_2 performance, the settings of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py):
-   
-    ```
-    val_file = 'ILSVRC2012_val.txt' # download from this folder, label range 0~999
-    ... ...
-    model_weights = 'inception_resnet_v2/inception_resnet_v2.caffemodel' # download as below
-    model_deploy = 'inception_resnet_v2/deploy_inception_resnet_v2.prototxt' # check the parameters of input_shape
-    ... ...
-    mean_value = np.array([103.52, 116.28, 123.675])  # BGR
-    std = np.array([57.375, 57.12, 58.395])  # BGR
-    crop_num = 1    # perform center(single)-crop
-    ```
+**2. Modify the parameter settings**
+
+ Network|val_file|mean_value|std
+ :---:|:---:|:---:|:---:
+ resnet_v2(101/152/269)| ILSVRC2012_val | [102.98, 115.947, 122.772] | [1.0, 1.0, 1.0]
+ resnet_v2(38a/38a1) | ILSVRC2012_val | [103.52, 116.28, 123.675] | [57.375, 57.12, 58.395]
+ resnext(50/101), wrn50_2 | ILSVRC2012_val | [103.52, 116.28, 123.675] | [57.375, 57.12, 58.395]
+ inception-v3| **ILSVRC2015_val** | [128.0, 128.0, 128.0] | [128.0, 128.0, 128.0] 
+ inception-v2(xception) | ILSVRC2012_val | [128.0, 128.0, 128.0] | [128.0, 128.0, 128.0] 
+ inception-v4(inception-resnet-v2) | ILSVRC2012_val | [128.0, 128.0, 128.0] | [128.0, 128.0, 128.0] 
 
 
-0. then
-    ```
+**3. then run evaluation_cls.py**
+
     python evaluation_cls.py
-    ```

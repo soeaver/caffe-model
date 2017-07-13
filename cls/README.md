@@ -29,7 +29,7 @@ Project links:
  resnext50-32x4d| 22.37/6.31 | 20.53/5.35 | 21.10/5.53 | 20.37/5.03
  resnext101-32x4d| 21.30/5.79 | 19.47/4.89 | 19.91/4.97 | 19.19/4.59
  resnext101-64x4d| 20.60/5.41 | 18.88/4.59 | 19.26/4.63 | 18.48/4.31
- wrn50-2(resnet50-1x128d)| 22.13/6.17 | 20.09/5.06 | 20.68/5.28 | 19.83/4.87
+ wrn50-2(resnet50-1x128d)| 22.13/6.13 | 20.09/5.06 | 20.68/5.28 | 19.83/4.87
 
  - The pre-train models are tested on original [caffe](https://github.com/BVLC/caffe) by [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py), **but ceil_mode:false（pooling_layer） is used for the models converted from torch, the detail in https://github.com/BVLC/caffe/pull/3057/files**. If you remove ceil_mode:false, the performance will decline about 1% top1.
  - 224x224(base_size=256) and 320x320(base_size=320) crop size for resnet-v2/resnext/wrn, 299x299(base_size=320) and 395x395(base_size=395) crop size for inception.

@@ -1,6 +1,5 @@
-# CLS (imagenet)
+## CLS (Classification)
 
-## CLS (imagenet)
 Please install [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv) for evaluating and finetuning.
 
 ### Disclaimer

@@ -25,7 +25,8 @@ we are releasing the training code and files, the models and more experiments wi
  resnet38a| 80.1 | 1.4 img/s | 8,723MB | 3.4 img/s | 5,501MB
  
  - To reduce memory usage, we merge all the models batchnorm layer parameters into scale layer, more details please refer to [faster-rcnn-resnet](https://github.com/Eniac-Xie/faster-rcnn-resnet#modification) or [pva-faster-rcnn](https://github.com/sanghoon/pva-faster-rcnn/blob/master/tools/gen_merged_model.py);
- - Performanc, speed and memory are calculated on py-R-FCN-multiGPU (this reproduction) with Nvidia Titan pascal, we do not guarantee that the results can be reproduced under any other conditions;
+ - We also split the deploy file to rpn deploy file and rcnn deploy file for adopting more testing tricks.
+ - Performanc, speed and memory are calculated on [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv) with Nvidia Titan pascal, we do not guarantee that the results can be reproduced under any other conditions;
  - All the models are trained on a single scale (600*1000) with image flipping and train-batch=128 for 80,000 iterations, tested on the same single scale with test-batch=300 and nms=0.3;
  
  
@@ -39,4 +40,8 @@ we are releasing the training code and files, the models and more experiments wi
  &nbsp;+nms=0.4 | 84.22 | 0.27 | 5.4 img/s
  &nbsp;+image flipping test | 84.54 | 0.32 | 2.7 img/s
  &nbsp;+multi-scale testing | 85.78 | 1.24 | 0.13 img/s
+ 
+ - The SCALES for multi-scale training is (200, 400, 600, 800, 1000) and MAX_SIZE is 1666; 
+ - For multi-scale training, we double the training iterations (160,000 for VOC0712trainval);
+ - The SCALES for multi-scale testing is (400, 600, 800, 1000, 1200) and MAX_SIZE is 2000;
 

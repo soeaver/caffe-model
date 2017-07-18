@@ -15,7 +15,7 @@ Project links:
 ## CLS (Classification)
 Please install [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv) for evaluating and finetuning.
 
-**More details are in [cls](https://github.com/soeaver/caffe-model/tree/master/cls) folder. **
+**More details are in [cls](https://github.com/soeaver/caffe-model/tree/master/cls) folder.**
 
 ### Performance on imagenet validation.
 **Top-1/5 error of pre-train models in this repository.**

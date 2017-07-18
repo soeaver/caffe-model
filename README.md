@@ -12,10 +12,8 @@ Project links:
 [mxnet-model-gallery](https://github.com/dmlc/mxnet-model-gallery)、 [tensorflow slim](https://github.com/tensorflow/models/tree/master/slim)、 [craftGBD](https://github.com/craftGBD/craftGBD)、 [ResNeXt](https://github.com/facebookresearch/ResNeXt)、 [DenseNet](https://github.com/liuzhuang13/DenseNet)、 [wide-residual-networks](https://github.com/szagoruyko/wide-residual-networks)、 [keras deep-learning-models](https://github.com/fchollet/deep-learning-models)、 [ademxapp](https://github.com/itijyou/ademxapp)
 
 
-## CLS (Classification)
+## CLS (Classification, more details are in [cls](https://github.com/soeaver/caffe-model/tree/master/cls).)
 Please install [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv) for evaluating and finetuning.
-
-**More details are in [cls](https://github.com/soeaver/caffe-model/tree/master/cls) folder.**
 
 ### Performance on imagenet validation.
 **Top-1/5 error of pre-train models in this repository.**

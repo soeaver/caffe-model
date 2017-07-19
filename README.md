@@ -15,7 +15,7 @@ Project links:
 
 ## CLS (Classification, more details are in [cls](https://github.com/soeaver/caffe-model/tree/master/cls))
 ### Performance on imagenet validation.
-**Top-1/5 error of pre-train models in this repository.**
+**Top-1/5 error of pre-train models in this repository (Pre-train models download [urls](https://github.com/soeaver/caffe-model/tree/master/cls#performance-on-imagenet-validation)).**
 
  Network|224/299<br/>(single-crop)|224/299<br/>(12-crop)|320/395<br/>(single-crop)|320/395<br/>(12-crop)
  :---:|:---:|:---:|:---:|:---:

@@ -49,13 +49,13 @@ Project links:
   ```
  to test the forward/backward time cost, the result is really different with time cost of [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py)
 
- Network|F/B(224/299)|F/B(320/395)|Download<br/>(Baidu Cloud)|Download<br/>(GoogleDrive)|Source
+ Network|F/B(224/299)|F/B(320/395)|Download<br/>(BaiduCloud)|Download<br/>(GoogleDrive)|Source
  :---:|:---:|:---:|:---:|:---:|:---:
  resnet18-priv | 4.48/5.07ms | 4.99/7.01ms | [44.6MB](https://pan.baidu.com/s/1hrYc3La)|44.6MB|[pytorch-classification](https://github.com/soeaver/pytorch-classification)
  resnext26-32x4d-priv | 8.53/10.12ms | 10.55/13.46ms | [58.9MB](https://pan.baidu.com/s/1dFzmUOh)|58.9MB|[pytorch-classification](https://github.com/soeaver/pytorch-classification)
- resnet101-v2| 22.31/22.75ms | 26.02/29.50ms | [170.3MB](https://pan.baidu.com/s/1kVQDHFx)|170.3|[craftGBD](https://github.com/craftGBD/craftGBD)
- resnet152-v2| 32.11/32.54ms | 37.46/41.84ms | [230.2MB](https://pan.baidu.com/s/1dFIc4vB)|230.2MB|[craftGBD](https://github.com/craftGBD/craftGBD)
- resnet269-v2| 58.20/59.15ms | 69.43/77.26ms | [390.4MB](https://pan.baidu.com/s/1qYbICs0)|390.4MB|[craftGBD](https://github.com/craftGBD/craftGBD)
+ resnet101-v2| 22.31/22.75ms | 26.02/29.50ms | [170.3MB](https://pan.baidu.com/s/1kVQDHFx)|[170.3](https://drive.google.com/open?id=0B9mkjlmP0d7zRlhISks0VktGOGs)|[craftGBD](https://github.com/craftGBD/craftGBD)
+ resnet152-v2| 32.11/32.54ms | 37.46/41.84ms | [230.2MB](https://pan.baidu.com/s/1dFIc4vB)|[230.2MB](https://drive.google.com/open?id=0B9mkjlmP0d7zOXhrb1EyYVRHOEk)|[craftGBD](https://github.com/craftGBD/craftGBD)
+ resnet269-v2| 58.20/59.15ms | 69.43/77.26ms | [390.4MB](https://pan.baidu.com/s/1qYbICs0)|[390.4MB](https://drive.google.com/open?id=0B9mkjlmP0d7zOGFxcTMySHN6bUE)|[craftGBD](https://github.com/craftGBD/craftGBD)
  inception-v3| 21.79/19.82ms | 22.14/24.88ms | [91.1MB](https://pan.baidu.com/s/1boC0HEf)|91.1MB|[mxnet](https://github.com/dmlc/mxnet-model-gallery/blob/master/imagenet-1k-inception-v3.md)
  xception | 14.03/30.39ms | 19.46/48.64ms | [87.4MB](https://pan.baidu.com/s/1gfiTShd)|87.4MB|[keras_models](https://github.com/fchollet/deep-learning-models)
  inception-v4| 32.96/32.19ms | 36.04/41.91ms | [163.1MB](https://pan.baidu.com/s/1c6D150)|163.1MB|[tensorflow_slim](https://github.com/tensorflow/models/tree/master/slim)

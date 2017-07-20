@@ -6,5 +6,7 @@ we are releasing the training code and files, the models and more experiments wi
 ### Object Segmentation Performance on PASCAL VOC.
 **1. PSPNet training on [SBD](http://home.bharathh.info/pubs/pdfs/BharathICCV2011.pdf) (10,582 images) and testing on VOC 2012 validation (1,449 images).**
 
- Network|mIoU|pixel acc|train speed|train memory|test speed|test memory
+ Network|mIoU(%)|pixel acc(%)|train speed|train memory|test speed|test memory
  :---:|:---:|:---:|:---:|:---:|:---:|:---:
+ resnet101-v2| 77.94 | 94.94 | -- img/s | --MB | -- img/s | --MB
+ air101| 77.64 | 94.93 | -- img/s | --MB | -- img/s | --MB

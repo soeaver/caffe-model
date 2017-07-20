@@ -5,3 +5,5 @@ we are releasing the training code and files, the models and more experiments wi
 
 ### Object Segmentation Performance on PASCAL VOC.
 **1. PSPNet training on SBD (Semantic Boundaries Dataset, 10582 images) and testing on VOC 2012 validation (1449).**
+
+ Network|mIoU|pixel acc|train speed|train memory|test speed|test memory

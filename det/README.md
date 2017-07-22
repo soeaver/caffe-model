@@ -7,7 +7,7 @@ we are releasing the training code and files, the models and more experiments wi
 ### Object Detection Performance on PASCAL VOC.
 **1. Original faster rcnn training on VOC 2007+2012 trainval and testing on VOC 2007 test.**
 
- Network|mAP@50(%)|train speed|train memory|test speed|test memory
+ Network|mAP@50(%)|training<br/>speed|train memory|test speed|test memory
  :---:|:---:|:---:|:---:|:---:|:---:
  resnet18 | 70.02 | 9.5 img/s | 1,235MB | 17.5 img/s | 989MB
  resnet101| -- | -- | -- | -- | --

@@ -23,6 +23,7 @@ we are releasing the training code and files, the models and more experiments wi
  densenet-161| -- | -- | -- | -- | --
  densenet-201| 77.53 | 3.9 img/s<br/> (batch=72) | 10,073MB | 5.5 img/s | 9,955MB
  resnet38a| 80.1 | 1.4 img/s | 8,723MB | 3.4 img/s | 5,501MB
+ air101| 81.0 | 2.4 img/s | 7,747MB | 5.1 img/s | 5,777MB
  
  - To reduce memory usage, we merge all the models batchnorm layer parameters into scale layer, more details please refer to [faster-rcnn-resnet](https://github.com/Eniac-Xie/faster-rcnn-resnet#modification) or [pva-faster-rcnn](https://github.com/sanghoon/pva-faster-rcnn/blob/master/tools/gen_merged_model.py);
  - We also split the deploy file to rpn deploy file and rcnn deploy file for adopting more testing tricks.

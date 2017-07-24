@@ -10,6 +10,7 @@ we are releasing the training code and files, the models and more experiments wi
  :---:|:---:|:---:|:---:|:---:|:---:|:---:
  resnet101-v2| 77.94 | 94.94 | -- img/s | --MB | -- img/s | --MB
  resnet101-v2-selu| 77.10 | 94.80 | -- img/s | --MB | -- img/s | --MB
+ resnext101-32x4d| 77.79 | 94.92 | -- img/s | --MB | -- img/s | --MB
  air101| 77.64 | 94.93 | -- img/s | --MB | -- img/s | --MB
  inception-v4| 77.58 | 94.83 | -- img/s | --MB | -- img/s | --MB
  - To reduce memory usage, we merge all the models batchnorm layer parameters into scale layer, more details please refer to [faster-rcnn-resnet](https://github.com/Eniac-Xie/faster-rcnn-resnet#modification) or [pva-faster-rcnn](https://github.com/sanghoon/pva-faster-rcnn/blob/master/tools/gen_merged_model.py);

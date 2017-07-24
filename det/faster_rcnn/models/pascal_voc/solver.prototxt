@@ -1,4 +1,4 @@
-train_net: "~/caffe-model/det/faster_rcnn/models/pascal_voc/resnet101-v2/faster_voc_resnet101-v2_merge.prototxt"
+train_net: "~/caffe-model/det/faster_rcnn/models/pascal_voc/resnet101-v2/faster_voc_resnet101-v2-merge.prototxt"
 base_lr: 0.001
 lr_policy: "multistep"
 gamma: 0.1

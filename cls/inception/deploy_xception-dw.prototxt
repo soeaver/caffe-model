@@ -334,7 +334,7 @@ layer {
   }
 }
 layer {
-  name: "xception2_conv1_rulu"
+  name: "xception2_conv1_relu"
   type: "ReLU"
   bottom: "xception2_conv1_2"
   top: "xception2_conv1_2"

@@ -18,7 +18,7 @@ we are releasing the training code and files, the models and more experiments wi
  resnext101-32x4d| 79.98 | 2.7 img/s | 7,836MB | 6.3 img/s | 5,705MB
  resnext101-64x4d| 80.71 | 2.0 img/s<br/> (batch=96) | 11,277MB | 3.7 img/s | 9,461MB
  inception-v3| 78.6 | 4.1 img/s | 4,325MB | 7.3 img/s | 3,445MB
- xception| -- | 3.3 img/s | 7,341MB | 7.3 img/s | 2,979MB
+ xception| 76.6 | 3.3 img/s | 7,341MB | 7.3 img/s | 2,979MB
  inception-v4| 81.49 | 2.6 img/s | 6,759MB | 5.4 img/s | 4,683MB
  inception-resnet-v2| 80.0 | 2.0 img/s<br/> (batch=112) | 11,497MB | 3.2 img/s | 8,409MB
  densenet-161| -- | -- | -- | -- | --

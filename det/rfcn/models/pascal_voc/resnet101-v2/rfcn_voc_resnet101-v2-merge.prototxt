@@ -1,4 +1,4 @@
-name: "faster_rfcn_resnet101-v2"
+name: "rfcn_resnet101-v2"
 layer {
   name: 'input-data'
   type: 'Python'

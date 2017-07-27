@@ -10,6 +10,7 @@ layer {
     layer: 'RoIDataLayer'
     param_str: "'num_classes': 21"
   }
+}
 
 ################## resnext101-32x4d #################
 layer {

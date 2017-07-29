@@ -5,7 +5,7 @@
 we are releasing the training code and files, the models and more experiments will come soon.
 
 ### Object Detection Performance on PASCAL VOC.
-**1. Original faster rcnn training on VOC 2007+2012 trainval and testing on VOC 2007 test.**
+#### **1. Original faster rcnn training on VOC 2007+2012 trainval and testing on VOC 2007 test.**
 
  Network|mAP@50(%)|training<br/>speed|training<br/>memory|testing<br/>speed|testing<br/>memory
  :---:|:---:|:---:|:---:|:---:|:---:
@@ -46,4 +46,7 @@ we are releasing the training code and files, the models and more experiments wi
  - The SCALES for multi-scale training is (200, 400, 600, 800, 1000) and MAX_SIZE is 1666; 
  - For multi-scale training, we double the training iterations (160000 for VOC0712trainval);
  - The SCALES for multi-scale testing is (400, 600, 800, 1000, 1200) and MAX_SIZE is 2000;
+ 
+ 
+#### **2. Original rfcn training on VOC 2007+2012 trainval and testing on VOC 2007 test.**
 

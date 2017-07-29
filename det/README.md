@@ -48,5 +48,17 @@ we are releasing the training code and files, the models and more experiments wi
  - The SCALES for multi-scale testing is (400, 600, 800, 1000, 1200) and MAX_SIZE is 2000;
  
  
-#### **2. Original rfcn training on VOC 2007+2012 trainval and testing on VOC 2007 test.**
+#### **2. RFCN-OHEM training on VOC 2007+2012 trainval and testing on VOC 2007 test.**
+
+ Network|mAP@50(%)|training<br/>speed|training<br/>memory|testing<br/>speed|testing<br/>memory
+ :---:|:---:|:---:|:---:|:---:|:---:
+ resnet101-v2| 78.93 | -- | -- | -- | --
+ resnext101-32x4d| 79.98 | -- | -- | -- | --
+ resnext101-64x4d| 80.26 | -- | -- | -- | --
+ air101| -- | -- | -- | -- | --
+ 
+ - To reduce memory usage, we merge all the models batchnorm layer parameters into scale layer, more details please refer to [faster-rcnn-resnet](https://github.com/Eniac-Xie/faster-rcnn-resnet#modification) or [pva-faster-rcnn](https://github.com/sanghoon/pva-faster-rcnn/blob/master/tools/gen_merged_model.py);
+ - We also split the deploy file to rpn deploy file and rcnn deploy file for adopting more testing tricks.
+ - Performanc, speed and memory are calculated on [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv) with Nvidia Titan pascal, we do not guarantee that the results can be reproduced under any other conditions;
+ - All the models are trained on a single scale (600*1000) with image flipping and ohem for 110,000 iterations, tested on the same single scale with test-batch=300 and nms=0.3;
 

@@ -32,7 +32,7 @@ we are releasing the training code and files, the models and more experiments wi
  - All the models are trained on a single scale (600*1000) with image flipping and train-batch=128 for 80,000 iterations, tested on the same single scale with test-batch=300 and nms=0.3;
  
  
- **2. Comparisons on VOC 2007 test using faster rcnn with inception-v4.**
+ **Comparisons on VOC 2007 test using faster rcnn with inception-v4**
  
  Method|mAP@50| improvment |test speed
  :---|:---:|:---:|:---:

@@ -36,7 +36,7 @@ Project links:
  DPN-92| 20.81/5.47 | ../.. | ../.. | ../..
  DPN-98| 20.27/5.28 | ../.. | ../.. | ../..
  DPN-131| 20.00/5.24 | ../.. | ../.. | ../..
- DPN-131| **19.70**/5.06 | ../.. | ../.. | ../..
+ DPN-107| **19.70**/5.06 | ../.. | ../.. | ../..
  
  - The resnet18-priv, resnext26-32x4d-priv are trained under [pytorch](https://github.com/soeaver/pytorch-classification) by bupt-priv.
  - The pre-train models are tested on original [caffe](https://github.com/BVLC/caffe) by [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py), **but ceil_mode:false（pooling_layer） is used for the models converted from torch, the detail in https://github.com/BVLC/caffe/pull/3057/files**. If you remove ceil_mode:false, the performance will decline about 1% top1.

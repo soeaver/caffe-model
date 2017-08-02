@@ -1,5 +1,5 @@
 # Caffe-model
-Caffe models (include classification, detection and segmentation) and deploy prototxt for resnet, resnext, inception_v3, inception_v4, inception_resnet, wider_resnet, densenet and other networks.
+Caffe models (include classification, detection and segmentation) and deploy prototxt for resnet, resnext, inception_v3, inception_v4, inception_resnet, wider_resnet, densenet, DPNs and other networks.
 
 ## We recommend using these caffe models with [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv)
 Please install [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv) for evaluating and finetuning.
@@ -10,7 +10,7 @@ Most of the pre-train models are converted from other projects, the main contrib
 
 Project links:
 
-[mxnet-model-gallery](https://github.com/dmlc/mxnet-model-gallery)、 [tensorflow slim](https://github.com/tensorflow/models/tree/master/slim)、 [craftGBD](https://github.com/craftGBD/craftGBD)、 [ResNeXt](https://github.com/facebookresearch/ResNeXt)、 [DenseNet](https://github.com/liuzhuang13/DenseNet)、 [wide-residual-networks](https://github.com/szagoruyko/wide-residual-networks)、 [keras deep-learning-models](https://github.com/fchollet/deep-learning-models)、 [ademxapp](https://github.com/itijyou/ademxapp)
+[mxnet-model-gallery](https://github.com/dmlc/mxnet-model-gallery)、 [tensorflow slim](https://github.com/tensorflow/models/tree/master/slim)、 [craftGBD](https://github.com/craftGBD/craftGBD)、 [ResNeXt](https://github.com/facebookresearch/ResNeXt)、 [DenseNet](https://github.com/liuzhuang13/DenseNet)、 [wide-residual-networks](https://github.com/szagoruyko/wide-residual-networks)、 [keras deep-learning-models](https://github.com/fchollet/deep-learning-models)、 [ademxapp](https://github.com/itijyou/ademxapp)、 [DPNs](https://github.com/cypw/DPNs)
 
 
 ## CLS (Classification, more details are in [cls](https://github.com/soeaver/caffe-model/tree/master/cls))
@@ -23,7 +23,7 @@ Project links:
  resnext26-32x4d-priv| 24.93/7.75 | 23.54/6.89 | 24.20/7.21 | 23.19/6.60
  resnet101-v2| 21.95/6.12 | 19.99/5.04 | 20.37/5.16 | 19.29/4.57
  resnet152-v2| 20.85/5.42 | 19.24/4.68 | 19.66/4.73 | 18.84/4.32
- resnet269-v2| **19.71**/5.00 | **18.25**/4.20 | 18.70/4.33 | **17.87**/3.85
+ resnet269-v2| 19.71/5.00 | **18.25**/4.20 | 18.70/4.33 | **17.87**/3.85
  resnet38a| 20.66/5.27 | ../.. | 19.25/4.66 | ../..
  inception-v3| 21.67/5.75 | 19.60/4.73 | 20.10/4.82 | 19.25/4.24 
  xception| 20.90/5.49 | 19.68/4.90 | 19.58/4.77 | 18.91/4.39 
@@ -33,7 +33,11 @@ Project links:
  resnext101-32x4d| 21.30/5.79 | 19.47/4.89 | 19.91/4.97 | 19.19/4.59
  resnext101-64x4d| 20.60/5.41 | 18.88/4.59 | 19.26/4.63 | 18.48/4.31
  wrn50-2<br/>(resnet50-1x128d)| 22.13/6.13 | 20.09/5.06 | 20.68/5.28 | 19.83/4.87
-
+ DPN-92| 20.81/5.47 | ../.. | ../.. | ../..
+ DPN-98| 20.27/5.28 | ../.. | ../.. | ../..
+ DPN-131| 20.00/5.24 | ../.. | ../.. | ../..
+ DPN-131| **19.70**/5.06 | ../.. | ../.. | ../..
+ 
  - The resnet18-priv, resnext26-32x4d-priv are trained under [pytorch](https://github.com/soeaver/pytorch-classification) by bupt-priv.
  - The pre-train models are tested on original [caffe](https://github.com/BVLC/caffe) by [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py), **but ceil_mode:false（pooling_layer） is used for the models converted from torch, the detail in https://github.com/BVLC/caffe/pull/3057/files**. If you remove ceil_mode:false, the performance will decline about 1% top1.
  - 224x224(base_size=256) and 320x320(base_size=320) crop size for resnet-v2/resnext/wrn, 299x299(base_size=320) and 395x395(base_size=395) crop size for inception.

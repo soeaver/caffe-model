@@ -13,7 +13,7 @@ input_shape {
   dim: 2
 }
 
-################ resnet101_v2 ################
+################ resnet101-v2 ################
 layer {
   name: "conv1"
   type: "Convolution"

@@ -1,4 +1,4 @@
-name: "faster_resnext50"
+name: "faster_resnext50-32x4d"
 layer {
   name: 'input-data'
   type: 'Python'
@@ -12,7 +12,7 @@ layer {
   }
 }
 
-################ resnext50 ################
+################ resnext50-32x4d ################
 layer {
   name: "conv1"
   type: "Convolution"

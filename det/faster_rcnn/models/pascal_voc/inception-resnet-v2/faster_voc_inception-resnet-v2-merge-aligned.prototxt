@@ -1,4 +1,4 @@
-name: "faster_inception_resnet_v2"
+name: "faster_inception-resnet-v2"
 layer {
   name: 'input-data'
   type: 'Python'
@@ -12,7 +12,7 @@ layer {
   }
 }
 
-################ inception_resnet_v2 ################
+################ inception-resnet-v2 ################
 layer {
   name: "conv1_3x3_s2"
   type: "Convolution"

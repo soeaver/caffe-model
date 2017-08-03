@@ -1,4 +1,4 @@
-name: "faster_voc_inception_v4"
+name: "faster_voc_inception-v4"
 layer {
   name: 'input-data'
   type: 'Python'
@@ -12,7 +12,7 @@ layer {
   }
 }
 
-################ inception_v4 ################
+################ inception-v4 ################
 layer {
   name: "conv1_3x3_s2"
   type: "Convolution"

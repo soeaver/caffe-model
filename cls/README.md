@@ -33,8 +33,8 @@ Project links:
  air101<br/>(aligned-inception-resnet101)| 20.74/5.56 | ../.. | ../.. | ../..
  dpn-92| 20.81/5.47 | ../.. | 19.23/4.64 | ../.. 
  dpn-98| 20.27/5.28 | ../.. | 18.87/4.43 | ../..
- dpn-131| 20.00/5.24 | ../.. | ../.. | ../..
- dpn-107| **19.70**/5.06 | ../.. | ../.. | ../..
+ dpn-131| 20.00/5.24 | ../.. | 18.63/4.31 | ../..
+ dpn-107| **19.70**/5.06 | ../.. | 18.41/4.25 | ../..
 
  - The resnet18-priv, resnext26-32x4d-priv are trained under [pytorch](https://github.com/soeaver/pytorch-classification) by bupt-priv.
  - The pre-train models are tested on original [caffe](https://github.com/BVLC/caffe) by [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py), **but ceil_mode:false（pooling_layer） is used for the models converted from torch, the detail in https://github.com/BVLC/caffe/pull/3057/files**. If you remove ceil_mode:false, the performance will decline about 1% top1.

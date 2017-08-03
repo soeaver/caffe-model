@@ -34,7 +34,7 @@ layer {
     scale_factors: 2.0
   }
   image_data_param {
-    root_folder: "/home/prmct/Database/VOC_PASCAL/SBD"
+    root_folder: "/home/priv/Database/VOC_PASCAL/SBD"
     source: "./sbd_voc2012train_image2category.txt"
     batch_size: 1
     shuffle: true

@@ -1,4 +1,4 @@
-name: "psp_voc_resnet101_v2"
+name: "psp_resnet101-v2"
 #layer {
 #  name: "data"
 #  type: "Python"
@@ -7,7 +7,7 @@ name: "psp_voc_resnet101_v2"
 #  python_param {
 #    module: "image_seg_data"
 #    layer: "ImageSegDataLayer"
-#    param_str: "{'crop_size': 513, 'root_dir': '/home/prmct/Database/VOC_PASCAL/SBD', 'source': './sbd_voc2012train_image2category.txt', 'batch_size': 1}"
+#    param_str: "{'crop_size': 513, 'root_dir': '/home/priv/Database/VOC_PASCAL/SBD', 'source': './sbd_voc2012train_image2category.txt', 'batch_size': 1}"
 #  }
 #}
 
@@ -42,7 +42,7 @@ layer {
   }
 }
 
-################ resnet101_v2 ################
+################ resnet101-v2 ################
 layer {
   name: "conv1"
   type: "Convolution"

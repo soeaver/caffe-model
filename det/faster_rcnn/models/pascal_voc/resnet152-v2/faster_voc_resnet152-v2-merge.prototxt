@@ -1,4 +1,4 @@
-name: "faster_resnet152_v2"
+name: "faster_resnet152-v2"
 layer {
   name: 'input-data'
   type: 'Python'
@@ -12,7 +12,7 @@ layer {
   }
 }
 
-################ resnet152_v2 ################
+################ resnet152-v2 ################
 layer {
   name: "conv1"
   type: "Convolution"

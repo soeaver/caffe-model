@@ -7,7 +7,7 @@ name: "psp_resnext101-32x4d"
 #  python_param {
 #    module: "image_seg_data"
 #    layer: "ImageSegDataLayer"
-#    param_str: "{'crop_size': 513, 'root_dir': '/home/prmct/Database/VOC_PASCAL/SBD', 'source': './sbd_voc2012train_image2category.txt', 'batch_size': 1}"
+#    param_str: "{'crop_size': 513, 'root_dir': '/home/priv/Database/VOC_PASCAL/SBD', 'source': './sbd_voc2012train_image2category.txt', 'batch_size': 1}"
 #  }
 #}
 layer {
@@ -34,7 +34,7 @@ layer {
     scale_factors: 2.0
   }
   image_data_param {
-    root_folder: "/home/yanglu/Database/VOC_PASCAL/SBD"
+    root_folder: "/home/priv/Database/VOC_PASCAL/SBD"
     source: "./sbd_voc2012train_image2category.txt"
     batch_size: 1
     shuffle: true

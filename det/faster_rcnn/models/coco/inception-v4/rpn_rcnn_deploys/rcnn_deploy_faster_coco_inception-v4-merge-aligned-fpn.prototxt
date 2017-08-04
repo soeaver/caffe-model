@@ -1,0 +1,219 @@
+input: "p2_elewise"
+input_shape {
+  dim: 1
+  dim: 256
+  dim: 40
+  dim: 40
+}
+
+input: "p3_elewise"
+input_shape {
+  dim: 1
+  dim: 256
+  dim: 40
+  dim: 40
+}
+
+input: "p4_elewise"
+input_shape {
+  dim: 1
+  dim: 256
+  dim: 40
+  dim: 40
+}
+
+input: "p5_conv_1x1"
+input_shape {
+  dim: 1
+  dim: 256
+  dim: 40
+  dim: 40
+}
+
+input: "rois"
+input_shape {
+  dim: 300
+  dim: 5
+}
+
+#============== ROI Pooling ===============
+layer {
+  name: "roi_pool4"
+  type: "ROIPooling"
+  bottom: "p2_elewise"
+  bottom: "rois"
+  top: "roi_pool4"
+  roi_pooling_param {
+    pooled_w: 8
+    pooled_h: 8
+    spatial_scale: 0.25
+  }
+}
+layer {
+  name: "roi_pool8"
+  type: "ROIPooling"
+  bottom: "p3_elewise"
+  bottom: "rois"
+  top: "roi_pool8"
+  roi_pooling_param {
+    pooled_w: 8
+    pooled_h: 8
+    spatial_scale: 0.125
+  }
+}
+layer {
+  name: "roi_pool16"
+  type: "ROIPooling"
+  bottom: "p4_elewise"
+  bottom: "rois"
+  top: "roi_pool16"
+  roi_pooling_param {
+    pooled_w: 8
+    pooled_h: 8
+    spatial_scale: 0.0625
+  }
+}
+layer {
+  name: "roi_pool32"
+  type: "ROIPooling"
+  bottom: "p5_conv_1x1"
+  bottom: "rois"
+  top: "roi_pool32"
+  roi_pooling_param {
+    pooled_w: 8
+    pooled_h: 8
+    spatial_scale: 0.03125
+  }
+}
+layer {
+  name: "roi_pool"
+  type: "Eltwise"
+  bottom: "roi_pool4"
+  bottom: "roi_pool8"
+  bottom: "roi_pool16"
+  bottom: "roi_pool32"
+  top: "roi_pool"
+  eltwise_param {
+    operation: SUM
+  }
+}
+layer {
+  name: "fc1"
+  type: "InnerProduct"
+  bottom: "roi_pool"
+  top: "fc1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
+  inner_product_param {
+    num_output: 1024
+    weight_filler {
+      type: "gaussian"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+layer {
+  name: "fc1_relu"
+  type: "ReLU"
+  bottom: "fc1"
+  top: "fc1"
+}
+layer {
+  name: "fc2"
+  type: "InnerProduct"
+  bottom: "fc1"
+  top: "fc2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
+  inner_product_param {
+    num_output: 1024
+    weight_filler {
+      type: "gaussian"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+layer {
+  name: "fc2_relu"
+  type: "ReLU"
+  bottom: "fc2"
+  top: "fc2"
+}
+layer {
+  name: "cls_score"
+  type: "InnerProduct"
+  bottom: "fc2"
+  top: "cls_score"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
+  inner_product_param {
+    num_output: 81
+    weight_filler {
+      type: "msra"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+layer {
+  name: "bbox_pred"
+  type: "InnerProduct"
+  bottom: "fc2"
+  top: "bbox_pred"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
+  inner_product_param {
+    num_output: 324
+    weight_filler {
+      type: "msra"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+layer {
+  name: "cls_prob"
+  type: "Softmax"
+  bottom: "cls_score"
+  top: "cls_prob"
+}
+
+

@@ -24,7 +24,7 @@ Project links:
  resnet38a| 20.66/5.27 | ../.. | 19.25/4.66 | ../..
  inception-v3| 21.67/5.75 | 19.60/4.73 | 20.10/4.82 | 19.25/4.24 
  xception| 20.90/5.49 | 19.68/4.90 | 19.58/4.77 | 18.91/4.39 
- inception-v4| 20.03/5.09 | 18.60/4.30 | **18.68**/4.32 |18.12/3.92 
+ inception-v4| 20.03/5.09 | 18.60/4.30 | 18.68/4.32 |18.12/3.92 
  inception-resnet-v2| 19.86/**4.83** | 18.46/**4.08** | 18.75/**4.02** | 18.15/**3.71**
  resnext50-32x4d| 22.37/6.31 | 20.53/5.35 | 21.10/5.53 | 20.37/5.03
  resnext101-32x4d| 21.30/5.79 | 19.47/4.89 | 19.91/4.97 | 19.19/4.59
@@ -34,7 +34,7 @@ Project links:
  dpn-92| 20.81/5.47 | 18.99/4.59 | 19.23/4.64 | ../.. 
  dpn-98| 20.27/5.28 | ../.. | 18.87/4.43 | ../..
  dpn-131| 20.00/5.24 | ../.. | 18.63/4.31 | ../..
- dpn-107| **19.70**/5.06 | ../.. | 18.41/4.25 | ../..
+ dpn-107| **19.70**/5.06 | ../.. | **18.41**/4.25 | ../..
 
  - The resnet18-priv, resnext26-32x4d-priv are trained under [pytorch](https://github.com/soeaver/pytorch-classification) by bupt-priv.
  - The pre-train models are tested on original [caffe](https://github.com/BVLC/caffe) by [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py), **but ceil_mode:false（pooling_layer） is used for the models converted from torch, the detail in https://github.com/BVLC/caffe/pull/3057/files**. If you remove ceil_mode:false, the performance will decline about 1% top1.

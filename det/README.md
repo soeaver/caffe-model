@@ -53,7 +53,7 @@ we are releasing the training code and files, the models and more experiments wi
  Network|mAP@50(%)|training<br/>speed|training<br/>memory|testing<br/>speed|testing<br/>memory
  :---:|:---:|:---:|:---:|:---:|:---:
  resnet18 | 71.82 | -- | -- | -- | --
- resnext50-32x4d| 72.07 | -- | -- | -- | --
+ resnext26-32x4d| 72.07 | -- | -- | -- | --
  resnet101-v2| 78.93(79.9) | -- | -- | -- | --
  resnext101-32x4d| 79.98(80.35) | -- | -- | -- | --
  resnext101-64x4d| 80.26(79.88) | -- | -- | -- | --

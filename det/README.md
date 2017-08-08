@@ -52,7 +52,10 @@ we are releasing the training code and files, the models and more experiments wi
  
   Network|mAP@50(%)|training<br/>speed|training<br/>memory|testing<br/>speed|testing<br/>memory
  :---:|:---:|:---:|:---:|:---:|:---:
- resnet101-v2 | 70.02 | 9.5 img/s | 1,235MB | 17.5 img/s | 989MB
+ resnet101-v2 | 80.6 | -- | -- | -- | --
+ air101-multigrid | 81.47 | -- | -- | -- | --
+ air101-multigrid-context | 82.09 | -- | -- | -- | --
+ inception-v4-3x3| -- | -- | -- | -- | --
  
  
 #### **3. RFCN-OHEM training on VOC 2007+2012 trainval and testing on VOC 2007 test.**

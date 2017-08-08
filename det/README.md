@@ -93,12 +93,12 @@ we are releasing the training code and files, the models and more experiments wi
 <col style="width: 96px">
 </colgroup>
   <tr>
-    <th class="tg-baqh" rowspan="2">Model</td>
-    <th class="tg-baqh" rowspan="2">Size</td>
-    <th class="tg-baqh" rowspan="2">GFLOPs</td>
-    <th class="tg-baqh" rowspan="2">224x224</td>
-    <th class="tg-baqh" rowspan="2">320x320</td>
-    <th class="tg-baqh" rowspan="2">320x320</td>
+    <td class="tg-baqh" rowspan="2">Model</td>
+    <td class="tg-baqh" rowspan="2">Size</td>
+    <td class="tg-baqh" rowspan="2">GFLOPs</td>
+    <td class="tg-baqh" rowspan="2">224x224</td>
+    <td class="tg-baqh" rowspan="2">320x320</td>
+    <td class="tg-baqh" rowspan="2">320x320</td>
   </tr>
   <tr>
     <td class="tg-baqh">DPN-92</td>

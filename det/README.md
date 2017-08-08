@@ -98,7 +98,15 @@ we are releasing the training code and files, the models and more experiments wi
     <th class="tg-baqh" rowspan="2">GFLOPs</th>
     <th class="tg-baqh" rowspan="2">224x224</th>
     <th class="tg-baqh" rowspan="2">320x320</th>
-    <th class="tg-baqh" rowspan="2">320x320<br>( with mean-max pooling )</th>
+    <th class="tg-baqh" rowspan="2">320x320</th>
+  </tr>
+  <tr>
+    <td class="tg-baqh">DPN-92</td>
+    <td class="tg-baqh">145 MB</td>
+    <td class="tg-baqh">20.73</td>
+    <td class="tg-baqh">19.34</td>
+    <td class="tg-baqh">19.04</td>
+    <td class="tg-baqh">4.53</td>
   </tr>
 </table>
 </dl>

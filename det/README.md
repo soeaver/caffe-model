@@ -91,14 +91,14 @@ we are releasing the training code and files, the models and more experiments wi
 <col style="width: 72px">
 <col style="width: 87px">
 <col style="width: 96px">
-</rowgroup>
+</colgroup>
   <tr>
     <th class="tg-baqh" rowspan="2">Model</th>
     <th class="tg-baqh" rowspan="2">Size</th>
     <th class="tg-baqh" rowspan="2">GFLOPs</th>
-    <th class="tg-baqh" colspan="2">224x224</th>
-    <th class="tg-baqh" colspan="2">320x320</th>
-    <th class="tg-baqh" colspan="2">320x320<br>( with mean-max pooling )</th>
+    <th class="tg-baqh" rowspan="2">224x224</th>
+    <th class="tg-baqh" rowspan="2">320x320</th>
+    <th class="tg-baqh" rowspan="2">320x320<br>( with mean-max pooling )</th>
   </tr>
 </table>
 </dl>

@@ -79,3 +79,26 @@ we are releasing the training code and files, the models and more experiments wi
  
  #### **4. Results training on COCO-trainval35k and testing on COCO-test-dev2015.**
 
+<dl>
+<table class="tg" style="undefined;table-layout: fixed; width: 739px">
+<colgroup>
+<col style="width: 103px">
+<col style="width: 92px">
+<col style="width: 87px">
+<col style="width: 68px">
+<col style="width: 72px">
+<col style="width: 62px">
+<col style="width: 72px">
+<col style="width: 87px">
+<col style="width: 96px">
+</colgroup>
+  <tr>
+    <th class="tg-baqh" rowspan="2">Model</th>
+    <th class="tg-baqh" rowspan="2">Size</th>
+    <th class="tg-baqh" rowspan="2">GFLOPs</th>
+    <th class="tg-baqh" colspan="2">224x224</th>
+    <th class="tg-baqh" colspan="2">320x320</th>
+    <th class="tg-baqh" colspan="2">320x320<br>( with mean-max pooling )</th>
+  </tr>
+</table>
+</dl>

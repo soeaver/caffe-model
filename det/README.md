@@ -86,4 +86,4 @@ we are releasing the training code and files, the models and more experiments wi
  **FPN-inception-v4** <br/> with ms-train | 36.5 | 58.5 | 38.8 | 16.5 | 38.8 | 52.1
  **FPN-inception-v4** <br/> with ms-train & soft-nms | 38.3 | 61.0 | 40.8 | 20.0 | 41.5 | 51.4
  **RFCN-air101** <br/> with ms-train & ohem & multigrid | 38.2 | 60.1 | 41.2 | 18.2 | 41.9 | 53.0
- **RFCN-air101** <br/> with ms-train & ohem & multigrid & soft-nms & flipping | 40.4 | 63.5 | 43.5 | 22.6 | 44.4 | 52.0
+ **RFCN-air101** <br/> with ms-train & ohem & multigrid & bbox voting & soft-nms & flipping | 40.4 | 63.5 | 43.5 | 22.6 | 44.4 | 52.0

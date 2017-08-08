@@ -57,7 +57,8 @@ we are releasing the training code and files, the models and more experiments wi
  resnet101-v2-multigrid | 80.49 | -- | -- | -- | --
  air101-multigrid | 81.47 | -- | -- | -- | --
  air101-multigrid-context | 82.09 | -- | -- | -- | --
- inception-v4-3x3| -- | -- | -- | -- | --
+ inception-v4-3x3 | 81.12 | -- | -- | -- | --
+ inception-v4-3x3-multigrid | -- | -- | -- | -- | --
  
  
 #### **3. RFCN-OHEM training on VOC 2007+2012 trainval and testing on VOC 2007 test.**
@@ -71,12 +72,8 @@ we are releasing the training code and files, the models and more experiments wi
  resnext101-64x4d| 80.26(79.88) | -- | -- | -- | --
  air101| 79.42(80.93) | -- | -- | -- | --
  inception-v4| 80.2 | -- | -- | -- | --
- inception-v4-3x3| 81.15 | -- | -- | -- | --
- 
- - To reduce memory usage, we merge all the models batchnorm layer parameters into scale layer, more details please refer to [faster-rcnn-resnet](https://github.com/Eniac-Xie/faster-rcnn-resnet#modification) or [pva-faster-rcnn](https://github.com/sanghoon/pva-faster-rcnn/blob/master/tools/gen_merged_model.py);
- - We also split the deploy file to rpn deploy file and rcnn deploy file for adopting more testing tricks.
- - Performanc, speed and memory are calculated on [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv) with Nvidia Titan pascal, we do not guarantee that the results can be reproduced under any other conditions;
- - All the models are trained on a single scale (600*1000) with image flipping and ohem for 110,000 iterations, tested on the same single scale with test-batch=300 and nms=0.3;
+ inception-v4-3x3 | 81.15 | -- | -- | -- | --
+
  - The mAP@50 score in parentheses is training with ohem and [multigrid](https://arxiv.org/abs/1706.05587);
  
  #### **4. Results training on COCO-trainval35k and testing on COCO-test-dev2015.**

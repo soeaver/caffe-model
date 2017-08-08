@@ -47,11 +47,12 @@ we are releasing the training code and files, the models and more experiments wi
  - For multi-scale training, we double the training iterations (160000 for VOC0712trainval);
  - The SCALES for multi-scale testing is (400, 600, 800, 1000, 1200) and MAX_SIZE is 2000;
  
+ 
 #### **2. Faster-RCNN-2fc-OHEM training on VOC 2007+2012 trainval and testing on VOC 2007 test.**
  
   Network|mAP@50(%)|training<br/>speed|training<br/>memory|testing<br/>speed|testing<br/>memory
  :---:|:---:|:---:|:---:|:---:|:---:
- resnet18 | 70.02 | 9.5 img/s | 1,235MB | 17.5 img/s | 989MB
+ resnet101-v2 | 70.02 | 9.5 img/s | 1,235MB | 17.5 img/s | 989MB
  
  
 #### **3. RFCN-OHEM training on VOC 2007+2012 trainval and testing on VOC 2007 test.**
@@ -72,4 +73,6 @@ we are releasing the training code and files, the models and more experiments wi
  - Performanc, speed and memory are calculated on [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv) with Nvidia Titan pascal, we do not guarantee that the results can be reproduced under any other conditions;
  - All the models are trained on a single scale (600*1000) with image flipping and ohem for 110,000 iterations, tested on the same single scale with test-batch=300 and nms=0.3;
  - The mAP@50 score in parentheses is training with ohem and [multigrid](https://arxiv.org/abs/1706.05587);
+ 
+ #### **4. Results training on COCO-trainval35k and testing on COCO-test-dev2015.**
 

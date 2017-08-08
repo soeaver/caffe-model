@@ -79,34 +79,5 @@ we are releasing the training code and files, the models and more experiments wi
  
  #### **4. Results training on COCO-trainval35k and testing on COCO-test-dev2015.**
 
-<dl>
-<table class="tg" style="undefined;table-layout: fixed; width: 739px">
-<colgroup>
-<col style="width: 103px">
-<col style="width: 92px">
-<col style="width: 87px">
-<col style="width: 68px">
-<col style="width: 72px">
-<col style="width: 62px">
-<col style="width: 72px">
-<col style="width: 87px">
-<col style="width: 96px">
-</colgroup>
-  <tr>
-    <td class="tg-baqh" rowspan="2">Model</td>
-    <td class="tg-baqh" rowspan="2">Size</td>
-    <td class="tg-baqh" rowspan="2">GFLOPs</td>
-    <td class="tg-baqh" rowspan="2">224x224</td>
-    <td class="tg-baqh" rowspan="2">320x320</td>
-    <td class="tg-baqh" rowspan="2">320x320</td>
-  </tr>
-  <tr>
-    <td class="tg-baqh">DPN-92</td>
-    <td class="tg-baqh">145 MB</td>
-    <td class="tg-baqh">20.73</td>
-    <td class="tg-baqh">19.34</td>
-    <td class="tg-baqh">19.04</td>
-    <td class="tg-baqh">4.53</td>
-  </tr>
-</table>
-</dl>
+|                                 | <sub>mAP</sub>  | <sub>mAP@0.5</sub> | <sub>mAP@0.75</sub>| <sub>mAP@S</sub> | <sub>mAP@M</sub> | <sub>mAP@L</sub> |
+

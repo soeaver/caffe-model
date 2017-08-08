@@ -52,7 +52,9 @@ we are releasing the training code and files, the models and more experiments wi
  
   Network|mAP@50(%)|training<br/>speed|training<br/>memory|testing<br/>speed|testing<br/>memory
  :---:|:---:|:---:|:---:|:---:|:---:
+ resnet101-v2 w/o OHEM | 80.18 | -- | -- | -- | --
  resnet101-v2 | 80.6 | -- | -- | -- | --
+ resnet101-v2-multigrid | 80.49 | -- | -- | -- | --
  air101-multigrid | 81.47 | -- | -- | -- | --
  air101-multigrid-context | 82.09 | -- | -- | -- | --
  inception-v4-3x3| -- | -- | -- | -- | --

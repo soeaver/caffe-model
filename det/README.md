@@ -91,7 +91,7 @@ we are releasing the training code and files, the models and more experiments wi
 <col style="width: 72px">
 <col style="width: 87px">
 <col style="width: 96px">
-</colgroup>
+</rowgroup>
   <tr>
     <th class="tg-baqh" rowspan="2">Model</th>
     <th class="tg-baqh" rowspan="2">Size</th>

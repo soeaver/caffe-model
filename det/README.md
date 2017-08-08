@@ -79,5 +79,6 @@ we are releasing the training code and files, the models and more experiments wi
  
  #### **4. Results training on COCO-trainval35k and testing on COCO-test-dev2015.**
 
-|                                 | <sub>mAP</sub>  | <sub>mAP@0.5</sub> | <sub>mAP@0.75</sub>| <sub>mAP@S</sub> | <sub>mAP@M</sub> | <sub>mAP@L</sub> |
-
+ Network|mAP|mAP@50|mAP@75|mAP@S|mAP@M|mAP@L
+ :---:|:---:|:---:|:---:|:---:|:---:|:---:
+ FPN-inception-v4 with ms-train| 36.3 | 58.1 | 38.7 | -- | -- | --

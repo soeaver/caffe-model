@@ -81,4 +81,5 @@ we are releasing the training code and files, the models and more experiments wi
 
  Network|mAP|mAP@50|mAP@75|mAP@S|mAP@M|mAP@L
  :---:|:---:|:---:|:---:|:---:|:---:|:---:
- FPN-inception-v4 with ms-train| 36.3 | 58.1 | 38.7 | -- | -- | --
+ **FPN-inception-v4** with ms-train | 36.3 | 58.1 | 38.7 | -- | -- | --
+ **RFCN-air101** with <br/> ms-train & ohem & multigrid | 36.3 | 58.1 | 38.7 | -- | -- | --

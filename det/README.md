@@ -58,7 +58,7 @@ we are releasing the training code and files, the models and more experiments wi
  air101-multigrid | 81.47 | -- | -- | -- | --
  air101-multigrid-context | 82.09 | -- | -- | -- | --
  inception-v4-3x3 | 81.12 | -- | -- | -- | --
- inception-v4-3x3-multigrid | -- | -- | -- | -- | --
+ inception-v4-3x3-multigrid | 81.30 | -- | -- | -- | --
  
  
 #### **3. RFCN-OHEM training on VOC 2007+2012 trainval and testing on VOC 2007 test.**

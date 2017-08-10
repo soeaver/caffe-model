@@ -86,3 +86,4 @@ we are releasing the training code and files, the models and more experiments wi
  **RFCN-air101** <br/> with ms-train & ohem & multigrid | 38.2 | 60.1 | 41.2 | 18.2 | 41.9 | 53.0
  **RFCN-air101** <br/> with extra 7 epochs & ms-train & ohem & multigrid  | 38.5 | 60.2 | 41.4 | 18.3 | 42.1 | 53.4
  **RFCN-air101** <br/> with ms-train & ohem & multigrid & bbox voting & soft-nms & flipping | 40.4 | 63.5 | 43.5 | 22.6 | 44.4 | 52.0
+ **RFCN-air101** <br/> with ms-train & ohem & multigrid & bbox voting & soft-nms & flipping & ms-test | 41.8 | 65.3 | 45.3 | 26.1 | 45.6 | 52.4

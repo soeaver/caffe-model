@@ -72,9 +72,11 @@ Project links:
  resnext101-32x4d| 30.73/35.75ms | 34.33/41.02ms | [169.1MB](https://pan.baidu.com/s/1hswrNUG)|[169.1MB](https://drive.google.com/open?id=0B9mkjlmP0d7zTzYyelgyYlpOU3c)|[facebookresearch](https://github.com/facebookresearch/ResNeXt)
  resnext101-64x4d| 42.07/64.58ms | 51.99/77.71ms | [319.2MB](https://pan.baidu.com/s/1pLhk0Zp)|[319.2MB](https://drive.google.com/open?id=0B9mkjlmP0d7zQ0ZZOENnSFdQWnc)|[facebookresearch](https://github.com/facebookresearch/ResNeXt)
  wrn50-2<br/>(resnet50_1x128d)| 16.48/25.28ms | 20.99/35.04ms | [263.1MB](https://pan.baidu.com/s/1nvhoCsh)|[263.1MB](https://drive.google.com/open?id=0B9mkjlmP0d7zYW40dUMxS3VPclU)|[szagoruyko](https://github.com/szagoruyko/wide-residual-networks)
- dpn-92| 29.71/30.68 | 35.19/37.13  | [144.2MB](https://pan.baidu.com/s/1pL0VuWV)|[144.2MB](https://drive.google.com/open?id=0B9mkjlmP0d7zaWVKWFd2OXpRTVU)|[cypw](https://github.com/cypw/DPNs)
- dpn-98| 29.71/30.68 | 35.19/37.13  | .. | .. |
- 
+ dpn-92| 29.71/30.68ms | 35.19/37.13ms  | [144.2MB](https://pan.baidu.com/s/1pL0VuWV)|[144.2MB](https://drive.google.com/open?id=0B9mkjlmP0d7zaWVKWFd2OXpRTVU)|[cypw](https://github.com/cypw/DPNs)
+ dpn-98| 36.24/44.06ms | 42.84/53.50ms  | .. | .. |[cypw](https://github.com/cypw/DPNs)
+ dpn-107| 45.21/59.77ms | 56.12/77.78ms | .. | .. |[cypw](https://github.com/cypw/DPNs)
+ dpn-131| 48.20/59.43ms | 57.66/72.43ms | .. | .. |[cypw](https://github.com/cypw/DPNs)
+  
  - For speeding up xception, we adopt [convolution depthwise layer](https://github.com/BVLC/caffe/pull/5665/files).
 
 ### Check the performance

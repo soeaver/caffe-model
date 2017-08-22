@@ -53,12 +53,13 @@ we are releasing the training code and files, the models and more experiments wi
   Network|mAP@50(%)|training<br/>speed|training<br/>memory|testing<br/>speed|testing<br/>memory
  :---:|:---:|:---:|:---:|:---:|:---:
  resnet101-v2 w/o OHEM | 80.18 | 5.4 img/s | 5,807MB | 10.5 img/s | 3,147MB
- resnet101-v2 | 80.6 | -- | -- | -- | --
- resnet101-v2-multigrid | 80.49 | -- | -- | -- | --
- air101-multigrid | 81.47 | -- | -- | -- | --
- air101-multigrid-context | 82.09 | -- | -- | -- | --
- inception-v4-3x3 | 81.12 | -- | -- | -- | --
- inception-v4-3x3-multigrid | 81.30 | -- | -- | -- | --
+ resnet101-v2 | 80.6 | 5.0 img/s | 5,833MB | 10.5 img/s | 3,147MB
+ resnet101-v2-multigrid | 80.49 | 5.0 img/s | 5,833MB | 10.5 img/s | 3,147MB
+ air101-multigrid | 81.47 | 3.4 img/s | 6,653MB | 8.7 img/s | 4,503MB
+ air101-multigrid-context | 82.09 | 3.3 img/s | 6,773MB | 8.6 img/s | 4,577MB
+ air101-fpn w/o OHEM | 81.44 | 2.4 img/s | 7,063MB | 3.8 img/s | 4,433MB
+ inception-v4-3x3 | 81.12 | 3.73 img/s | 5,383MB | 10.1 img/s | 3,217MB
+ inception-v4-3x3-multigrid | 81.30 | 3.73 img/s | 5,383MB | 10.1 img/s | 3,217MB
  
  
 #### **3. RFCN-OHEM training on VOC 2007+2012 trainval and testing on VOC 2007 test.**

@@ -1,0 +1,75 @@
+input: "rfcn_cls"
+input_shape {
+  dim: 1
+  dim: 1029
+  dim: 40
+  dim: 40
+}
+
+input: "rfcn_bbox"
+input_shape {
+  dim: 1
+  dim: 392
+  dim: 40
+  dim: 40
+}
+
+input: "rois"
+input_shape {
+  dim: 300
+  dim: 5
+}
+
+
+#======= position sensitive RoI pooling ========
+layer {
+  bottom: "rfcn_cls"
+  bottom: "rois"
+  top: "psroipooled_cls_rois"
+  name: "psroipooled_cls_rois"
+  type: "PSROIPooling"
+  psroi_pooling_param {
+    spatial_scale: 0.0625
+    output_dim: 21
+    group_size: 7
+  }
+}
+layer {
+  bottom: "psroipooled_cls_rois"
+  top: "cls_score"
+  name: "ave_cls_score_rois"
+  type: "Pooling"
+  pooling_param {
+    pool: AVE
+    global_pooling: true
+  }
+}
+layer {
+  bottom: "rfcn_bbox"
+  bottom: "rois"
+  top: "psroipooled_loc_rois"
+  name: "psroipooled_loc_rois"
+  type: "PSROIPooling"
+  psroi_pooling_param {
+    spatial_scale: 0.0625
+    output_dim: 8
+    group_size: 7
+  }
+}
+layer {
+  bottom: "psroipooled_loc_rois"
+  top: "bbox_pred"
+  name: "ave_bbox_pred_rois"
+  type: "Pooling"
+  pooling_param {
+    pool: AVE
+    global_pooling: true
+  }
+}
+layer {
+  name: "cls_prob"
+  type: "Softmax"
+  bottom: "cls_score"
+  top: "cls_prob"
+}
+

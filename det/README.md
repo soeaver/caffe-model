@@ -68,9 +68,9 @@ we are releasing the training code and files, the models and more experiments wi
  :---:|:---:|:---:|:---:|:---:|:---:
  resnet18 | 71.82 | 14.3 img/s | 1,215MB | 23.4 img/s | 899MB
  resnext26-32x4d| 72.07 | 7.5 img/s | 2,521MB | 15.0 img/s | 1,797MB
- resnet101-v2| 78.93(79.9) | -- | -- | -- | --
- resnext101-32x4d| 79.98(80.35) | -- | -- | -- | --
- resnext101-64x4d| 80.26(79.88) | -- | -- | -- | --
+ resnet101-v2| 78.93(79.9) | 4.9 img/s | 5,719MB | 10.4 img/s | 3,097MB
+ resnext101-32x4d| 79.98(80.35) | 3.8 img/s | 6,977MB | 8.8 img/s | 4,761MB
+ resnext101-64x4d| 80.26(79.88) | 2.4 img/s | 10,203MB | 6.2 img/s | 8,529MB
  air101| 79.42(80.93) | -- | -- | -- | --
  inception-v4| 80.2 | -- | -- | -- | --
  inception-v4-3x3 | 81.15 | -- | -- | -- | --

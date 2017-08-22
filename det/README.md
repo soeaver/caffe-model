@@ -52,7 +52,7 @@ we are releasing the training code and files, the models and more experiments wi
  
   Network|mAP@50(%)|training<br/>speed|training<br/>memory|testing<br/>speed|testing<br/>memory
  :---:|:---:|:---:|:---:|:---:|:---:
- resnet101-v2 w/o OHEM | 80.18 | -- | -- | -- | --
+ resnet101-v2 w/o OHEM | 80.18 | 5.4 img/s | 5,807MB | 10.5 img/s | 3,147MB
  resnet101-v2 | 80.6 | -- | -- | -- | --
  resnet101-v2-multigrid | 80.49 | -- | -- | -- | --
  air101-multigrid | 81.47 | -- | -- | -- | --

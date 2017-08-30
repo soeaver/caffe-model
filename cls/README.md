@@ -8,7 +8,7 @@ Most of the models are converted from other projects, the main contribution belo
 
 Project links:
 
-[mxnet-model-gallery](https://github.com/dmlc/mxnet-model-gallery)、 [tensorflow slim](https://github.com/tensorflow/models/tree/master/slim)、 [craftGBD](https://github.com/craftGBD/craftGBD)、 [ResNeXt](https://github.com/facebookresearch/ResNeXt)、 [DenseNet](https://github.com/liuzhuang13/DenseNet)、 [wide-residual-networks](https://github.com/szagoruyko/wide-residual-networks)、 [keras deep-learning-models](https://github.com/fchollet/deep-learning-models)、 [ademxapp](https://github.com/itijyou/ademxapp)、 [DPNs](https://github.com/cypw/DPNs)
+[mxnet-model-gallery](https://github.com/dmlc/mxnet-model-gallery)、 [tensorflow slim](https://github.com/tensorflow/models/tree/master/slim)、 [craftGBD](https://github.com/craftGBD/craftGBD)、 [ResNeXt](https://github.com/facebookresearch/ResNeXt)、 [DenseNet](https://github.com/liuzhuang13/DenseNet)、 [wide-residual-networks](https://github.com/szagoruyko/wide-residual-networks)、 [keras deep-learning-models](https://github.com/fchollet/deep-learning-models)、 [ademxapp](https://github.com/itijyou/ademxapp)、 [DPNs](https://github.com/cypw/DPNs)、[Senet](https://github.com/hujie-frank/SENet)
 
 
 ### Performance on imagenet validation.
@@ -34,10 +34,13 @@ Project links:
  air101| 21.32/5.76 | ../.. | 19.92/4.75 | ../..
  airx101-32x4d| 21.15/5.74 | ../.. | 19.61/4.93 | ../..
  airx152-32x4d| 20.77/5.49 | 19.00/4.53 | ../.. | ../..
+ dpn-68| 22.56/6.24 | ../.. | ../.. | ../..
  dpn-92| 20.81/5.47 | 18.99/4.59 | 19.23/4.64 | ../.. 
  dpn-98| 20.27/5.28 | ../.. | 18.87/4.43 | ../..
  dpn-131| 20.00/5.24 | ../.. | 18.63/4.31 | ../..
  dpn-107| **19.70**/5.06 | ../.. | **18.41**/4.25 | ../..
+ se-inception-v2<br/>(se-inception-bn)| 23.64/7.04 | ../.. | 21.61/5.87 | ../..
+ senet<br/>(se-resnext152-64x4d)| 18.67/4.47 | ../.. | ../.. | ../..
 
  - The resnet18-priv, resnext26-32x4d-priv are trained under [pytorch](https://github.com/soeaver/pytorch-classification) by bupt-priv.
  - The pre-train models are tested on original [caffe](https://github.com/BVLC/caffe) by [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py), **but ceil_mode:false（pooling_layer） is used for the models converted from torch, the detail in https://github.com/BVLC/caffe/pull/3057/files**. If you remove ceil_mode:false, the performance will decline about 1% top1.

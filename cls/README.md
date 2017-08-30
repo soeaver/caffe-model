@@ -81,7 +81,7 @@ Project links:
  airx152-32x4d| 75.64/84.29ms | 83.03/97.68ms | .. | .. |[pytorch-classification](https://github.com/soeaver/pytorch-classification)
  dpn-68| ../..ms | ../..ms | [48.4MB](https://pan.baidu.com/s/1bphINV5) | .. |[cypw](https://github.com/cypw/DPNs)
  dpn-92| 29.71/30.68ms | 35.19/37.13ms  | [144.2MB](https://pan.baidu.com/s/1pL0VuWV)|[144.2MB](https://drive.google.com/open?id=0B9mkjlmP0d7zaWVKWFd2OXpRTVU)|[cypw](https://github.com/cypw/DPNs)
- dpn-98| 36.24/44.06ms | 42.84/53.50ms | .. | .. |[cypw](https://github.com/cypw/DPNs)
+ dpn-98| 36.24/44.06ms | 42.84/53.50ms | [235.6MB](https://pan.baidu.com/s/1pKHBRlD) | .. |[cypw](https://github.com/cypw/DPNs)
  dpn-107| 45.21/59.77ms | 56.12/77.78ms | .. | .. |[cypw](https://github.com/cypw/DPNs)
  dpn-131| 48.20/59.43ms | 57.66/72.43ms | .. | .. |[cypw](https://github.com/cypw/DPNs)
   

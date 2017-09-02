@@ -40,6 +40,12 @@ Project links:
  dpn-131| 20.00/5.24 | ../.. | 18.63/4.31 | ../..
  dpn-107| **19.70**/5.06 | ../.. | **18.41**/4.25 | ../..
  se-inception-v2<br/>(se-inception-bn)| 23.64/7.04 | ../.. | 21.61/5.87 | ../..
+ se-resnet50| 18.67/4.47 | ../.. | ../.. | ../..
+ se-resnet50-hik| ../.. | ../.. | ../.. | ../..
+ se-resnet101| ../.. | ../.. | ../.. | ../..
+ se-resnet152| ../.. | ../.. | ../.. | ../..
+ se-resnext50-32x4d| ../.. | ../.. | ../.. | ../..
+ se-resnext101-32x4d| ../.. | ../.. | ../.. | ../..
  senet<br/>(se-resnext152-64x4d)| 18.67/4.47 | ../.. | ../.. | ../..
 
  - The resnet18-priv, resnext26-32x4d-priv are trained under [pytorch](https://github.com/soeaver/pytorch-classification) by bupt-priv.
@@ -102,7 +108,8 @@ Project links:
  resnet18-priv, resnext26-32x4d-priv<br/>resnet38a, resnext50-32x4d<br/>resnext101-32x4d, resnext101-64x4d<br/>wrn50-2, air(x) | ILSVRC2012_val | [103.52, 116.28, 123.675] | [57.375, 57.12, 58.395]
  inception-v3| **ILSVRC2015_val** | [128.0, 128.0, 128.0] | [128.0, 128.0, 128.0] 
  inception-v2, xception<br/>inception-v4, inception-resnet-v2 | ILSVRC2012_val | [128.0, 128.0, 128.0] | [128.0, 128.0, 128.0] 
- dpn(92/98/131/107)| ILSVRC2012_val | [104.0, 117.0, 124.0] | [59.88, 59.88, 59.88]
+ dpn(68/92/98/131/107)| ILSVRC2012_val | [104.0, 117.0, 124.0] | [59.88, 59.88, 59.88]
+ official senet| **ILSVRC2015_val** | [104.0, 117.0, 123.0] | [1.0, 1.0, 1.0] 
 
 
 **3. then run evaluation_cls.py**

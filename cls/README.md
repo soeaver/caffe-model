@@ -84,6 +84,8 @@ Project links:
  dpn-98| 36.24/44.06ms | 42.84/53.50ms | [235.6MB](https://pan.baidu.com/s/1pKHBRlD) | .. |[cypw](https://github.com/cypw/DPNs)
  dpn-107| 45.21/59.77ms | 56.12/77.78ms | [332.4MB](https://pan.baidu.com/s/1i5b0Uih) | .. |[cypw](https://github.com/cypw/DPNs)
  dpn-131| 48.20/59.43ms | 57.66/72.43ms | [303.3MB](https://pan.baidu.com/s/1miOdMHi) | .. |[cypw](https://github.com/cypw/DPNs)
+ se-inception-v2| 14.66/10.63ms | 15.71/13.52ms | .. | .. |[SENet](https://github.com/hujie-frank/SENet)
+ se-resnet50| 15.29/14.20ms | 17.96/19.69ms | .. | .. |[SENet](https://github.com/hujie-frank/SENet)
   
  - For speeding up xception, we adopt [convolution depthwise layer](https://github.com/BVLC/caffe/pull/5665/files).
 

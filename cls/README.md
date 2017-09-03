@@ -44,8 +44,8 @@ Project links:
  se-resnet50-hik| 21.98/5.80 | 20.06/4.88 | 20.51/5.04 | ../..
  se-resnet101| 21.76/5.72 | ../.. | ../.. | ../..
  se-resnet152| 21.34/5.54 | ../.. | ../.. | ../..
- se-resnext50-32x4d| 20.96/5.53 | ../.. | ../.. | ../..
- se-resnext101-32x4d| 19.83/4.95 | ../.. | ../.. | ../..
+ se-resnext50-32x4d| 20.96/5.53 | ../.. | 19.36/4.66 | ../..
+ se-resnext101-32x4d| 19.83/4.95 | ../.. | 18.14/4.08 | ../..
  senet<br/>(se-resnext152-64x4d)| 18.67/4.47 | 17.40/3.69 | 17.28/3.78 | 16.80/3.47
 
  - The resnet18-priv, resnext26-32x4d-priv are trained under [pytorch](https://github.com/soeaver/pytorch-classification) by bupt-priv.

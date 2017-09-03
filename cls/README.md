@@ -46,7 +46,7 @@ Project links:
  se-resnet152| 21.34/5.54 | ../.. | ../.. | ../..
  se-resnext50-32x4d| 20.96/5.53 | ../.. | ../.. | ../..
  se-resnext101-32x4d| 19.83/4.95 | ../.. | ../.. | ../..
- senet<br/>(se-resnext152-64x4d)| 18.67/4.47 | 17.40/3.69 | ../.. | ../..
+ senet<br/>(se-resnext152-64x4d)| 18.67/4.47 | 17.40/3.69 | 17.28/3.78 | ../..
 
  - The resnet18-priv, resnext26-32x4d-priv are trained under [pytorch](https://github.com/soeaver/pytorch-classification) by bupt-priv.
  - The pre-train models are tested on original [caffe](https://github.com/BVLC/caffe) by [evaluation_cls.py](https://github.com/soeaver/caffe-model/blob/master/cls/evaluation_cls.py), **but ceil_mode:false（pooling_layer） is used for the models converted from torch, the detail in https://github.com/BVLC/caffe/pull/3057/files**. If you remove ceil_mode:false, the performance will decline about 1% top1.

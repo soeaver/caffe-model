@@ -41,11 +41,11 @@ Project links:
  dpn-107| **19.70**/5.06 | ../.. | **18.41**/4.25 | ../..
  se-inception-v2<br/>(se-inception-bn)| 23.64/7.04 | ../.. | 21.61/5.87 | ../..
  se-resnet50| 22.39/6.37 | 20.61/5.34 | 20.49/5.22 | ../..
- se-resnet50-hik| 21.98/5.80 | 20.06/4.88 | 20.51/5.04 | ../..
+ se-resnet50-hik| 21.98/5.80 | 20.06/4.88 | 20.51/5.04 | 19.92/4.68
  se-resnet101| 21.76/5.72 | 19.96/4.79 | ../.. | ../..
  se-resnet152| 21.34/5.54 | 19.56/4.66 | 19.34/4.59 | 18.83/4.32
  se-resnext50-32x4d| 20.96/5.53 | 19.39/4.69 | 19.36/4.66 | 18.70/4.38
- se-resnext101-32x4d| 19.83/4.95 | ../.. | 18.14/4.08 | ../..
+ se-resnext101-32x4d| 19.83/4.95 | 18.44/4.16 | 18.14/4.08 | ../..
  senet<br/>(se-resnext152-64x4d)| 18.67/4.47 | 17.40/3.69 | 17.28/3.78 | 16.80/3.47
 
  - The resnet18-priv, resnext26-32x4d-priv are trained under [pytorch](https://github.com/soeaver/pytorch-classification) by bupt-priv.

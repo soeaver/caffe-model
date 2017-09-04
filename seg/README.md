@@ -13,6 +13,7 @@ we are releasing the training code and files, the models and more experiments wi
  resnext101-32x4d| 77.79 | 94.92 | 1.3 img/s | 8,891MB | 2.6 img/s | 5,241MB
  air101| 77.64 | 94.93 | 1.3 img/s | 10,017MB | 2.5 img/s | 5,241MB
  inception-v4| 77.58 | 94.83 | -- img/s | --MB | -- img/s | --MB
+ se-resnet50| 75.80 | 94.30 | -- img/s | --MB | -- img/s | --MB
  - To reduce memory usage, we merge all the models batchnorm layer parameters into scale layer, more details please refer to [faster-rcnn-resnet](https://github.com/Eniac-Xie/faster-rcnn-resnet#modification) or [pva-faster-rcnn](https://github.com/sanghoon/pva-faster-rcnn/blob/master/tools/gen_merged_model.py);
  - PSP module without batch normlization, the kernel_size of avepooling is 64, 32, 16 and 8 respectively;
  - All the models use 513x513 input with random crop, multi-scale traing (0.75x, 1.0x, 1.25x, 1.5x, 2.0x) and horizantal flipping;

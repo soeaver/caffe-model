@@ -34,7 +34,6 @@ Project links:
  air101| 21.32/5.76 | 19.36/4.84 | 19.92/4.75 | 19.05/4.43
  air152| 20.38/5.11 | 18.46/4.26 | 19.08/4.40 | 18.53/4.00
  airx101-32x4d| 21.15/5.74 | 19.43/4.86 | 19.61/4.93 | 18.90/4.49
- airx152-32x4d| 20.77/5.49 | 19.00/4.53 | ../.. | ../..
  dpn-68| 22.56/6.24 | 20.48/4.99 | 20.99/5.25 | 20.09/4.73
  dpn-92| 20.81/5.47 | 18.99/4.59 | 19.23/4.64 | 18.68/4.24 
  dpn-98| 20.27/5.28 | ../.. | 18.87/4.43 | ../..
@@ -85,7 +84,6 @@ Project links:
  airx50-24x4d| 23.59/24.80ms | 26.64/30.92ms | .. | .. |[pytorch-classification](https://github.com/soeaver/pytorch-classification)
  air101| 35.78/35.94ms | 39.69/45.52ms | .. | .. |[pytorch-classification](https://github.com/soeaver/pytorch-classification)
  airx101-32x4d| 49.43/55.52ms | 54.64/66.31ms | .. | .. |[pytorch-classification](https://github.com/soeaver/pytorch-classification)
- airx152-32x4d| 75.64/84.29ms | 83.03/97.68ms | .. | .. |[pytorch-classification](https://github.com/soeaver/pytorch-classification)
  dpn-68| ../..ms | ../..ms | [48.4MB](https://pan.baidu.com/s/1bphINV5) | .. |[cypw](https://github.com/cypw/DPNs)
  dpn-92| 29.71/30.68ms | 35.19/37.13ms  | [144.2MB](https://pan.baidu.com/s/1pL0VuWV)|[144.2MB](https://drive.google.com/open?id=0B9mkjlmP0d7zaWVKWFd2OXpRTVU)|[cypw](https://github.com/cypw/DPNs)
  dpn-98| 36.24/44.06ms | 42.84/53.50ms | [235.6MB](https://pan.baidu.com/s/1pKHBRlD) | .. |[cypw](https://github.com/cypw/DPNs)

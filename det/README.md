@@ -83,6 +83,7 @@ we are releasing the training code and files, the models and more experiments wi
  Network|mAP|mAP@50|mAP@75|mAP@S|mAP@M|mAP@L
  :---:|:---:|:---:|:---:|:---:|:---:|:---:
  **RFCN-se-inception-v2** <br/> with ms-train & ohem & multigrid | 32.6 | 53.6 | 34.5 | 12.5 | 35.1 | 48.4
+ **RFCN-se-inception-v2** <br/> with ms-train & ohem & multigrid & bbox voting & soft-nms & flipping & ms-test | 36.8 | 59.8 | 38.7 | 19.7 | 39.8 | 49.1
  **FPN-Faster-inception-v4** <br/> with ms-train | 36.5 | 58.5 | 38.8 | 16.5 | 38.8 | 52.1
  **FPN-Faster-inception-v4** <br/> with ms-train & bbox voting & soft-nms | 38.3 | 61.0 | 40.8 | 20.0 | 41.5 | 51.4
  **FPN-Faster-inception-v4** <br/> with ms-train & bbox voting & soft-nms & flipping & ms-test | 39.5 | 62.5 | 42.3 | 23.3 | 43.2 | 51.0

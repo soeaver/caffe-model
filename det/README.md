@@ -72,6 +72,7 @@ we are releasing the training code and files, the models and more experiments wi
  resnext101-32x4d| 79.98(80.35) | 3.8 img/s | 6,977MB | 8.8 img/s | 4,761MB
  resnext101-64x4d| 80.26(79.88) | 2.4 img/s | 10,203MB | 6.2 img/s | 8,529MB
  air101| 79.42(80.93) | 3.4 img/s | 6,525MB | 8.5 img/s | 4,477MB
+ air152| ..(81.18) | .. | .. | .. | ..
  inception-v4| 80.2 | 4.1 img/s | 4,371MB | 10.3 img/s | 2,343MB
  inception-v4-3x3 | 81.15 | 3.7 img/s | 5,207MB | 9.5 img/s | 3,151MB
  se-inception-v2| 77.1 | .. | .. | .. | ..
@@ -92,4 +93,5 @@ we are releasing the training code and files, the models and more experiments wi
  **RFCN-air101** <br/> with ms-train & ohem & multigrid & bbox voting & soft-nms & flipping | 40.4 | 63.5 | 43.5 | 22.6 | 44.4 | 52.0
  **RFCN-air101** <br/> with ms-train & ohem & multigrid & bbox voting & soft-nms & flipping & ms-test | 41.8 | 65.3 | 45.3 | 26.1 | 45.6 | 52.4
  **RFCN-air101** <br/> with ms-train & ohem & multigrid & bbox voting & soft-nms & flipping & assign-ms-test | 42.1 | 64.6 | 45.6 | 25.6 | 44.5 | 54.1
+ **RFCN-air101** <br/> with ms-train & ohem & multigrid & deformpsroi & bbox voting & soft-nms & flipping & assign-ms-test | 43.2 | 66.0 | 46.7 | 25.6 | 46.3 | 55.9
  **Faster-2fc-air101** <br/> with ms-train & ohem & multigrid | 36.5 | 60.4 | 38.1 | 15.5 | 39.5 | 53.5

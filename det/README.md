@@ -97,7 +97,8 @@ we are releasing the training code and files, the models and more experiments wi
  **Faster-2fc-air101** <br/> with ms-train & ohem & multigrid | 36.5 | 60.4 | 38.1 | 15.5 | 39.5 | 53.5
  
  
+ **Results training on MSCOCO2017-trainval and testing on MSCOCO2017-test-dev2017.**
   Network|mAP|mAP@50|mAP@75|mAP@S|mAP@M|mAP@L
  :---:|:---:|:---:|:---:|:---:|:---:|:---:
- **RFCN-air101** <br/> with ms-train & ohem & multigrid | 40.1 | 62.2 | 43.4 | 19.4 | 44.4 | 55.9
- **RFCN-air101** <br/> with ms-train & ohem & multigrid & 800 scale test | 41.4 | 63.9 | 45.0 | 23.3 | 45.3 | 54.6
+ **RFCN-air101** <br/> with cp-attention & ms-train & ohem & multigrid | 40.1 | 62.2 | 43.4 | 19.4 | 44.4 | 55.9
+ **RFCN-air101** <br/> with cp-attention & ms-train & ohem & multigrid & 800 scale test | 41.4 | 63.9 | 45.0 | 23.3 | 45.3 | 54.6

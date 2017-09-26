@@ -95,3 +95,9 @@ we are releasing the training code and files, the models and more experiments wi
  **RFCN-air101** <br/> with ms-train & ohem & multigrid & bbox voting & soft-nms & flipping & assign-ms-test | 42.1 | 64.6 | 45.6 | 25.6 | 44.5 | 54.1
  **RFCN-air101** <br/> with ms-train & ohem & multigrid & deformpsroi & bbox voting & soft-nms & flipping & assign-ms-test | 43.2 | 66.0 | 46.7 | 25.6 | 46.3 | 55.9
  **Faster-2fc-air101** <br/> with ms-train & ohem & multigrid | 36.5 | 60.4 | 38.1 | 15.5 | 39.5 | 53.5
+ 
+ 
+  Network|mAP|mAP@50|mAP@75|mAP@S|mAP@M|mAP@L
+ :---:|:---:|:---:|:---:|:---:|:---:|:---:
+ **RFCN-air101** <br/> with ms-train & ohem & multigrid | 40.1 | 62.2 | 43.4 | 19.4 | 44.4 | 55.9
+ **RFCN-air101** <br/> with ms-train & ohem & multigrid & 800 scale test | 41.4 | 63.9 | 45.0 | 23.3 | 45.3 | 54.6

@@ -102,6 +102,6 @@ we are releasing the training code and files, the models and more experiments wi
   Network|mAP|mAP@50|mAP@75|mAP@S|mAP@M|mAP@L
  :---:|:---:|:---:|:---:|:---:|:---:|:---:
  **CPANet-air101** <br/> with ms-train & ohem & multigrid | 40.1 | 62.2 | 43.4 | 19.4 | 44.4 | 55.9
- **CPANet-air101** <br/> with ms-train & ohem & multigrid & 800-scale-test | 41.4 | 63.9 | 45.0 | 23.3 | 45.3 | 54.6
+ **CPANet-air101** <br/> with ms-train & ohem & multigrid & 800-scale-test | 42.4 | 65.6 | 46.0 | 24.6 | 46.5 | 55.0
  **CPANet-air101** <br/> with ms-train & ohem & multigrid & 800-scale-test & snms | 43.3 | 66.0 | 47.2 | 25.2 | 47.4 | 56.0
  **CPANet-air101** <br/> with ms-train & ohem & multigrid & 800-scale-test & snms & flipping | 43.5 | 65.9 | 47.5 | 25.1 | 47.7 | 56.6

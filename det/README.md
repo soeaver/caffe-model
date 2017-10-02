@@ -76,7 +76,7 @@ we are releasing the training code and files, the models and more experiments wi
  air152| ..(81.18) | .. | .. | .. | ..
  inception-v4| 80.2 | 4.1 img/s | 4,371MB | 10.3 img/s | 2,343MB
  inception-v4-3x3 | 81.15 | 3.7 img/s | 5,207MB | 9.5 img/s | 3,151MB
- se-inception-v2| 77.1 | .. | .. | .. | ..
+ se-inception-v2| 77.1 | 9.3 img/s | 2,303MB | .. | ..
 
  - The mAP@50 score in parentheses is training with ohem and [multigrid](https://arxiv.org/abs/1706.05587);
  

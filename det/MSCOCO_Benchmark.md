@@ -35,7 +35,7 @@
 ### **3. COCOPerson results training on MSCOCO2017-trainval and testing on test-dev2017.**
 
  Network|mAP|mAP@50|mAP@75|mAP@S|mAP@M|mAP@L|mAR@10
- :---:|:---:|:---:|:---:|:---:|:---:|:---:
+ :---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
  **RFCN-se-air14-thin-specific** <br/> with ms-train & ohem & multigrid | 21.5 | 48.9 | 16.5 | 12.3 | 27.3 | 30.8 | 28.6
  **RFCN-se-resnet50-specific** <br/> with 800-scale-train & ohem & multigrid | 39.0 | 64.1 | 41.1 | 13.5 | 48.4 | 66.4 | 43.9
  **RFCN-se-resnet50-specific** <br/> with ms-train & ohem & multigrid | 41.9 | 67.7 | 44.3 | 18.6 | 51.0 | 67.9 | 46.0

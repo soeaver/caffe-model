@@ -1,13 +1,12 @@
 ## Faster RCNN Benchmark
 
-** We recommend using these caffe models with [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv) **
+**We recommend using these caffe models with [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv)**
 
-### **1. Original Faster-RCNN training on VOC 2007+2012 trainval and testing on VOC 2007 test.**
+**1. Original Faster-RCNN training on VOC 2007+2012 trainval and testing on VOC 2007 test.**
 
  Network|mAP@50(%)|training<br/>speed|training<br/>memory|testing<br/>speed|testing<br/>memory
  :---:|:---:|:---:|:---:|:---:|:---:
  resnet18 | 70.02 | 9.5 img/s | 1,235MB | 17.5 img/s | 989MB
- resnet101| -- | -- | -- | -- | --
  resnet101-v2| 79.6 | 3.1 img/s | 6,495MB | 7.1 img/s | 4,573MB
  resnet152-v2| 80.72 | 2.8 img/s | 9,315MB | 6.2 img/s | 6,021MB
  wrn50-2| 78.59 | 2.1 img/s | 4,895MB | 4.9 img/s | 3,499MB
@@ -28,7 +27,7 @@
  - All the models are trained on a single scale (600*1000) with image flipping and train-batch=128 for 80,000 iterations, tested on the same single scale with test-batch=300 and nms=0.3;
  
  
- **Comparisons on VOC 2007 test using Faster-RCNN with inception-v4.**
+ **2.Comparisons on VOC 2007 test using Faster-RCNN with inception-v4.**
  
  Method|mAP@50| improvment |test speed
  :---|:---:|:---:|:---:

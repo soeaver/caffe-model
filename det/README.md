@@ -52,6 +52,7 @@ we are releasing the training code and files, the models and more experiments wi
  
   Network|mAP@50(%)|training<br/>speed|training<br/>memory|testing<br/>speed|testing<br/>memory
  :---:|:---:|:---:|:---:|:---:|:---:
+ se-resnet50-multigrid | 79.73 | 6.5 img/s | 4,129MB | 12.8 img/s | 2,175MB
  resnet101-v2 w/o OHEM | 80.18 | 5.4 img/s | 5,807MB | 10.5 img/s | 3,147MB
  resnet101-v2 | 80.6 | 5.0 img/s | 5,833MB | 10.5 img/s | 3,147MB
  resnet101-v2-multigrid | 80.49 | 5.0 img/s | 5,833MB | 10.5 img/s | 3,147MB

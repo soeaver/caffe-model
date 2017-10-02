@@ -4,7 +4,7 @@
 **We recommend using these caffe models with [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv)
 we are releasing the training code and files, the models and more experiments will come soon.**
 
-### Object Detection Performance on PASCAL VOC. ([More experiments](https://github.com/soeaver/caffe-model/master/det/VOC_Benchmark.md))
+### Object Detection Performance on PASCAL VOC. ([More experiments](https://github.com/soeaver/caffe-model/blob/master/det/VOC_Benchmark.md))
 
 #### **1. Original Faster-RCNN training on VOC 2007+2012 trainval and testing on VOC 2007 test.**
 
@@ -54,7 +54,7 @@ we are releasing the training code and files, the models and more experiments wi
  
  
  
- ### Object Detection Performance on MSCOCO. ([More experiments](https://github.com/soeaver/caffe-model/master/det/MSCOCO_Benchmark.md))
+ ### Object Detection Performance on MSCOCO. ([More experiments](https://github.com/soeaver/caffe-model/blob/master/det/MSCOCO_Benchmark.md))
  
  #### **1. Results training on MSCOCO2017-trainval and testing on test-dev2017.**
 

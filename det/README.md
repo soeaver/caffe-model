@@ -14,10 +14,8 @@ we are releasing the training code and files, the models and more experiments wi
  wrn50-2| 78.59 | 2.1 img/s | 4,895MB | 4.9 img/s | 3,499MB
  resnext50-32x4d| 77.99 | 3.6 img/s | 5,315MB | 7.4 img/s | 4,305MB
  resnext101-32x4d| 79.98 | 2.7 img/s | 7,836MB | 6.3 img/s | 5,705MB
- inception-v3| 78.6 | 4.1 img/s | 4,325MB | 7.3 img/s | 3,445MB
  inception-v4| 81.49 | 2.6 img/s | 6,759MB | 5.4 img/s | 4,683MB
  inception-resnet-v2| 80.0 | 2.0 img/s<br/> (batch=112) | 11,497MB | 3.2 img/s | 8,409MB
- densenet-201| 77.53 | 3.9 img/s<br/> (batch=72) | 10,073MB | 5.5 img/s | 9,955MB
  air101| 81.0 | 2.4 img/s | 7,747MB | 5.1 img/s | 5,777MB
  
  - To reduce memory usage, we merge all the models batchnorm layer parameters into scale layer, more details please refer to [faster-rcnn-resnet](https://github.com/Eniac-Xie/faster-rcnn-resnet#modification) or [pva-faster-rcnn](https://github.com/sanghoon/pva-faster-rcnn/blob/master/tools/gen_merged_model.py);

@@ -1,4 +1,4 @@
-## Faster RCNN Benchmark
+## VOC Benchmark
 
 **We recommend using these caffe models with [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv)**
 
@@ -41,3 +41,18 @@
  - The SCALES for multi-scale training is (200, 400, 600, 800, 1000) and MAX_SIZE is 1666; 
  - For multi-scale training, we double the training iterations (160000 for VOC0712trainval);
  - The SCALES for multi-scale testing is (400, 600, 800, 1000, 1200) and MAX_SIZE is 2000;
+ 
+ **3. Faster-RCNN-2fc-OHEM training on VOC 2007+2012 trainval and testing on VOC 2007 test.**
+ 
+  Network|mAP@50(%)|training<br/>speed|training<br/>memory|testing<br/>speed|testing<br/>memory
+ :---:|:---:|:---:|:---:|:---:|:---:
+ se-resnet50-multigrid | -- | 8.2 img/s | 2,453MB | -- | --
+ se-resnet50-multigrid | 79.73 | 6.5 img/s | 4,129MB | 12.8 img/s | 2,175MB
+ resnet101-v2 w/o OHEM | 80.18 | 5.4 img/s | 5,807MB | 10.5 img/s | 3,147MB
+ resnet101-v2 | 80.6 | 5.0 img/s | 5,833MB | 10.5 img/s | 3,147MB
+ resnet101-v2-multigrid | 80.49 | 5.0 img/s | 5,833MB | 10.5 img/s | 3,147MB
+ air101-multigrid | 81.47 | 3.4 img/s | 6,653MB | 8.7 img/s | 4,503MB
+ air101-multigrid-context | 82.09 | 3.3 img/s | 6,773MB | 8.6 img/s | 4,577MB
+ air101-fpn w/o OHEM | 81.44 | 2.4 img/s | 7,063MB | 3.8 img/s | 4,433MB
+ inception-v4-3x3 | 81.12 | 3.73 img/s | 5,383MB | 10.1 img/s | 3,217MB
+ inception-v4-3x3-multigrid | 81.30 | 3.73 img/s | 5,383MB | 10.1 img/s | 3,217MB

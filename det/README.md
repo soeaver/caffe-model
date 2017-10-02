@@ -29,13 +29,14 @@ we are releasing the training code and files, the models and more experiments wi
  
   Network|mAP@50(%)|training<br/>speed|training<br/>memory|testing<br/>speed|testing<br/>memory
  :---:|:---:|:---:|:---:|:---:|:---:
- se-inception-v2-multigrid | -- | 8.2 img/s | 2,453MB | -- | --
- se-resnet50-multigrid | 79.73 | 6.5 img/s | 4,129MB | 12.8 img/s | 2,175MB
- resnet101-v2-multigrid | 80.49 | 5.0 img/s | 5,833MB | 10.5 img/s | 3,147MB
- air101-multigrid | 81.47 | 3.4 img/s | 6,653MB | 8.7 img/s | 4,503MB
- inception-v4-3x3-multigrid | 81.30 | 3.73 img/s | 5,383MB | 10.1 img/s | 3,217MB
+ se-inception-v2 | (77.57) | 9.4 img/s | 2,453MB | 15.9 img/s | 1,573MB
+ se-resnet50 | (79.73) | 6.2 img/s | 4,129MB | 12.8 img/s | 2,175MB
+ resnet101-v2 | 80.6(80.49) | 5.0 img/s | 5,833MB | 10.5 img/s | 3,147MB
+ air101 | (81.47) | 3.4 img/s | 6,653MB | 8.7 img/s | 4,503MB
+ inception-v4-3x3 | 81.12(81.30) | 3.73 img/s | 5,383MB | 10.1 img/s | 3,217MB
  
  - 2fc means: conv256d --- fc1024d --- fc1024d;
+ - The mAP@50 score in parentheses is training with ohem and [multigrid](https://arxiv.org/abs/1706.05587);
  
  
 #### **3. RFCN-OHEM training on VOC 2007+2012 trainval and testing on VOC 2007 test.**
@@ -43,15 +44,14 @@ we are releasing the training code and files, the models and more experiments wi
  Network|mAP@50(%)|training<br/>speed|training<br/>memory|testing<br/>speed|testing<br/>memory
  :---:|:---:|:---:|:---:|:---:|:---:
  resnet18 | 71.82 | 14.3 img/s | 1,215MB | 23.4 img/s | 899MB
- se-inception-v2| 77.1 | 8.5 img/s | 2,303MB | 13.17 img/s | 1,567MB
- se-resnet50-multigrid | .. | 6.3 img/s | 3.999MB | .. | ..
+ se-inception-v2| (78.23) | 10.2 img/s | 2,303MB | 14.0 img/s | 1,567MB
+ se-resnet50 | (79.19) | 6.3 img/s | 3.999MB | 11.7 img/s | 2,205MB
  resnet101-v2| 78.93(79.9) | 4.9 img/s | 5,719MB | 10.4 img/s | 3,097MB
  resnext101-32x4d| 79.98(80.35) | 3.8 img/s | 6,977MB | 8.8 img/s | 4,761M
  air101| 79.42(80.93) | 3.4 img/s | 6,525MB | 8.5 img/s | 4,477MB
  inception-v4| 80.2 | 4.1 img/s | 4,371MB | 10.3 img/s | 2,343MB
 
  - The mAP@50 score in parentheses is training with ohem and [multigrid](https://arxiv.org/abs/1706.05587);
- 
  
  
  ### Object Detection Performance on MSCOCO. ([More experiments](https://github.com/soeaver/caffe-model/blob/master/det/MSCOCO_Benchmark.md))

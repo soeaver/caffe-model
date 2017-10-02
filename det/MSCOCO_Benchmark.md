@@ -19,6 +19,9 @@
  **RFCN-air101** <br/> with ms-train & ohem & multigrid & deformpsroi & bbox-voting & soft-nms & flipping & assign-ms-test | 43.2 | 66.0 | 46.7 | 25.6 | 46.3 | 55.9
  **Faster-2fc-air101** <br/> with ms-train & ohem & multigrid | 36.5 | 60.4 | 38.1 | 15.5 | 39.5 | 53.5
  
+ - All the models are test on a single scale (600*1000) without any bells and whistles;
+  
+ 
 ### **2. Context Pyramid Attention Network (CPANet) results training on MSCOCO2017-trainval and testing on test-dev2017.**
  
   Network|mAP|mAP@50|mAP@75|mAP@S|mAP@M|mAP@L

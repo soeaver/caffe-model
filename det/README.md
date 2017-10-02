@@ -66,6 +66,7 @@ we are releasing the training code and files, the models and more experiments wi
  
  - All the models are test on a single scale (600*1000) without any bells and whistles;
  
+ 
  #### **2. Context Pyramid Attention Network (CPANet) results training on MSCOCO2017-trainval and testing on test-dev2017.**
  
   Network|mAP|mAP@50|mAP@75|mAP@S|mAP@M|mAP@L

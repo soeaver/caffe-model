@@ -43,7 +43,7 @@ we are releasing the training code and files, the models and more experiments wi
  Network|mAP@50(%)|training<br/>speed|training<br/>memory|testing<br/>speed|testing<br/>memory
  :---:|:---:|:---:|:---:|:---:|:---:
  resnet18 | 71.82 | 14.3 img/s | 1,215MB | 23.4 img/s | 899MB
- se-inception-v2| 77.1 | 8.5 img/s | 2,303MB | .. | ..
+ se-inception-v2| 77.1 | 8.5 img/s | 2,303MB | 13.17 img/s | 1,567MB
  se-resnet50-multigrid | .. | 6.3 img/s | 3.999MB | .. | ..
  resnet101-v2| 78.93(79.9) | 4.9 img/s | 5,719MB | 10.4 img/s | 3,097MB
  resnext101-32x4d| 79.98(80.35) | 3.8 img/s | 6,977MB | 8.8 img/s | 4,761M

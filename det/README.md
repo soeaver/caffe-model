@@ -54,9 +54,9 @@ we are releasing the training code and files, the models and more experiments wi
  
  
  
- ### Object Detection Performance on MSCOCO
+ ### Object Detection Performance on MSCOCO. ([More experiments](https://github.com/soeaver/caffe-model/edit/master/det/MSCOCO_Benchmark.md))
  
- #### **1. Results training on MSCOCO2017-trainval and testing on test-dev2017.**([More experiments](https://github.com/soeaver/caffe-model/edit/master/det/VOC_Benchmark.md))
+ #### **1. Results training on MSCOCO2017-trainval and testing on test-dev2017.**
 
  Network|mAP|mAP@50|mAP@75|mAP@S|mAP@M|mAP@L
  :---:|:---:|:---:|:---:|:---:|:---:|:---:
@@ -64,6 +64,7 @@ we are releasing the training code and files, the models and more experiments wi
  **RFCN-air101** <br/> with ms-train & ohem & multigrid | 38.2 | 60.1 | 41.2 | 18.2 | 41.9 | 53.0
  **Faster-2fc-air101** <br/> with ms-train & ohem & multigrid | 36.5 | 60.4 | 38.1 | 15.5 | 39.5 | 53.5
  
+ - All the models are test on a single scale (600*1000) without any bells and whistles;
  
  #### **2. Context Pyramid Attention Network (CPANet) results training on MSCOCO2017-trainval and testing on test-dev2017.**
  

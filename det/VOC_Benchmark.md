@@ -66,6 +66,8 @@
  :---:|:---:|:---:|:---:|:---:|:---:
  resnet18 | 71.82 | 14.3 img/s | 1,215MB | 23.4 img/s | 899MB
  resnext26-32x4d| 72.07 | 7.5 img/s | 2,521MB | 15.0 img/s | 1,797MB
+ se-inception-v2| 77.1 | 8.5 img/s | 2,303MB | .. | ..
+ se-resnet50-multigrid | 79.19 | 6.3 img/s | 3.999MB | .. | ..
  resnet101-v2| 78.93(79.9) | 4.9 img/s | 5,719MB | 10.4 img/s | 3,097MB
  resnext101-32x4d| 79.98(80.35) | 3.8 img/s | 6,977MB | 8.8 img/s | 4,761MB
  resnext101-64x4d| 80.26(79.88) | 2.4 img/s | 10,203MB | 6.2 img/s | 8,529MB
@@ -73,8 +75,6 @@
  air152| ..(81.18) | .. | .. | .. | ..
  inception-v4| 80.2 | 4.1 img/s | 4,371MB | 10.3 img/s | 2,343MB
  inception-v4-3x3 | 81.15 | 3.7 img/s | 5,207MB | 9.5 img/s | 3,151MB
- se-inception-v2| 77.1 | 8.5 img/s | 2,303MB | .. | ..
- se-resnet50-multigrid | .. | 6.3 img/s | 3.999MB | .. | ..
 
  - The mAP@50 score in parentheses is training with ohem and [multigrid](https://arxiv.org/abs/1706.05587);
  

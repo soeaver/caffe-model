@@ -41,6 +41,7 @@
  **RFCN-se-resnet50-specific** <br/> with 800-scale-train & ohem & multigrid | 39.0 | 64.1 | 41.1 | 13.5 | 48.4 | 66.4 | 43.9
  **RFCN-se-resnet50-specific** <br/> with ms-train & ohem & multigrid | 41.9 | 67.7 | 44.3 | 18.6 | 51.0 | 67.9 | 46.0
  **RFCN-se-resnet50-specific** <br/> with ms-train & ohem & multigrid & snms & flip & ms-test | 44.6 | 72.8 | 47.3 | 25.3 | 54.4 | 63.3 | 49.8
+ **RFCN-se-inception-v2-specific** <br/> with ms-train & ohem & multigrid | 41.2 | 66.7 | 43.2 | 17.6 | 50.0 | 68.3 | 45.1
  **RFCN-se-inception-v2** <br/> with ms-train & ohem & multigrid | 42.3 | 71.4 | 44.2 | 19.5 | 50.7 | 67.2 | 44.9
  **RFCN-se-inception-v2** <br/> with ms-train & ohem & multigrid & bbox-voting & soft-nms & flipping & ms-test | 48.0 | 79.5 | 50.0 | 28.3 | 55.8 | 67.5 | 50.8
  **RFCN-air101** <br/> with ms-train & ohem & multigrid & deformpsroi & bbox-voting & soft-nms & flipping & assign-ms-test | 54.0 | 83.9 | 58.2 | 35.2 | 61.6 | 73.0 | 55.1

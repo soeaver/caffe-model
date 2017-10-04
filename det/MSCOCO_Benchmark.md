@@ -8,6 +8,7 @@
  :---:|:---:|:---:|:---:|:---:|:---:|:---:
  **RFCN-se-inception-v2** <br/> with ms-train & ohem & multigrid | 32.6 | 53.6 | 34.5 | 12.5 | 35.1 | 48.4
  **RFCN-se-inception-v2** <br/> with ms-train & ohem & multigrid & bbox-voting & soft-nms & flipping & ms-test | 36.8 | 59.8 | 38.7 | 19.7 | 39.8 | 49.1
+ **RFCN-se-resnet50** <br/> with ms-train & ohem & multigrid | 32.9 | 54.4 | 34.8 | 13.0 | 35.3 | 48.1
  **FPN-Faster-inception-v4** <br/> with ms-train | 36.5 | 58.5 | 38.8 | 16.5 | 38.8 | 52.1
  **FPN-Faster-inception-v4** <br/> with ms-train & bbox-voting & soft-nms | 38.3 | 61.0 | 40.8 | 20.0 | 41.5 | 51.4
  **FPN-Faster-inception-v4** <br/> with ms-train & bbox-voting & soft-nms & flipping & ms-test | 39.5 | 62.5 | 42.3 | 23.3 | 43.2 | 51.0
@@ -41,6 +42,7 @@
  **RFCN-se-resnet50-specific** <br/> with 800-scale-train & ohem & multigrid | 39.0 | 64.1 | 41.1 | 13.5 | 48.4 | 66.4 | 43.9
  **RFCN-se-resnet50-specific** <br/> with ms-train & ohem & multigrid | 41.9 | 67.7 | 44.3 | 18.6 | 51.0 | 67.9 | 46.0
  **RFCN-se-resnet50-specific** <br/> with ms-train & ohem & multigrid & snms & flip & ms-test | 44.6 | 72.8 | 47.3 | 25.3 | 54.4 | 63.3 | 49.8
+ **RFCN-se-resnet50** <br/> with ms-train & ohem & multigrid | 42.7 | 72.0 | 44.5 | 21.0 | 51.1 | 66.4 | 45.4
  **RFCN-se-inception-v2-specific** <br/> with ms-train & ohem & multigrid | 41.2 | 66.7 | 43.2 | 17.6 | 50.0 | 68.3 | 45.1
  **RFCN-se-inception-v2** <br/> with ms-train & ohem & multigrid | 42.3 | 71.4 | 44.2 | 19.5 | 50.7 | 67.2 | 44.9
  **RFCN-se-inception-v2** <br/> with ms-train & ohem & multigrid & bbox-voting & soft-nms & flipping & ms-test | 48.0 | 79.5 | 50.0 | 28.3 | 55.8 | 67.5 | 50.8

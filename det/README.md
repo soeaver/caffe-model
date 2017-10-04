@@ -61,6 +61,7 @@ we are releasing the training code and files, the models and more experiments wi
  Network|mAP|mAP@50|mAP@75|mAP@S|mAP@M|mAP@L
  :---:|:---:|:---:|:---:|:---:|:---:|:---:
  **RFCN-se-inception-v2** <br/> with ms-train & ohem & multigrid | 32.6 | 53.6 | 34.5 | 12.5 | 35.1 | 48.4
+ **RFCN-se-resnet50** <br/> with ms-train & ohem & multigrid | 32.9 | 54.4 | 34.8 | 13.0 | 35.3 | 48.1
  **RFCN-air101** <br/> with ms-train & ohem & multigrid | 38.2 | 60.1 | 41.2 | 18.2 | 41.9 | 53.0
  **Faster-2fc-air101** <br/> with ms-train & ohem & multigrid | 36.5 | 60.4 | 38.1 | 15.5 | 39.5 | 53.5
  

@@ -27,6 +27,7 @@
  
  Network|mAP|mAP@50|mAP@75|mAP@S|mAP@M|mAP@L
  :---:|:---:|:---:|:---:|:---:|:---:|:---:
+ **CPANet-ResNet101** <br/> with ms-train & ohem & multigrid & 800-scale-test | 38.3 | 60.4 | 41.0 | 17.0 | 42.4 | 53.1
  **CPANet-air101** <br/> with ms-train & ohem & multigrid & 600-scale-test | 40.1 | 62.2 | 43.4 | 19.4 | 44.4 | 55.9
  **CPANet-air101** <br/> with ms-train & ohem & multigrid & 800-scale-test | 41.9 | 64.8 | 45.5 | 24.0 | 45.9 | 54.6
  **CPANet-air101** <br/> with ms-train & ohem & multigrid & 800-scale-test & snms | 42.7 | 65.4 | 46.7 | 24.6 | 46.8 | 55.6

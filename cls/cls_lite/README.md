@@ -35,4 +35,5 @@ Please install [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv) for evalu
  air50-1x32d | 25.59/7.89 | 15.39/7.64ms | 229.6/22.81ms | [pytorch-cls](https://github.com/soeaver/pytorch-classification)
  dpn68 | 22.56/6.24 | 22.70/21.41ms | 371.1/329.3ms | [DPNs](https://github.com/cypw/DPNs) 
  se-resnet50 | 22.39/6.37 | 17.91/19.49ms | 932.2/821.4ms | [senet](https://github.com/hujie-frank/SENet) 
+ se-resnet50-hik | 21.98/5.80 | 17.43/20.13ms | 581.1/482.7ms | [senet-caffe](https://github.com/shicai/SENet-Caffe) 
  se-inception-v2 | 23.64/7.04 | 15.31/11.21ms | 251.9/218.5ms | [senet](https://github.com/hujie-frank/SENet) 

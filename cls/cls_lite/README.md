@@ -21,6 +21,7 @@ Please install [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv) for evalu
  vgg16bn-pytorch | 27.53/8.99 | 9.14/15.83ms | 1783/1695ms | [vision](https://github.com/pytorch/vision/tree/master/torchvision/models)
  vgg19-pytorch | 28.23/9.60 | 8.03/14.26ms | 2076/2012ms | [vision](https://github.com/pytorch/vision/tree/master/torchvision/models)
  vgg19bn-pytorch | 26.58/8.45 | 10.75/18.77ms | 2224/2081ms | [vision](https://github.com/pytorch/vision/tree/master/torchvision/models)
+ mobilenet-v1-1.0 | 29.98/10.52 | 6.16/9.50ms | 169.4/138.1ms | [tf-slim](https://github.com/tensorflow/models/tree/master/research/slim)
  air14-1x8d | -- | 4.28/3.08ms | 21.01/3.29ms | [pytorch-classification](https://github.com/soeaver/pytorch-classification)
  air14-1x16d | -- | 5.13/3.56ms | 45.45/6.41ms | [pytorch-classification](https://github.com/soeaver/pytorch-classification)
  air26-1x16d | -- | 7.32/4.70ms | 62.02/8.52ms | [pytorch-classification](https://github.com/soeaver/pytorch-classification)

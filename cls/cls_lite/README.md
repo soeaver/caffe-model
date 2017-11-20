@@ -22,7 +22,7 @@ Please install [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv) for evalu
  vgg16bn-pytorch | 27.53/8.99 | 9.14/15.83ms | 1783/1695ms | [vision](https://github.com/pytorch/vision/tree/master/torchvision/models)
  vgg19-pytorch | 28.23/9.60 | 8.03/14.26ms | 2076/2012ms | [vision](https://github.com/pytorch/vision/tree/master/torchvision/models)
  vgg19bn-pytorch | 26.58/8.45 | 10.75/18.77ms | 2224/2081ms | [vision](https://github.com/pytorch/vision/tree/master/torchvision/models)
- inception-v1-tf | -- | 10.66/7.84ms | 186.2/155.8ms | [tf-slim](https://github.com/tensorflow/models/tree/master/research/slim)
+ inception-v1-tf | 31.37/11.10 | 10.66/7.84ms | 186.2/155.8ms | [tf-slim](https://github.com/tensorflow/models/tree/master/research/slim)
  inception-v1-dsd | -- | 7.24/5.91ms | 228.1/206.9ms | [dsd](https://github.com/songhan/DSD)
  inception-v2-tf | -- | 13.93/10.65ms | 286.4/255.0ms | [tf-slim](https://github.com/tensorflow/models/tree/master/research/slim)
  xception | 20.90/5.49 | 15.21/31.65ms | 1262/1253ms | [keras-models](https://github.com/fchollet/deep-learning-models)

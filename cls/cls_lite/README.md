@@ -23,7 +23,7 @@ Please install [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv) for evalu
  vgg19-pytorch | 28.23/9.60 | 8.03/14.26ms | 2076/2012ms | [vision](https://github.com/pytorch/vision/tree/master/torchvision/models)
  vgg19bn-pytorch | 26.58/8.45 | 10.75/18.77ms | 2224/2081ms | [vision](https://github.com/pytorch/vision/tree/master/torchvision/models)
  inception-v1-tf | 31.37/11.10 | 10.66/7.84ms | 186.2/155.8ms | [tf-slim](https://github.com/tensorflow/models/tree/master/research/slim)
- inception-v2-tf | -- | 13.93/10.65ms | 286.4/255.0ms | [tf-slim](https://github.com/tensorflow/models/tree/master/research/slim)
+ inception-v2-tf | 27.91/9.40 | 13.93/10.65ms | 286.4/255.0ms | [tf-slim](https://github.com/tensorflow/models/tree/master/research/slim)
  xception | 20.90/5.49 | 15.21/31.65ms | 1262/1253ms | [keras-models](https://github.com/fchollet/deep-learning-models)
  mobilenet-v1-1.0 | 29.98/10.52 | 6.16/9.50ms | 169.4/138.1ms | [tf-slim](https://github.com/tensorflow/models/tree/master/research/slim)
  air14-1x8d | -- | 4.28/3.08ms | 21.01/3.29ms | [pytorch-cls](https://github.com/soeaver/pytorch-classification)

@@ -11,7 +11,7 @@ Please install [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv) for evalu
  resnet18-priv | 29.62/10.38 | 4.48/5.07ms | 213.2/193.3ms | [pytorch-cls](https://github.com/soeaver/pytorch-classification)
  resnet18-1x96d | 26.11/8.31 | 6.16/9.94ms | 443.2/419.0ms | [pytorch-cls](https://github.com/soeaver/pytorch-classification)
  resnet18-1x128d | 24.81/7.61 | 9.75/16.94ms | 729.1/695.4ms | [pytorch-cls](https://github.com/soeaver/pytorch-classification)
- resnext26-32x4d | 24.93/7.75 | 9.68/11.16ms | 331.4/300.2ms | [pytorch-cls](https://github.com/soeaver/pytorch-classification)
+ resnext26-32x4d | 25.57/8.12 | 9.68/11.16ms | 331.4/300.2ms | [pytorch-cls](https://github.com/soeaver/pytorch-classification)
  vgg13-pytorch | 31.07/11.13 | 5.70/9.35ms | 1318/1279ms | [vision](https://github.com/pytorch/vision/tree/master/torchvision/models)
  vgg13bn-pytorch | 29.50/10.18 | 8.35/13.49ms | 1443/1336ms | [vision](https://github.com/pytorch/vision/tree/master/torchvision/models)
  vgg16-pytorch | 29.14/10.00 | 6.79/11.78ms | 1684/1643ms | [vision](https://github.com/pytorch/vision/tree/master/torchvision/models)

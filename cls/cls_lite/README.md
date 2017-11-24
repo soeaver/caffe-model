@@ -8,7 +8,7 @@ Please install [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv) for evalu
 
  Network|Top-1/5 error|F/B on GPU|F/B on CPU|Source
  :---:|:---:|:---:|:---:|:---:
- resnet18-priv | 29.62/10.38 | 4.48/5.07ms | 213.2/193.3ms | [pytorch-cls](https://github.com/soeaver/pytorch-classification)
+ resnet18-priv<br/>(resnet18-1x64d) | 29.62/10.38 | 4.48/5.07ms | 213.2/193.3ms | [pytorch-cls](https://github.com/soeaver/pytorch-classification)
  resnet18-1x96d | 26.11/8.31 | 6.16/9.94ms | 443.2/419.0ms | [pytorch-cls](https://github.com/soeaver/pytorch-classification)
  resnet18-1x128d | 24.81/7.61 | 9.75/16.94ms | 729.1/695.4ms | [pytorch-cls](https://github.com/soeaver/pytorch-classification)
  resnext26-32x4d | 25.57/8.12 | 9.68/11.16ms | 331.4/300.2ms | [pytorch-cls](https://github.com/soeaver/pytorch-classification)
@@ -26,7 +26,7 @@ Please install [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv) for evalu
  inception-v2-tf | 27.91/9.40 | 13.93/10.65ms | 286.4/255.0ms | [tf-slim](https://github.com/tensorflow/models/tree/master/research/slim)
  xception | 20.90/5.49 | 15.21/31.65ms | 1262/1253ms | [keras-models](https://github.com/fchollet/deep-learning-models)
  mobilenet-v1-1.0 | 29.98/10.52 | 6.16/9.50ms | 169.4/138.1ms | [tf-slim](https://github.com/tensorflow/models/tree/master/research/slim)
- air14-1x8d | -- | 4.28/3.08ms | 21.01/3.29ms | [pytorch-cls](https://github.com/soeaver/pytorch-classification)
+ air14-1x8d | 56.28/31.25 | 4.28/3.08ms | 21.01/3.29ms | [pytorch-cls](https://github.com/soeaver/pytorch-classification)
  air14-1x16d | 44.23/20.68 | 5.13/3.56ms | 45.45/6.41ms | [pytorch-cls](https://github.com/soeaver/pytorch-classification)
  air26-1x16d | 36.31/14.59 | 7.32/4.70ms | 62.02/8.52ms | [pytorch-cls](https://github.com/soeaver/pytorch-classification)
  air26-1x32d | 28.71/9.59 | 8.77/5.05ms | 170.7/19.25ms | [pytorch-cls](https://github.com/soeaver/pytorch-classification)

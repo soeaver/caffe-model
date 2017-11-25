@@ -9,7 +9,7 @@ Please install [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv) for evalu
  Network|Top-1/5 error|F/B on GPU|F/B on CPU|Source
  :---:|:---:|:---:|:---:|:---:
  resnet18-1x32d | -- | 3.53/4.14ms | 69.2/63.2ms | [pytorch-cls](https://github.com/soeaver/pytorch-classification)
- resnet18-1x48d | -- | 4.30/4.83ms | 139.1/127.6ms | [pytorch-cls](https://github.com/soeaver/pytorch-classification)
+ resnet18-1x48d | 32.55/11.87 | 4.30/4.83ms | 139.1/127.6ms | [pytorch-cls](https://github.com/soeaver/pytorch-classification)
  resnet18-1x64d<br/>(resnet18-priv) | 29.62/10.38 | 4.48/5.07ms | 213.2/193.3ms | [pytorch-cls](https://github.com/soeaver/pytorch-classification)
  resnet18-1x96d | 26.11/8.31 | 6.16/9.94ms | 443.2/419.0ms | [pytorch-cls](https://github.com/soeaver/pytorch-classification)
  resnet18-1x128d | 24.81/7.61 | 9.75/16.94ms | 729.1/695.4ms | [pytorch-cls](https://github.com/soeaver/pytorch-classification)

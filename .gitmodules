@@ -1,0 +1,3 @@
+[submodule "pypriv"]
+	path = pypriv
+	url = https://github.com/soeaver/caffe-model.git

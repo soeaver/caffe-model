@@ -1,6 +1,11 @@
 # Caffe-model
 Caffe models (include classification, detection and segmentation) and deploy prototxt for resnet, resnext, inception_v3, inception_v4, inception_resnet, wider_resnet, densenet, aligned-inception-resne(x)t, DPNs and other networks.
 
+Clone the caffe-model repository
+  ```Shell
+  git clone https://github.com/soeaver/caffe-model --recursive
+  ```
+
 ## We recommend using these caffe models with [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv)
 Please install [py-RFCN-priv](https://github.com/soeaver/py-RFCN-priv) for evaluating and finetuning.
 
